@@ -1,4 +1,5 @@
 import Toybox.Activity;
+import Toybox.Lang;
 import Toybox.System;
 import Toybox.Time;
 import Toybox.WatchUi;
@@ -59,6 +60,19 @@ public function quit() {
     System.exit();
 }
 
+public function join(arr as Array<String>, str as String) as String {
+    var joined as String = "";
+    for (var i = 0; i < arr.size(); i++) {
+        if (i != 0) {
+            joined += str;
+        }
+        joined += arr[i];
+    }
+    return joined;
+}
+
+
+
 public function timerTimeToString(timerTime as Number) as String {
     var options = {:seconds => (timerTime * 0.001).toNumber()};
     var timerValue = Time.Gregorian.duration(options).value();
@@ -68,14 +82,16 @@ public function timerTimeToString(timerTime as Number) as String {
     return minutes.format("%02d") + ":" + seconds.format("%02d");
 }
 
+// Return UTC time in RFC 3339 format with second level precision.
+// Example: 2006-08-14 02:34:56
+public function rfc3339(moment as Moment) as String {
+    var info = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+    return Lang.format("$1$-$2$-$3$ $4$:$5$:$6$",
+                       [info.year.format("%04d"), info.month.format("%02d"), info.day.format("%02d"), info.hour.format("%02d"), info.min.format("%02d"), info.sec.format("%02d")]);
+}
+
 public function log(string as String) as Void {
-        var info = Activity.getActivityInfo();
-        var timerTime = info.timerTime;
-        if (timerTime != null) {
-            System.println(timerTimeToString(timerTime) + " " + string);
-        } else {
-            System.println("00:00 " + string);
-        }
+    System.println(rfc3339(Time.now()) + " " + string);
 }
 
 class FootballDelegate extends WatchUi.BehaviorDelegate {

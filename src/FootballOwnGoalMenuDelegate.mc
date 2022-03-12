@@ -13,9 +13,9 @@ class FootballOwnGoalMenuDelegate extends WatchUi.MenuInputDelegate {
 
     private function logGoal(scorer as Symbol, keeper as Symbol?) as Void {
         if (keeper != null) {
-            log("Own goal scored by " + scorer.toString() + " against " + keeper.toString());
+            log(join(["OG", scorer.toString(), keeper.toString()], ","));
         } else {
-            log("Own goal scored by " + scorer.toString());
+            log(join(["OG", scorer.toString()], ","));
         }
     }
 

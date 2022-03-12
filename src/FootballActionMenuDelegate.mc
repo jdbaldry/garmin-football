@@ -9,14 +9,6 @@ class FootballActionMenuDelegate extends WatchUi.MenuInputDelegate {
         _team = team;
     }
 
-    private function logGoal(scorer as symbol, keeper as Symbol?) as Void {
-        if (keeper != null) {
-            log("Goal scored by " + scorer.toString() + " against " + keeper.toString());
-        } else {
-            log("Goal scored by " + scorer.toString());
-        }
-    }
-
     public function onMenuItem(action as Symbol) as Void {
         var menu = _team == TEAM_A ? new $.Rez.Menus.A() : new $.Rez.Menus.B();
         switch (action) {

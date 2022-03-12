@@ -34,7 +34,7 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             if (session.isRecording() == false) {
                 session.start();
                 activityState = ACTIVITY_RECORDING;
-                System.println("Started recording");
+                log(join(["A", "started"], ","));
             }
             break;
         case :Pause:
@@ -44,7 +44,7 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
                     activityState = ACTIVITY_PAUSED;
                     aKeeper = null;
                     bKeeper = null;
-                    System.println("Paused recording");
+                    log(join(["A", "paused"], ","));
                 }
             }
             break;
@@ -52,10 +52,10 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             if (session != null) {
                 if (session.isRecording()) {
                     session.stop();
-                    System.println("Stopped recording");
+                    log(join(["A", "stopped"], ","));
                 }
                 session.save();
-                System.println("Saved recording");
+                log(join(["A", "saved"], ","));
                 activityState = ACTIVITY_STOPPED;
                 session = null;
             }

@@ -6,9 +6,7 @@ class FootballApp extends Application.AppBase {
         AppBase.initialize();
     }
 
-    function onStart(state as Dictionary?) as Void {
-        System.println("Hello World");
-    }
+    function onStart(state as Dictionary?) as Void {}
 
     function onStop(state as Dictionary?) as Void {}
 
