@@ -2,453 +2,513 @@
 <html>
   <head>
     <title>2022-01-26 Wrighty vs. Mitch</title>
+    <script>
+      const getCellValue = (tr, i) => tr.children[i].innerText || tr.children[i].textContent;
+      const compare = (a, b) => a !== '' && b !== '' && !isNaN(a) && !isNaN(b) ? a - b : a.toString().localeCompare(b);
+      const compareCol = (i, desc) => (a, b) => compare(getCellValue(desc ? b : a, i), getCellValue(desc ? a : b, i));
+
+      window.onload = () => {
+          document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+              const table = th.closest('table');
+              Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+                  .sort(compareCol(Array.from(th.parentNode.children).indexOf(th), this.desc = !this.desc))
+                  .forEach(tr => table.appendChild(tr) );
+          })));
+      };
+    </script>
     <style>
-      table { width: 100%; }
+      div { text-align: center; width: 100%; }
+      table,td,th { border: 1px solid; }
+      table { cell-padding: 0; cell-spacing: 10; width: 100%; }
       th { cursor: pointer; }
       .black { background: black; color: white; }
-      .Keeper { background: blue; color: white; }
-      .Goal { background: green; color: white; }
-      .Own { background: purple; color: white; }
-      .Yellow { background: yellow; }
-      .Red { background: red; color: white; }
+      .team { background: white; float: left; text-align: center; width: 50%; }
+      .result { font-size: xx-large; }
+      .minute { width: 20%; }
+      .type { width: 40%; }
+      .player { width: 40%; }
+      .Keeper { background: blue; color: white; float: left; }
+      .Goal { background: green; color: white; float: left; }
+      .Own { background: purple; color: white; float: left; }
+      .Yellow { background: yellow; float: left; }
+      .Red { background: red; color: white; float: left; }
       .Kickoff,.Paused,.Full { background: grey; color: white; }
     </style>
   </head>
   <body>
     <h1 align="center">2022-01-26 Wrighty vs. Mitch</h1>
-    <table cellpadding="5" cellspacing="0">
-      <tbody>
-        <tr>
-          <td align="center" colspan="8" class="black">Teams</td>
-        </tr>
-        <tr>
-          <td align="center" colspan="4">Wrighty</td>
-          <td align="center" colspan="4">Mitch</td>
-        </tr>
-        <tr>
-          <td align="center" colspan="4">9</td>
-          <td align="center" colspan="4">17</td>
-        </tr>
-        <tr>
-          <td align="center" colspan="8" class="black">Events</td>
-        </tr>
-        
-        <tr>
+    <div class="black">Result</div>
+    <div class="result">
+      09 - 17
+    </div>
+    <div class="black">Players</div>
+    <div>
+      <div class="team">
+        <table>
+          <tr>
+            <th>Player</th>
+            <th>Goals</th>
+            <th>Conceded</th>
+            <th>Own goals</th>
+            <th>Yellows</th>
+            <th>Reds</th>
+          </tr>
+          
+          
+          
+          
+          <tr>
+            <td>Wrighty*</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          
+          
+          
+          <tr>
+            <td>Baldry</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+          
+          <tr>
+            <td>Notley</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+          
+          <tr>
+            <td>Gwin</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+          
+          <tr>
+            <td>Archie</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+
+        </table>
+      </div>
+      <div class="team">
+        <table>
+          <tr>
+            <th>Player</th>
+            <th>Goals</th>
+            <th>Conceded</th>
+            <th>Own goals</th>
+            <th>Yellows</th>
+            <th>Reds</th>
+          </tr>
+          
+          
+          
+          
+          <tr>
+            <td>Mitch*</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
           
-          
-          <td align="center" colspan="8" class="Kickoff">0' Kickoff</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">1'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Shirley</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">4'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Shirley</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">4'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Ben</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">8'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Liam</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">9'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Baldry</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">13'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Mitch</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">17'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Shirley</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">18'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Baldry</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">19'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Wrighty</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">20'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Liam</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">22'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Mitch</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">23'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Q</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="8" class="Paused">25' Paused</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="8" class="Kickoff">25' Kickoff</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">26'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Ben</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Yellow card">27'</td>
-          <td align="center" colspan="1" class="Yellow card">Yellow card</td>
-          <td align="center" colspan="2" class="Yellow card">Wrighty</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">29'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Wrighty</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">29'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Notley</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">32'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Shirley</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">33'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Mitch</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">37'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Shirley</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">39'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Ben</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">40'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Notley</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">41'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Liam</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">42'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Notley</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">45'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Baldry</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="1" class="Goal">50'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Notley</td>
-          <td colspan="4"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">52'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Mitch</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td colspan="4"></td>
-          <td align="center" colspan="1" class="Goal">53'</td>
-          <td align="center" colspan="1" class="Goal">Goal</td>
-          <td align="center" colspan="2" class="Goal">Shirley</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td align="center" colspan="8" class="Full time">53' Full time</td>
-          
-          
-        </tr>
-        
-        <tr>
-          <td align="center" colspan="8" class="black">Players</td>
-        </tr>
-        
-        
-        
-        
-        
-        <tr>
-          <td align="center" colspan="2">Wrighty</td>
-          <td align="center" colspan="2">
-            
-            G:2&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:1&nbsp&nbsp&nbspRC:0
-            
-          </td>
-          <td align="center" colspan="2">Mitch</td>
-          <td align="center" colspan="2">
-            
-            G:4&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-        </tr>
-        
-        
-        <tr>
-          <td align="center" colspan="2">Baldry</td>
-          <td align="center" colspan="2">
-            
-            G:3&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-          <td align="center" colspan="2">Liam</td>
-          <td align="center" colspan="2">
-            
-            G:3&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-        </tr>
-        
-        
-        <tr>
-          <td align="center" colspan="2">Notley</td>
-          <td align="center" colspan="2">
-            
-            G:4&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-          <td align="center" colspan="2">Shirley</td>
-          <td align="center" colspan="2">
-            
-            G:6&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-        </tr>
-        
-        
-        <tr>
-          <td align="center" colspan="2">Gwin</td>
-          <td align="center" colspan="2">
-            
-            G:0&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-          <td align="center" colspan="2">Q</td>
-          <td align="center" colspan="2">
-            
-            G:1&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-        </tr>
-        
-        
-        <tr>
-          <td align="center" colspan="2">Archie</td>
-          <td align="center" colspan="2">
-            
-            G:0&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-          <td align="center" colspan="2">Ben</td>
-          <td align="center" colspan="2">
-            
-            G:3&nbsp&nbsp&nbspOG:0&nbsp&nbsp&nbspC:0&nbsp&nbsp&nbspYC:0&nbsp&nbsp&nbspRC:0
-            
-          </td>
-        </tr>
-        
-    </table>
+          <tr>
+            <td>Liam</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+          
+          <tr>
+            <td>Shirley</td>
+            <td>6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+          
+          <tr>
+            <td>Q</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+          
+          <tr>
+            <td>Ben</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          
+        </table>
+      </div>
+    </div>
+    <div class="black">Events</div>
+    <div>
+      
+      
+      
+      <div align="center" class="Kickoff">0' Kickoff</div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">1'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Shirley</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">4'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Shirley</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">4'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Ben</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">8'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Liam</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">9'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Baldry</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">13'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Mitch</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">17'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Shirley</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">18'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Baldry</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">19'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Wrighty</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">20'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Liam</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">22'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Mitch</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">23'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Q</div>
+       </div>
+      
+      
+      
+      
+      
+      <div align="center" class="Paused">25' Paused</div>
+      
+      
+      
+      
+      
+      <div align="center" class="Kickoff">25' Kickoff</div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">26'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Ben</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Yellow card">27'</div>
+        <div align="center" class="type Yellow card">Yellow card</div>
+        <div align="center" class="player Yellow card">Wrighty</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">29'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Wrighty</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">29'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Notley</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">32'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Shirley</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">33'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Mitch</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">37'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Shirley</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">39'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Ben</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">40'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Notley</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">41'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Liam</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">42'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Notley</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">45'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Baldry</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">
+        <div align="center" class="minute Goal">50'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Notley</div>
+      </div>
+      <div class="team">&nbsp</div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">52'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Mitch</div>
+       </div>
+      
+      
+      
+      
+      
+      <div class="team">&nbsp</div>
+      <div class="team">
+        <div align="center" class="minute Goal">53'</div>
+        <div align="center" class="type Goal">Goal</div>
+        <div align="center" class="player Goal">Shirley</div>
+       </div>
+      
+      
+      
+      
+      
+      <div align="center" class="Full time">53' Full time</div>
+      
+      
+      
+    </div>
   </body>
 </html>
