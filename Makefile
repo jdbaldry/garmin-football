@@ -15,7 +15,8 @@ help:
 CURRENT_SDK = $(shell cat "$(HOME)/.Garmin/ConnectIQ/current-sdk.cfg")
 sdk: ## Copy in the active SDK that can only be download by the sdkmanager to the HOME directory.
 sdk: $(CURRENT_SDK)
-	rsync -av --delete --files-from - $< $@ <<-EOF
+	rsync -av --delete-excluded --include-from - --exclude '*' $< $@ <<-EOF
+		bin/
 		bin/api.mir
 		bin/api.db
 		bin/monkeyc
@@ -23,6 +24,8 @@ sdk: $(CURRENT_SDK)
 		bin/monkeybrains.jar
 		bin/shell
 		bin/simulator
+		share/
 		share/simulator/
+		share/simulator/**
 	EOF
 	touch $@
