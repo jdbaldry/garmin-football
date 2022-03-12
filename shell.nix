@@ -2,7 +2,14 @@
 
 with pkgs;
 mkShell {
-  buildInputs = [ openjdk glib-networking ];
+  buildInputs = [
+    cfr
+    monkeyc
+    monkeydo
+    openjdk
+    sdkmanager
+    simulator
+  ];
   shellHook = ''
     export PATH="$PATH":"$(pwd)/bin":"$(pwd)/result/bin"
   '';

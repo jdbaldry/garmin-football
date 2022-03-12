@@ -9,6 +9,8 @@
       overlay =
         (
           final: prev: {
+            monkeyc = prev.callPackage ./monkeyc.nix { pkgs = prev; };
+            monkeydo = prev.callPackage ./monkeydo.nix { pkgs = prev; };
             sdkmanager = prev.callPackage ./sdkmanager.nix { pkgs = prev; };
             simulator = prev.callPackage ./simulator.nix { pkgs = prev; };
           }
@@ -24,6 +26,8 @@
       {
         defaultPackage = pkgs.sdkmanager;
         devShell = import ./shell.nix { inherit pkgs; };
+        packages.monkeyc = pkgs.monkeyc;
+        packages.monkeydo = pkgs.monkeydo;
         packages.sdkmanager = pkgs.sdkmanager;
         packages.simulator = pkgs.simulator;
       }));

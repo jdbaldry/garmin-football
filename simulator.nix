@@ -34,7 +34,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/{bin,share/simulator}
-    cp bin/simulator $out/bin
+    cp bin/{api.db,simulator} $out/bin
     cp -r share/simulator/* $out/share/simulator
   '';
 
