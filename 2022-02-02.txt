@@ -1,0 +1,30 @@
+{"ts": "2022-02-02 19:00:00", "event": "A", "value": "started"}
+{"ts": "2022-02-02 19:00:00", "event": "C", "team": 0, "player": "Notley"}
+{"ts": "2022-02-02 19:00:00", "event": "C", "team": 1, "player": "Q"}
+{"ts": "2022-02-02 19:00:00", "event": "T", "team": 0, "players": ["Notley", "Baldry", "Liam", "Wrighty", "Archie"]}
+{"ts": "2022-02-02 19:00:00", "event": "T", "team": 1, "players": ["Q", "Baz", "Shirley", "Mitch", "Gwin"]}
+{"ts": "2022-02-02 19:01:00", "event": "G", "team": 1, "player": "Mitch"}
+{"ts": "2022-02-02 19:02:00", "event": "G", "team": 1, "player": "Mitch"}
+{"ts": "2022-02-02 19:07:00", "event": "G", "team": 1, "player": "Mitch"}
+{"ts": "2022-02-02 19:10:00", "event": "G", "team": 0, "player": "Notley"}
+{"ts": "2022-02-02 19:11:00", "event": "G", "team": 1, "player": "Shirley"}
+{"ts": "2022-02-02 19:11:00", "event": "G", "team": 0, "player": "Notley"}
+{"ts": "2022-02-02 19:16:00", "event": "G", "team": 1, "player": "Gwin"}
+{"ts": "2022-02-02 19:17:00", "event": "G", "team": 0, "player": "Wrighty"}
+{"ts": "2022-02-02 19:21:00", "event": "G", "team": 0, "player": "Liam"}
+{"ts": "2022-02-02 19:22:00", "event": "G", "team": 0, "player": "Archie"}
+{"ts": "2022-02-02 19:28:00", "event": "G", "team": 1, "player": "Baz"}
+{"ts": "2022-02-02 19:30:00", "event": "G", "team": 1, "player": "Gwin"}
+{"ts": "2022-02-02 19:30:00", "event": "A", "value": "paused"}
+{"ts": "2022-02-02 19:30:00", "event": "A", "value": "started"}
+{"ts": "2022-02-02 19:34:00", "event": "G", "team": 0, "player": "Notley"}
+{"ts": "2022-02-02 19:37:00", "event": "G", "team": 0, "player": "Wrighty"}
+{"ts": "2022-02-02 19:40:00", "event": "G", "team": 1, "player": "Mitch"}
+{"ts": "2022-02-02 19:40:00", "event": "G", "team": 1, "player": "Baz"}
+{"ts": "2022-02-02 19:44:00", "event": "G", "team": 1, "player": "Mitch"}
+{"ts": "2022-02-02 19:46:00", "event": "G", "team": 0, "player": "Archie"}
+{"ts": "2022-02-02 19:46:00", "event": "G", "team": 0, "player": "Archie"}
+{"ts": "2022-02-02 19:52:00", "event": "G", "team": 0, "player": "Baldry"}
+{"ts": "2022-02-02 19:56:00", "event": "G", "team": 0, "player": "Notley"}
+{"ts": "2022-02-02 19:56:00", "event": "A", "value": "stopped"}
+{"ts": "2022-02-02 19:56:00", "event": "A", "value": "saved"}

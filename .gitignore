@@ -2,3 +2,4 @@ flake-profile*
 /result
 /FootballApp.prg
 /FootballApp.prg.debug.xml
+/sdk/bin/default.jungle

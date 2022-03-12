@@ -11,7 +11,7 @@
       .Own { background: purple; color: white; }
       .Yellow { background: yellow; }
       .Red { background: red; color: white; }
-      .Kickoff,.Full,.Half { background: grey; color: white; }
+      .Kickoff,.Paused,.Full { background: grey; color: white; }
     </style>
   </head>
   <body>
@@ -27,15 +27,24 @@
         </tr>
         <tr>
           <td align="center" colspan="4">{{ .MatchReport.A.Score }}</td>
-          <td align="center" colspan="4">{{ .MatchReport.A.Score }}</td>
+          <td align="center" colspan="4">{{ .MatchReport.B.Score }}</td>
         </tr>
         <tr>
           <td align="center" colspan="8" class="black">Events</td>
         </tr>
         {{ range $i, $event := .MatchReport.Events }}
         <tr>
-          {{ if or (eq .Type "Kickoff") (eq .Type "Half time") (eq .Type "Full time") }}
+          {{ if eq .Team 2 }}
+          {{ if eq .Type "Keeper" }}
+          <td align="center" colspan="1" class="{{ .Type }}">{{ printf "%.0f" .Minute }}'</td>
+          <td align="center" colspan="1" class="{{ .Type }}">{{ .Type }}</td>
+          <td align="center" colspan="2" class="{{ .Type }}">{{ index .Players 0 }}</td>
+          <td align="center" colspan="1" class="{{ .Type }}">{{ printf "%.0f" .Minute }}'</td>
+          <td align="center" colspan="1" class="{{ .Type }}">{{ .Type }}</td>
+          <td align="center" colspan="2" class="{{ .Type }}">{{ index .Players 1 }}</td>
+          {{ else }}
           <td align="center" colspan="8" class="{{ .Type }}">{{ printf "%.0f" .Minute }}' {{ .Type }}</td>
+          {{ end }}
           {{ else }}
           {{ if eq .Team 0 }}
           <td align="center" colspan="1" class="{{ .Type }}">{{ printf "%.0f" .Minute }}'</td>
