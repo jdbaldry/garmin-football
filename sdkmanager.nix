@@ -2,152 +2,16 @@
 
 with pkgs;
 let
-  libjpeg8 = libjpeg_original.overrideAttrs (oldAttrs: rec {
-    name = "libjpeg";
-    version = "8d";
-
-    src = fetchurl {
-      url = "http://www.ijg.org/files/jpegsrc.v${version}.tar.gz";
-      sha256 = "1cz0dy05mgxqdgjf52p54yxpyy95rgl30cnazdrfmw7hfca9n0h0";
-    };
-  });
-  harfbuzzWithIcu = harfbuzz.override {
-    withIcu = true;
-  };
+  harfbuzzWithIcu = import ./harfbuzz.nix { inherit pkgs; };
+  icu57 = import ./icu57.nix { inherit pkgs; };
+  libjpeg8 = import ./libjpeg8.nix { inherit pkgs; };
+  libwebp6 = import ./libwebp6.nix { inherit pkgs; };
 in
 let
-  # From: https://github.com/NixOS/nixpkgs/commit/b5485da2cd359a1257a296cba5361a0e52bbe4e0#comments.
-  icu57 = stdenv.mkDerivation rec {
-    pname = "icu4c";
-    version = "57.1";
-
-    src = fetchurl {
-      url = "http://download.icu-project.org/files/${pname}/${version}/${pname}-"
-        + (lib.replaceChars [ "." ] [ "_" ] version) + "-src.tgz";
-      sha256 = "10cmkqigxh9f73y7q3p991q6j8pph0mrydgj11w1x6wlcp5ng37z";
-    };
-
-    outputs = [ "out" "dev" ];
-    outputBin = "dev";
-
-    postUnpack = ''
-      sourceRoot=''${sourceRoot}/source
-      echo Source root reset to ''${sourceRoot}
-    '';
-
-    preConfigure = ''
-      sed -i -e "s|/bin/sh|${stdenv.shell}|" configure
-    '';
-
-    configureFlags = "--disable-debug" +
-      lib.optionalString (stdenv.isFreeBSD || stdenv.isDarwin) " --enable-rpath";
-
-    # remove dependency on bootstrap-tools in early stdenv build
-    postInstall = lib.optionalString stdenv.isDarwin ''
-      sed -i 's/INSTALL_CMD=.*install/INSTALL_CMD=install/' $out/lib/icu/${version}/pkgdata.inc
-    '';
-
-    postFixup = ''moveToOutput lib/icu "$dev" '';
-
-    enableParallelBuilding = true;
-
-    meta = with lib; {
-      description = "Unicode and globalization support library";
-      homepage = http://site.icu-project.org/;
-      platforms = platforms.all;
-    };
-  };
+  libjavascriptcoregtk-1 = import ./libjavascriptcoregtk-1.nix { inherit pkgs icu57; };
 in
 let
-  libjavascriptcoregtk-1 = stdenv.mkDerivation rec {
-    pname = "libjavascriptcoregtk-1.0";
-    version = "2.4.11";
-
-    src = fetchurl {
-      url = "http://ftp.uk.debian.org/debian/pool/main/w/webkitgtk/${pname}-0_${version}-3_amd64.deb";
-      sha256 = "sha256-g0jiJhfeZ/SnlGyixtT2c51I3+lsTN17lHzaPrjKcDw=";
-    };
-    unpackCmd = "${dpkg}/bin/dpkg-deb -x $curSrc .";
-
-    nativeBuildInputs = [
-      autoPatchelfHook
-    ];
-
-    buildInputs = [
-      enchant1
-      gobject-introspection
-      zlib
-    ];
-
-    propagatedBuildInputs = [
-      icu57
-    ];
-
-    installPhase = ''
-      mkdir -p $out/lib
-      cp ./lib/x86_64-linux-gnu/* $out/lib
-    '';
-  };
-  # From: https://github.com/NixOS/nixpkgs/blob/b20284ddd88c812bbce63dd0e1e99d5eb36e2f14/pkgs/development/libraries/libwebp/default.nix
-  # Despite the version, this provides libweb.so.6.
-  libwebp6 = with lib; stdenv.mkDerivation rec {
-    name = "libwebp-${version}";
-    version = "0.5.2";
-
-    src = fetchurl {
-      url = "http://downloads.webmproject.org/releases/webp/${name}.tar.gz";
-      sha256 = "sha256-t1MQyBCz7aIix39tbCawYSQOPZBgCV3kSywbrikeze8=";
-    };
-
-    meta = {
-      description = "Tools and library for the WebP image format";
-      homepage = https://developers.google.com/speed/webp/;
-      license = licenses.bsd3;
-      platforms = platforms.all;
-    };
-  };
-in
-let
-  libwebkitgtk-1 = stdenv.mkDerivation rec {
-    pname = "libwebkitgtk-1.0";
-    version = "2.4.11";
-
-    src = fetchurl {
-      url = "http://ftp.uk.debian.org/debian/pool/main/w/webkitgtk/${pname}-0_${version}-3_amd64.deb";
-      sha256 = "sha256-sBGD6fTMPLnxukCcFXAW8fNSXofmekWy2eXbXeUm2uA=";
-    };
-    unpackCmd = "${dpkg}/bin/dpkg-deb -x $curSrc .";
-
-    nativeBuildInputs = [
-      autoPatchelfHook
-    ];
-
-    buildInputs = [
-      enchant1
-      harfbuzzWithIcu
-      gst_all_1.gstreamer
-      gst_all_1.gst-plugins-base
-      gtk2
-      fontconfig.lib
-      libsecret
-      libsoup
-      libwebp6
-      libxslt
-      pango
-      xorg.libXdamage
-      xorg.libXrender
-      xorg.libXt
-    ];
-
-    propagatedBuildInputs = [
-      libjavascriptcoregtk-1
-    ];
-
-    installPhase = ''
-      mkdir -p $out/lib
-      cp ./lib/x86_64-linux-gnu/* $out/lib
-    '';
-  };
+  libwebkitgtk-1 = import ./libwebkitgtk-1.nix { inherit pkgs harfbuzzWithIcu libjavascriptcoregtk-1 libwebp6; };
 in
 stdenv.mkDerivation rec {
   pname = "sdkmanager";
