@@ -69,4 +69,11 @@ import:
 	steps+=("rmdir $${tmp}")
 	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
 	steps+=("sudo umount $${tmp}")
-	cp "$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT" $@
+	cp "$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT" "$$(date +%Y-%m-%d).txt"
+
+%.html: %.txt main.go match.go stats.go
+	go run ./
+
+stats.html index.html: ## Build the website pages.
+stats.html index.html: main.go match.go stats.go $(wildcard *.txt)
+	go run ./

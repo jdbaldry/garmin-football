@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
 	"path/filepath"
@@ -25,6 +26,8 @@ const (
 	matchReportTemplatePath = "match-report.html.tpl"
 	// statsTemplatePath is the template file for the stats page.
 	statsTemplatePath = "stats.html.tpl"
+	// indexTemplatePath is the template file for the index page.
+	indexTemplatePath = "index.html.tpl"
 )
 
 // Time is a custom time structure that handles unmarshaling RFC3339 time strings
@@ -68,10 +71,25 @@ type Event struct {
 	Value string
 }
 
+// Page is a file and its title.
+type Page struct {
+	Path  string
+	Title string
+}
+
 func main() {
 	matchReportTemplate, err := template.ParseFiles(matchReportTemplatePath)
 	if err != nil {
 		log.Fatalf("Failed to parse match report template file: %v\n", err)
+	}
+
+	indexTemplate, err := template.ParseFiles(indexTemplatePath)
+	if err != nil {
+		log.Fatalf("Failed to parse template file: %v\n", err)
+	}
+	indexFile, err := os.Create("index.html")
+	if err != nil {
+		log.Fatalf("Failed to open index file: %v\n", err)
 	}
 
 	statsTemplate, err := template.ParseFiles(statsTemplatePath)
@@ -83,9 +101,10 @@ func main() {
 		log.Fatalf("Failed to open stats file: %v\n", err)
 	}
 
-	paths, _ := filepath.Glob(logsGlob)
-
+	var pages []Page
 	var rawOverall = make(map[string]RawStats)
+
+	paths, _ := filepath.Glob(logsGlob)
 	for _, p := range paths {
 		f, err := os.Open(p)
 		if err != nil {
@@ -114,14 +133,20 @@ func main() {
 		}
 
 		match := reportMatch(events)
+		pages = append(pages, Page{Path: op, Title: fmt.Sprintf("%s %s vs. %s", match.MatchReport.Date, match.MatchReport.A.Captain, match.MatchReport.B.Captain)})
 		updatePlayerStats(rawOverall, match)
 		if err := matchReportTemplate.Execute(of, match); err != nil {
 			log.Printf("Failed to execute template for match report %q, skipping match report: %v\n", op, err)
 		}
 	}
 
+	if err := indexTemplate.Execute(indexFile, pages); err != nil {
+		log.Fatalf("Failed to execute template: %v\n", err)
+	}
+
 	computed := computeStats(rawOverall)
 	if err := statsTemplate.Execute(statsFile, computed); err != nil {
 		log.Fatalf("Failed to execute template: %v\n", err)
 	}
+
 }
