@@ -66,9 +66,9 @@
         <td>{{ $stats.OwnGoals }}</td>
         <td>{{ printf "%.2f" $stats.OGPG }}</td>
         <td>{{ printf "%.2f" $stats.OGPH }}</td>
-        <td>{{ $stats.Yellows }}</td>
+        <td>{{ $stats.YellowCards }}</td>
         <td>{{ printf "%.2f" $stats.YPG }}</td>
-        <td>{{ $stats.Reds }}</td>
+        <td>{{ $stats.RedCards }}</td>
         <td>{{ printf "%.2f" $stats.RPG }}</td>
       </tr>
       {{ end}}
