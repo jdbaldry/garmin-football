@@ -41,11 +41,15 @@ FootballApp.prg: bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FI
 .PHONY: deploy
 deploy: ## Deploy the built PRG file to a Garmin device.
 deploy:  FootballApp.prg
+	steps=()
+	function cleanup { set -x; eval "$${steps[@]}"; };
+	trap cleanup EXIT
 	tmp="$$(mktemp -d)"
+	steps+=("rmdir $${tmp}")
 	trap "rmdir $${tmp}" EXIT
 	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
+	steps+=("sudo umount $${tmp}")
 	mv $< "$${tmp}/Primary/GARMIN/Apps/"
-	sudo umount "$${tmp}"
 
 .PHONY: simulate
 simulate: ## Run the built PRG file in the Garmin Connect IQ simulator. Requires the simulator to be running.
@@ -54,3 +58,15 @@ simulate: FootballApp.prg bin/iq sdk/bin/monkeydo
 	trap "pkill simulator" EXIT
 	./bin/iq simulator &
 	./bin/iq monkeydo $< fenix6pro ""
+
+.PHONY: import
+import: ## Import the latest logs from the Football app.
+import:
+	steps=()
+	function cleanup { set -x; eval "$${steps[@]}"; };
+	trap cleanup EXIT
+	tmp="$$(mktemp -d)"
+	steps+=("rmdir $${tmp}")
+	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
+	steps+=("sudo umount $${tmp}")
+	cp "$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT" $@
