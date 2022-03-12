@@ -10,6 +10,7 @@
         (
           final: prev: {
             sdkmanager = prev.callPackage ./sdkmanager.nix { pkgs = prev; };
+            simulator = prev.callPackage ./simulator.nix { pkgs = prev; };
           }
         );
     } //
@@ -24,5 +25,6 @@
         defaultPackage = pkgs.sdkmanager;
         devShell = import ./shell.nix { inherit pkgs; };
         packages.sdkmanager = pkgs.sdkmanager;
+        packages.simulator = pkgs.simulator;
       }));
 }
