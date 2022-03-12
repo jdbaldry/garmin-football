@@ -11,8 +11,8 @@ Usage:
 
 Examples:
   $0 monkeyc -o FootballApp.prg -d fenix6pro -f FootballApp.jungle -y developer_key.der
-  $0 monkeydo FootballApp.prg fenixpro6
-  $0 connectiq fenixpro6
+  $0 monkeydo FootballApp.prg fenix6pro
+  $0 connectiq fenix6pro
 EOF
 }
 
@@ -25,7 +25,7 @@ SDK="$(git rev-parse --show-toplevel)/sdk"
 case "$1" in
   monkeyc) bash "${SDK}/bin/$1" "${@:2}" ;;
   monkeydo) monkeydo "${@:2}" ;;
-  connectiq | simulator) simulator "${@:2}" ;;
+  connectiq | simulator) "${SDK}/bin/simulator" "${@:2}" ;;
   *)
     echo "Unrecognized command '$1'"
     echo ""
