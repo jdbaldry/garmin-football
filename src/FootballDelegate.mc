@@ -118,6 +118,54 @@ public function rfc3339(moment as Moment) as String {
                        [info.year.format("%04d"), info.month.format("%02d"), info.day.format("%02d"), info.hour.format("%02d"), info.min.format("%02d"), info.sec.format("%02d")]);
 }
 
+public function toJson(anything) as String {
+    switch (anything) {
+    case instanceof Lang.String:
+        return "\"" + anything + "\"";
+    case instanceof Lang.Number:
+        return anything.toString();
+    case instanceof Lang.Array:
+        var str = "[";
+        for (var j = 0; j < anything.size(); j++) {
+            if (j != 0) {
+                str += ", ";
+            }
+            str += toJson(anything[j]);
+        }
+        str += "]";
+        return str;
+    default:
+        if (anything has :toString) {
+            return "\"" + anything.toString() + "\"";
+        } else {
+            throw new Lang.InvalidValueException();
+        }
+    }
+}
+
+public function jsonLog(pairs as Array<String>) as Void {
+    // {"ts": "<timestamp>"
+    var line = "{\"ts\": \"" + rfc3339(Time.now()) + "\"";
+
+    for (var i = 0; i < pairs.size(); i += 2) {
+        // , "<key>":
+        var key = pairs[i];
+        line += ", ";
+        line += toJson(key);
+        line += ":";
+
+        if ((i + 1) < pairs.size()) {
+            var value = pairs[i+1];
+            line += " " + toJson(value);
+        } else {
+            // "MISSING"
+            line += " \"MISSING\"";
+        }
+    }
+    line += "}";
+    System.println(line);
+}
+
 public function log(string as String) as Void {
     System.println(rfc3339(Time.now()) + " " + string);
 }

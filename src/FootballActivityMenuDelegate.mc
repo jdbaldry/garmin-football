@@ -35,11 +35,11 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             if (session.isRecording() == false) {
                 session.start();
                 activityState = ACTIVITY_RECORDING;
-                log(join(["A", "started"], ","));
-                log(join(["C", TEAM_A.toString(), aTeam[0]], ","));
-                log(join(["C", TEAM_B.toString(), bTeam[0]], ","));
-                log(join(["T", TEAM_A.toString()].addAll(aTeam) , ","));
-                log(join(["T", TEAM_B.toString()].addAll(bTeam) , ","));
+                jsonLog(["event", "A", "value", "started"]);
+                jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
+                jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
+                jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
+                jsonLog(["event", "T", "team", TEAM_B, "players", bTeam]);
             }
             break;
         case :Pause:
@@ -49,7 +49,7 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
                     activityState = ACTIVITY_PAUSED;
                     aKeeper = null;
                     bKeeper = null;
-                    log(join(["A", "paused"], ","));
+                    jsonLog(["event", "A", "value", "paused"]);
                 }
             }
             break;
@@ -57,10 +57,10 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             if (session != null) {
                 if (session.isRecording()) {
                     session.stop();
-                    log(join(["A", "stopped"], ","));
+                    jsonLog(["event", "A", "value", "stopped"]);
                 }
                 session.save();
-                log(join(["A", "saved"], ","));
+                jsonLog(["event", "A", "value", "saved"]);
                 activityState = ACTIVITY_STOPPED;
                 session = null;
             }

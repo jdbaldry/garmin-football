@@ -13,9 +13,9 @@ class FootballGoalMenuDelegate extends WatchUi.MenuInputDelegate {
 
     private function logGoal(scorer as Symbol, keeper as Symbol?) as Void {
         if (keeper != null) {
-            log(join(["G", _team.toString(), scorer.toString(), keeper.toString()], ","));
+            jsonLog(["event", "G", "team", _team, "player", scorer, "keeper", keeper]);
         } else {
-            log(join(["G", _team.toString(), scorer.toString()], ","));
+            jsonLog(["event", "G", "team", _team, "player", scorer]);
         }
     }
 

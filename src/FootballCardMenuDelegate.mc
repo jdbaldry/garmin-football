@@ -14,7 +14,7 @@ class FootballCardMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     private function logCard(color as String, offender as Symbol) as Void {
-        log(join([color, _team.toString(), offender.toString()], ","));
+        jsonLog(["event", "YC", "team", _team, "player", offender]);
     }
 
     public function onMenuItem(offender as Symbol) as Void {
