@@ -1,0 +1,5 @@
+<menu id="ActivityMenu" title="@Strings.ActivityMenu">
+  <menu-item id="Start" label="@Strings.StartLabel"/>
+  <menu-item id="Pause" label="@Strings.PauseLabel"/>
+  <menu-item id="Stop" label="@Strings.StopLabel"/>
+</menu>

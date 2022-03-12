@@ -1,5 +1,5 @@
-using Toybox.Application;
-using Toybox.System;
+import Toybox.Application;
+import Toybox.System;
 
 class FootballApp extends Application.AppBase {
     function initialize() {
@@ -13,10 +13,8 @@ class FootballApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {}
 
     function getInitialView() as Array<Views or InputDelegates>?{
-        return [new FootballView()] as Array<Views or InputDelegates>;
+        var view = new $.FootballView();
+        var delegate = new $.FootballDelegate(view);
+        return [view, delegate] as Array<Views or InputDelegates>;
     }
-}
-
-function getApp() as FootballApp {
-    return Application.getApp() as FootballApp;
 }

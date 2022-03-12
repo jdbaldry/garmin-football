@@ -1,0 +1,7 @@
+<menu id="A" title="@Strings.ATitle">
+  <menu-item id="Baldry" label="@Strings.Baldry"/>
+  <menu-item id="Gwin" label="@Strings.Gwin"/>
+  <menu-item id="Shirley" label="@Strings.Shirley"/>
+  <menu-item id="Ben" label="@Strings.Ben"/>
+  <menu-item id="Archie" label="@Strings.Archie"/>
+</menu>

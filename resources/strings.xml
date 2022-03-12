@@ -1,5 +1,35 @@
 <resources>
   <strings>
-    b<string id="AppName">Football</string>
+    <string id="AppName">Football</string>
+    <string id="Prompt">Press the enter\nbutton to start</string>
+
+    <string id="ActivityMenu">Activity</string>
+    <string id="StartLabel">Start</string>
+    <string id="StopLabel">Stop</string>
+    <string id="PauseLabel">Pause</string>
+
+    <string id="ActionMenu">Action</string>
+    <string id="GoalLabel">Goal</string>
+    <string id="KeeperLabel">Keeper</string>
+    <string id="OwnGoalLabel">Own goal</string>
+    <string id="YellowCardLabel">Yellow card</string>
+    <string id="RedCardLabel">Red card</string>
+
+    <string id="QuitMenu">Quit</string>
+    <string id="NoLabel">No</string>
+    <string id="YesLabel">Yes</string>
+
+    <string id="ATitle">Team A</string>
+    <string id="BTitle">Team B</string>
+    <string id="Baldry">Baldry</string>
+    <string id="Gwin">Gwin</string>
+    <string id="Shirley">Shirley</string>
+    <string id="Ben">Ben</string>
+    <string id="Archie">Archie</string>
+    <string id="Liam">Liam</string>
+    <string id="Q">Q</string>
+    <string id="Mitch">Mitch</string>
+    <string id="Wrighty">Wrighty</string>
+    <string id="Niall">Niall</string>
   </strings>
 </resources>

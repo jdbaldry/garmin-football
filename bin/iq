@@ -25,7 +25,7 @@ SDK="$(git rev-parse --show-toplevel)/sdk"
 case "$1" in
   monkeyc) bash "${SDK}/bin/$1" "${@:2}" ;;
   monkeydo) monkeydo "${@:2}" ;;
-  connectiq | simulator) "${SDK}/bin/simulator" "${@:2}" ;;
+  connectiq | simulator) simulator "${@:2}" ;;
   *)
     echo "Unrecognized command '$1'"
     echo ""

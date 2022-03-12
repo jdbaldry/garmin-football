@@ -1,0 +1,7 @@
+<menu id="ActionMenu" title="@Strings.ActionMenu">
+  <menu-item id="Goal" label="@Strings.GoalLabel"/>
+  <menu-item id="Keeper" label="@Strings.KeeperLabel"/>
+  <menu-item id="OwnGoal" label="@Strings.OwnGoalLabel"/>
+  <menu-item id="YellowCard" label="@Strings.YellowCardLabel"/>
+  <menu-item id="RedCard" label="@Strings.RedCardLabel"/>
+</menu>

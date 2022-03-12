@@ -1,4 +1,10 @@
-4.0.9
+4.1.0.beta1
+<Toybox_ActivityMonitor_BodyBatteryHistoryIterator_>>mCount> 8391837
+<Toybox_ActivityMonitor_BodyBatteryHistoryIterator_>>mData> 8391836
+<Toybox_ActivityMonitor_BodyBatteryHistoryIterator_>>mIndex> 8391835
+<Toybox_ActivityMonitor_StressHistoryIterator_>>mCount> 8391845
+<Toybox_ActivityMonitor_StressHistoryIterator_>>mData> 8391844
+<Toybox_ActivityMonitor_StressHistoryIterator_>>mIndex> 8391843
 <Toybox_Cryptography_CipherBasedMessageAuthenticationCode_>>mContext> 8390629
 <Toybox_Cryptography_CipherBasedMessageAuthenticationCode_>>mKey> 8390630
 <Toybox_Cryptography_Cipher_>>mContext> 8390529
@@ -36,6 +42,9 @@
 <Toybox_Media_SystemButton_>>mDisabled> 8391044
 <Toybox_Media_SystemButton_>>mType> 8391043
 <Toybox_System_AppInfo_>>mIconId> 8391505
+<Toybox_UserProfile_UserActivityHistoryIterator_>>mCount> 8391862
+<Toybox_UserProfile_UserActivityHistoryIterator_>>mData> 8391861
+<Toybox_UserProfile_UserActivityHistoryIterator_>>mIndex> 8391860
 <Toybox_WatchUi_AnimationLayer_>>animation> 8391430
 <Toybox_WatchUi_CustomMenuItem_>>mDrawable> 8390746
 <Toybox_WatchUi_CustomMenuItem_>>mFocused> 8390745
@@ -85,7 +94,9 @@
 <Toybox_WatchUi_TextArea_>>mPreviousHeight> 8391310
 <Toybox_WatchUi_TextArea_>>mPreviousWidth> 8391309
 <Toybox_WatchUi_TextArea_>>mText> 8391304
+<Toybox_WatchUi_View_>>mHourHandPosition> 8391804
 <Toybox_WatchUi_View_>>mLayers> 8391438
+<Toybox_WatchUi_View_>>mMinuteHandPosition> 8391803
 <ara> 8389920
 <bul> 8389921
 <ces> 8389352
@@ -267,7 +278,10 @@ BitmapResource 8389053
 BitmapTexture 8391776
 BleDelegate 8391234
 BluetoothLowEnergy 8391193
+BodyBatteryData 8391832
+BodyBatteryHistoryIterator 8391834
 Boolean 8388762
+BoundingBox 8391806
 BufferedBitmap 8390101
 BufferedBitmapReference 8391771
 BurstListener 8390055
@@ -450,6 +464,9 @@ DEVICE_TYPE_RUNNING_DYNAMICS 8390266
 DEVICE_TYPE_SHIFTING 8391365
 DEVICE_TYPE_SPD_CAD 8390668
 DEVICE_TYPE_SPEED 8390670
+DRAG_TYPE_CONTINUE 8391819
+DRAG_TYPE_START 8391818
+DRAG_TYPE_STOP 8391820
 DailyForecast 8391664
 DataField 8389024
 DataFieldAlert 8391697
@@ -464,6 +481,7 @@ DeviceSettings 8389397
 DeviceState 8389424
 Dictionary 8388650
 Double 8388761
+DragEvent 8391821
 Drawable 8389058
 Drawables 8388771
 Duration 8388921
@@ -513,6 +531,7 @@ FitnessEquipment 8390250
 FitnessEquipmentData 8390249
 FitnessEquipmentListener 8390251
 FitnessEquipmentMode 8390244
+FlickEvent 8391822
 Float 8388760
 FontReference 8391759
 FontResource 8389052
@@ -543,6 +562,7 @@ GlanceView 8391454
 GlanceViewDelegate 8391455
 Graphics 8388639
 Gregorian 8388924
+GyroscopeData 8391850
 HASH_MD5 8390694
 HASH_SHA1 8390502
 HASH_SHA256 8390503
@@ -791,6 +811,7 @@ MSG_ID_RF_EVENT 8389196
 MSG_ID_SEARCH_TIMEOUT 8389201
 MSG_ID_TRANSMIT_POWER 8389204
 MSG_ID_UNASSIGN_CHANNEL 8389197
+MagnetometerData 8391851
 MailboxIterator 8388820
 ManufacturerInfo 8389977
 MapMarker 8390566
@@ -1087,6 +1108,8 @@ SimulationSettings 8390246
 Stats 8388710
 Storage 8390424
 StorageFullException 8390215
+StressData 8391840
+StressHistoryIterator 8391842
 String 8388763
 StringUtil 8389782
 Strings 8388770
@@ -1224,6 +1247,8 @@ UnableToAcquireChannelException 8389698
 UnableToAcquireEncryptedChannelException 8390114
 UnexpectedAppTypeException 8389943
 UnexpectedTypeException 8389585
+UserActivity 8391858
+UserActivityHistoryIterator 8391859
 UserProfile 8388647
 UserSettings 8390248
 UserTest 8391816
@@ -1386,6 +1411,7 @@ backlight 8388988
 basicResistance 8390289
 basicResistanceSupported 8390303
 battery 8388724
+batteryInDays 8391854
 batteryStatus 8389526
 batteryVoltage 8389528
 bearing 8389929
@@ -1398,6 +1424,8 @@ bitmap 8391710
 bitmapResource 8390139
 bleAddress 8391718
 bluetooth 8390485
+bodyBattery 8391833
+bodyBatteryData 8391838
 bodyLocation 8390269
 bufferedBitmap 8391769
 burstDataBlob 8390056
@@ -1623,6 +1651,7 @@ getBackgroundColor 8389627
 getBackgroundData 8390164
 getBatteryStatus 8390027
 getBikeLights 8390021
+getBodyBatteryHistory 8391839
 getBytes 8390609
 getCacheStatistics 8390330
 getCachedContentObj 8390329
@@ -1661,6 +1690,7 @@ getDeviceSettings 8389398
 getDeviceState 8389479
 getDimensions 8389106
 getDirection 8389119
+getDistance 8391826
 getDrawable 8389628
 getElevationHistory 8389802
 getEquipmentData 8390298
@@ -1760,7 +1790,11 @@ getSpeedInfo 8390671
 getState 8389902
 getStats 8390181
 getStepsEventRegistered 8390682
+getStressHistory 8391847
 getSubLabel 8390402
+getSubscreen 8391802
+getSunrise 8391864
+getSunset 8391865
 getSyncConfigurationView 8390434
 getSyncDelegate 8390431
 getSyncIcon 8391047
@@ -1781,9 +1815,11 @@ getTrainerMode 8390291
 getTrialDaysRemaining 8390187
 getType 8389114
 getUnitId 8391178
+getUserActivityHistory 8391857
 getUserSettings 8390295
 getUuid 8391247
 getValue 8389629
+getVelocity 8391825
 getWakeEventRegistered 8390680
 getWaypoints 8389955
 getWidth 8389117
@@ -1794,6 +1830,8 @@ globals 8389350
 greaterThan 8388946
 groundContactBalance 8390271
 groundContactTime 8390272
+gyroscope 8391852
+gyroscopeData 8391848
 handleEvent 8389084
 hasAddress 8391680
 hasKey 8388790
@@ -1904,6 +1942,7 @@ mDeviceType 8389477
 mDirection 8389118
 mDisabledSubLabel 8390400
 mDisplayString 8389085
+mDistance 8391824
 mDrawContext 8389195
 mEnabledSubLabel 8390399
 mErrorCode 8389575
@@ -1959,10 +1998,13 @@ mTime 8389710
 mTitle 8389093
 mType 8389112
 mUuid 8391273
+mVelocity 8391823
 mWidth 8389545
 mX 8389110
 mY 8389111
 mag 8389606
+magnetometer 8391853
+magnetometerData 8391849
 makeImageRequest 8388819
 makeImageRequestNative 8389659
 makeJsonRequest 8388817
@@ -2062,10 +2104,12 @@ onDescriptorRead 8391261
 onDescriptorWrite 8391262
 onDeviceStateUpdate 8390040
 onDone 8390422
+onDrag 8391828
 onEnterSleep 8389376
 onError 8388828
 onExitSleep 8389377
 onFitnessEquipmentUpdate 8390306
+onFlick 8391827
 onFooter 8390751
 onGlanceEvent 8391456
 onGoalReached 8390149
@@ -2135,11 +2179,13 @@ onTorqueEffectivenessPedalSmoothnessUpdate 8390036
 onTransmitComplete 8390063
 onTransmitFail 8390064
 onUpdate 8389124
+onValidateProperty 8391811
 onWakeTime 8390150
 onWorkoutStarted 8391698
 onWorkoutStepComplete 8390685
 onWrap 8390749
 open 8389256
+openAppSettingsEditor 8391810
 openWebPage 8389842
 operatingTime 8389527
 order 8389809
@@ -2233,6 +2279,7 @@ resetContentCache 8390327
 resetContentIterator 8390557
 resetTemporalEvent 8391724
 resource 8391768
+respirationRate 8391831
 responseCode 8389843
 responseType 8389844
 restStep 8391591
@@ -2286,6 +2333,7 @@ setBlendMode 8391738
 setBurstListener 8390058
 setChecked 8390397
 setClip 8390103
+setClockHandPosition 8391805
 setColor 8389131
 setData 8389864
 setDelegate 8391224
@@ -2384,6 +2432,8 @@ stop 8388699
 stopPlayback 8391463
 storeId 8391502
 storeVersion 8391501
+stress 8391841
+stressData 8391846
 stringToUuid 8391230
 subSport 8388891
 substring 8388797
@@ -2448,6 +2498,7 @@ textColor 8391038
 threat 8390644
 threatSide 8390645
 thresholdConfiguration 8389249
+timeToRecovery 8391830
 timeZoneOffset 8388723
 timer1 8388696
 timer2 8388697
@@ -2498,6 +2549,7 @@ update 8390514
 updateItem 8390420
 uri 8389947
 usedMemory 8388725
+userActivityData 8391863
 userInfoString 8390123
 userWeight 8390299
 utcInfo 8389878
@@ -2514,6 +2566,9 @@ vibrate 8388987
 vibrateOn 8389399
 vigorous 8389868
 visibility 8391445
+visible 8391829
+vo2maxCycling 8391856
+vo2maxRunning 8391855
 wakeTime 8389145
 walkingFlag 8390276
 walkingStepLength 8389148

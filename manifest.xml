@@ -6,5 +6,8 @@
     <iq:products>
       <iq:product id="fenix6pro"/>
     </iq:products>
+    <iq:permissions>
+      <iq:uses-permission id="Fit"/>
+    </iq:permissions>
   </iq:application>
 </iq:manifest>
