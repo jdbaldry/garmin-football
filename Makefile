@@ -29,3 +29,11 @@ sdk: $(CURRENT_SDK)
 		share/simulator/**
 	EOF
 	touch $@
+
+deploy: ## Deploy the built PRG file to a Garmin device.
+deploy:  FootballApp.prg
+	tmp="$$(mktemp -d)"
+	trap "rmdir $${tmp}" EXIT
+	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
+	mv $< "$${tmp}/Primary/GARMIN/Apps/"
+	sudo umount "$${tmp}"

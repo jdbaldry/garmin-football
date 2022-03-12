@@ -1,0 +1,8 @@
+<resources>
+  <bitmaps>
+    <bitmap id="LauncherIcon" filename="drawables/images/launcher_icon.png"/>
+  </bitmaps>
+  <strings>
+    <string id="device">fenix6pro</string>
+  </strings>
+</resources>
