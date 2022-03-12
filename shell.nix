@@ -2,8 +2,8 @@
 
 with pkgs;
 mkShell {
-  buildInputs = [ hello ];
+  buildInputs = [ openjdk glib-networking ];
   shellHook = ''
-    # ...
+    export PATH="$PATH":"$(pwd)/bin"
   '';
 }
