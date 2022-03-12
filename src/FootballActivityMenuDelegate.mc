@@ -1,3 +1,4 @@
+import Toybox.Application;
 import Toybox.System;
 import Toybox.WatchUi;
 
@@ -18,10 +19,10 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             }
 
             if (bKeeper == null) {
-                WatchUi.pushView(new $.Rez.Menus.B(), new $.FootballKeeperMenuDelegate(TEAM_B, method(:popViewIfKeepersAreSet)), WatchUi.SLIDE_UP);
+                WatchUi.pushView(bMenu, new $.FootballKeeperMenuDelegate(TEAM_B, method(:popViewIfKeepersAreSet)), WatchUi.SLIDE_UP);
             }
             if (aKeeper == null) {
-                WatchUi.pushView(new $.Rez.Menus.A(), new $.FootballKeeperMenuDelegate(TEAM_A, method(:popViewIfKeepersAreSet)), WatchUi.SLIDE_UP);
+                WatchUi.pushView(aMenu, new $.FootballKeeperMenuDelegate(TEAM_A, method(:popViewIfKeepersAreSet)), WatchUi.SLIDE_UP);
             }
 
             if (session == null) {
@@ -35,6 +36,10 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
                 session.start();
                 activityState = ACTIVITY_RECORDING;
                 log(join(["A", "started"], ","));
+                log(join(["C", TEAM_A.toString(), aTeam[0]], ","));
+                log(join(["C", TEAM_B.toString(), bTeam[0]], ","));
+                log(join(["T", TEAM_A.toString()].addAll(aTeam) , ","));
+                log(join(["T", TEAM_B.toString()].addAll(bTeam) , ","));
             }
             break;
         case :Pause:

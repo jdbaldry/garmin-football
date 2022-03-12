@@ -12,17 +12,16 @@ class FootballKeeperMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     private function logKeeper(keeper as Symbol) as Void {
-        log(join(["K", keeper.toString()], ","));
+        log(join(["K", _team.toString(), keeper.toString()], ","));
     }
 
     public function onMenuItem(keeper as Symbol) as Void {
+        logKeeper(keeper);
         switch (_team) {
         case TEAM_A:
-            logKeeper(keeper);
             aKeeper = keeper;
             break;
         case TEAM_B:
-            logKeeper(keeper);
             bKeeper = keeper;
             break;
         default:

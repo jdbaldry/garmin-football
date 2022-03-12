@@ -1,7 +1,0 @@
-<menu id="B" title="@Strings.BTitle">
-  <menu-item id="Liam" label="@Strings.Liam"/>
-  <menu-item id="Q" label="@Strings.Q"/>
-  <menu-item id="Mitch" label="@Strings.Mitch"/>
-  <menu-item id="Wrighty" label="@Strings.Wrighty"/>
-  <menu-item id="Niall" label="@Strings.Niall"/>
-</menu>

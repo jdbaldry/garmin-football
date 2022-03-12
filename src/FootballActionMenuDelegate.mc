@@ -10,7 +10,7 @@ class FootballActionMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     public function onMenuItem(action as Symbol) as Void {
-        var menu = _team == TEAM_A ? new $.Rez.Menus.A() : new $.Rez.Menus.B();
+        var menu = _team == TEAM_A ? aMenu : bMenu;
         switch (action) {
         case :Goal:
             WatchUi.pushView(menu, new $.FootballGoalMenuDelegate(_team, method(:popAdditional)), WatchUi.SLIDE_UP);
@@ -22,10 +22,10 @@ class FootballActionMenuDelegate extends WatchUi.MenuInputDelegate {
             WatchUi.pushView(menu, new $.FootballOwnGoalMenuDelegate(_team, method(:popAdditional)), WatchUi.SLIDE_UP);
             break;
         case :YellowCard:
-            WatchUi.pushView(menu, new $.FootballCardMenuDelegate(CARD_YELLOW, method(:popAdditional)), WatchUi.SLIDE_UP);
+            WatchUi.pushView(menu, new $.FootballCardMenuDelegate(_team, CARD_YELLOW, method(:popAdditional)), WatchUi.SLIDE_UP);
             break;
         case :RedCard:
-            WatchUi.pushView(menu, new $.FootballCardMenuDelegate(CARD_RED, method(:popAdditional)), WatchUi.SLIDE_UP);
+            WatchUi.pushView(menu, new $.FootballCardMenuDelegate(_team, CARD_RED, method(:popAdditional)), WatchUi.SLIDE_UP);
             break;
         default:
             throw new Lang.InvalidValueException();

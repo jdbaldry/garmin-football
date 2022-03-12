@@ -32,10 +32,38 @@ public enum {
 public var activityState = ACTIVITY_NONE;
 public var session as Session?;
 
+public var players = {
+    "Baldry"=>:Baldry,
+    "Gwin"=>:Gwin,
+    "Shirley"=>:Shirley,
+    "Ben"=>:Ben,
+    "Archie"=>:Archie,
+    "Liam"=>:Liam,
+    "Q"=>:Q,
+    "Mitch"=>:Mitch,
+    "Wrighty"=>:Wrighty,
+    "Niall"=>:Niall,
+};
 // Team A variables.
+public var aMenu as WatchUi.Menu = new WatchUi.Menu();
+public var aTeam = [
+                    "Baldry",
+                    "Gwin",
+                    "Shirley",
+                    "Ben",
+                    "Archie",
+                    ];
 public var aScore as Number = 0;
 public var aKeeper as Symbol? = null;
 // Team B variables.
+public var bMenu as WatchUi.Menu = new WatchUi.Menu();
+public var bTeam = [
+                    "Liam",
+                    "Q",
+                    "Mitch",
+                    "Wrighty",
+                    "Niall",
+                    ];
 public var bScore as Number = 0;
 public var bKeeper as Symbol? = null;
 
@@ -100,6 +128,12 @@ class FootballDelegate extends WatchUi.BehaviorDelegate {
     public function initialize(view as InputView) {
         BehaviorDelegate.initialize();
         _parentView = view;
+        for (var i = 0; i < aTeam.size(); i++) {
+            aMenu.addItem(aTeam[i], players[aTeam[i]]);
+        }
+        for (var i = 0; i < bTeam.size(); i++) {
+            bMenu.addItem(bTeam[i], players[bTeam[i]]);
+        }
     }
 
     public function onSelect() as Boolean {

@@ -2,17 +2,19 @@ import Toybox.System;
 import Toybox.WatchUi;
 
 class FootballCardMenuDelegate extends WatchUi.MenuInputDelegate {
+    private var _team as Number;
     private var _card as Number;
     private var _callback as Method?;
 
-    public function initialize(card as Number, callback as Method?) {
+    public function initialize(team as Number, card as Number, callback as Method?) {
         MenuInputDelegate.initialize();
+        _team = team;
         _card = card;
         _callback = callback;
     }
 
     private function logCard(color as String, offender as Symbol) as Void {
-        log(join([color, offender.toString()], ","));
+        log(join([color, _team.toString(), offender.toString()], ","));
     }
 
     public function onMenuItem(offender as Symbol) as Void {
