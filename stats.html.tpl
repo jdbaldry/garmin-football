@@ -62,12 +62,12 @@
     <table id="primary-stats">
       <tr>
         <th best="none">Name</th>
-        <th title="Games played" best="max">Games</th>
-        <th title="Games won" best="max">Wins</th>
-        <th title="Games drawn" best="max">Draws</th>
-        <th title="Games lost" best="min">Losses</th>
+        <th title="Games played" best="max">P</th>
+        <th title="Games won" best="max">W</th>
+        <th title="Games drawn" best="max">D</th>
+        <th title="Games lost" best="min">L</th>
         <th title="Ratio of wins" best="max">Win ratio</th>
-        <th title="Goals scored whilst outfield" best="max">Goals</th>
+        <th title="Goals scored whilst outfield" best="max">G</th>
         <th title="Goals per hour played outfield" best="max">GPH</th>
       </tr>
       {{ range $player, $stats :=  . }}
