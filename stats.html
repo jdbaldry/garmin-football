@@ -2,50 +2,73 @@
 <html lang="en">
   <head>
     <title>Stats</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script>
       const getCellValue = (tr, i) => tr.children[i].innerText || tr.children[i].textContent;
       const compare = (a, b) => a !== '' && b !== '' && !isNaN(a) && !isNaN(b) ? a - b : a.toString().localeCompare(b);
       const compareCol = (i, asc) => (a, b) => compare(getCellValue(asc ? a : b, i), getCellValue(asc ? b : a, i));
-
       window.onload = () => {
+          const tables = document.querySelectorAll('table');
+          tables.forEach(table => {
+              const ths = table.rows[0].cells;
+              const cols = ths.length;
+              var bestCells = new Array(cols).fill([]);
+              var bestVals = new Array(cols).fill(null);
+              var comparers = new Array(cols).fill(null);
+              for (var i = 0, th; th = ths[i]; i++) {
+                  switch (th.getAttribute('best')) {
+                  case 'max':
+                      bestVals[i] = Number.MIN_VALUE;
+                      comparers[i] = (a, b) => a > b;
+                      break;
+                  case 'min':
+                      bestVals[i] = Number.MAX_VALUE;
+                      comparers[i] = (a, b) => a < b;
+                      break;
+                  }                   
+              }
+              for (var i = 0, row; row = table.rows[i+1] /* ignore header row */; i++) {
+                  for (var j = 0, col; col = row.cells[j]; j++) {
+                      const comparer = comparers[j];
+                      const max = bestVals[j];
+                      const val = parseFloat(col.innerText);
+                      if (comparer == null) {
+                          continue
+                      }
+                      if (comparer(val, max)) {
+                          bestVals[j] = val;
+                          bestCells[j] = [col];
+                      } else if (val == max) {
+                          bestCells[j].push(col);
+                      }
+                  }
+              }
+              bestCells.forEach(col => col.forEach(td => td.classList.add('best')));
+          });
+          
           document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
               const table = th.closest('table');
-              console.log("here");
               Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
                   .sort(compareCol(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
                   .forEach(tr => table.appendChild(tr) );
           })));
       };
     </script>
-    <style>
-      table, th, td { border: 1px solid black; }
-      th { cursor: pointer; }
-    </style>
   </head>
   <body>
-    <table>
+    <h1>Primary stats</h1>
+    <table id="primary-stats">
       <tr>
-        <th>Name</th>
-        <th>Games</th>
-        <th>Wins</th>
-        <th>Draws</th>
-        <th>Losses</th>
-        <th>Win ratio</th>
-        <th>Outfield</th>
-        <th>In goal</th>
-        <th>Goals</th>
-        <th>Goals per game</th>
-        <th>Goals per hour</th>
-        <th>Conceded</th>
-        <th>Conceded per game</th>
-        <th>Conceded per hour</th>
-        <th>Own goals</th>
-        <th>Own goals per game</th>
-        <th>Own goals per hour</th>
-        <th>Yellows</th>
-        <th>Yellows per game</th>
-        <th>Reds</th>
-        <th>Reds per game</th>
+        <th best="none">Name</th>
+        <th title="Games played" best="max">Games</th>
+        <th title="Games won" best="max">Wins</th>
+        <th title="Games drawn" best="max">Draws</th>
+        <th title="Games lost" best="min">Losses</th>
+        <th title="Ratio of wins" best="max">Win ratio</th>
+        <th title="Goals scored whilst outfield" best="max">Goals</th>
+        <th title="Goals per hour played outfield" best="max">GPH</th>
       </tr>
       
       <tr>
@@ -55,21 +78,8 @@
         <td>1</td>
         <td>3</td>
         <td>0.33</td>
-        <td>5h13m0s</td>
-        <td>0s</td>
         <td>10</td>
-        <td>1.67</td>
         <td>1.92</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -79,21 +89,8 @@
         <td>1</td>
         <td>3</td>
         <td>0.33</td>
-        <td>5h13m0s</td>
-        <td>0s</td>
         <td>15</td>
-        <td>2.50</td>
         <td>2.88</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -103,21 +100,8 @@
         <td>1</td>
         <td>2</td>
         <td>0.00</td>
-        <td>2h38m0s</td>
-        <td>0s</td>
         <td>4</td>
-        <td>1.33</td>
         <td>1.52</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -127,21 +111,8 @@
         <td>0</td>
         <td>2</td>
         <td>0.50</td>
-        <td>3h26m0s</td>
-        <td>0s</td>
         <td>16</td>
-        <td>4.00</td>
         <td>4.66</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>1</td>
-        <td>0.25</td>
-        <td>0.29</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -151,21 +122,8 @@
         <td>1</td>
         <td>3</td>
         <td>0.00</td>
-        <td>3h32m0s</td>
-        <td>0s</td>
         <td>4</td>
-        <td>1.00</td>
         <td>1.13</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -175,21 +133,8 @@
         <td>1</td>
         <td>1</td>
         <td>0.60</td>
-        <td>4h23m0s</td>
-        <td>0s</td>
         <td>15</td>
-        <td>3.00</td>
         <td>3.42</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>1</td>
-        <td>0.20</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -199,21 +144,8 @@
         <td>0</td>
         <td>1</td>
         <td>0.67</td>
-        <td>2h33m0s</td>
-        <td>0s</td>
         <td>9</td>
-        <td>3.00</td>
         <td>3.53</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -223,21 +155,8 @@
         <td>1</td>
         <td>1</td>
         <td>0.67</td>
-        <td>5h13m0s</td>
-        <td>0s</td>
         <td>24</td>
-        <td>4.00</td>
         <td>4.60</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>1</td>
-        <td>0.17</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -247,21 +166,8 @@
         <td>1</td>
         <td>2</td>
         <td>0.25</td>
-        <td>3h32m0s</td>
-        <td>0s</td>
         <td>14</td>
-        <td>3.50</td>
         <td>3.96</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -271,21 +177,8 @@
         <td>1</td>
         <td>3</td>
         <td>0.33</td>
-        <td>5h13m0s</td>
-        <td>0s</td>
         <td>10</td>
-        <td>1.67</td>
         <td>1.92</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -295,21 +188,8 @@
         <td>1</td>
         <td>2</td>
         <td>0.50</td>
-        <td>5h13m0s</td>
-        <td>0s</td>
         <td>19</td>
-        <td>3.17</td>
         <td>3.64</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
-        <td>0</td>
-        <td>0.00</td>
       </tr>
       
       <tr>
@@ -319,21 +199,141 @@
         <td>1</td>
         <td>2</td>
         <td>0.50</td>
+        <td>14</td>
+        <td>2.68</td>
+      </tr>
+      
+    </table>
+    <h1>Secondary stats</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th title="Time spent outfield">Outfield</th>
+        <th title="Time spent in goal">In goal</th>
+        <th title="Goals conceded whilst in goal">Conceded</th>
+        <th title="Own goals scored">Own goals</th>
+        <th title="Yellow cards">🟨</th>
+        <th title="Red cards">🟥</th>
+      </tr>
+      
+      <tr>
+        <td>Archie</td>
         <td>5h13m0s</td>
         <td>0s</td>
-        <td>14</td>
-        <td>2.33</td>
-        <td>2.68</td>
         <td>0</td>
-        <td>0.00</td>
-        <td>NaN</td>
         <td>0</td>
-        <td>0.00</td>
-        <td>0.00</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Baldry</td>
+        <td>5h13m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Baz</td>
+        <td>2h38m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Ben</td>
+        <td>3h26m0s</td>
+        <td>0s</td>
+        <td>0</td>
         <td>1</td>
-        <td>0.17</td>
         <td>0</td>
-        <td>0.00</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Gwin</td>
+        <td>3h32m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Liam</td>
+        <td>4h23m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Mabel</td>
+        <td>2h33m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Mitch</td>
+        <td>5h13m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Notley</td>
+        <td>3h32m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Q</td>
+        <td>5h13m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Shirley</td>
+        <td>5h13m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td>Wrighty</td>
+        <td>5h13m0s</td>
+        <td>0s</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
       </tr>
       
     </table>

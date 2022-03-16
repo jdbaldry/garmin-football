@@ -1,0 +1,30 @@
+body {
+    background-color: #2a2a2a;
+    color: antiquewhite;
+    font-family: "Arial", sans-serif;
+    margin: 8px;
+    text-align: center;
+}
+body > :not(:last-child) {
+    margin-bottom: 8px;
+}
+h1 {
+    margin: 0;
+}
+table {
+    width: 100%;
+}
+th {
+    background-color: #3a3a3a;
+    cursor: pointer;
+    user-select: none;
+}
+td {
+    background-color: #4f4f4f;
+}
+td:first-child {
+    background-color: #4a4a4a;
+}
+td.best {
+    background-color: #639d0b;
+}

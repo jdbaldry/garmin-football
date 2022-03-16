@@ -71,9 +71,15 @@ import:
 	steps+=("sudo umount $${tmp}")
 	cp "$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT" "$$(date +%Y-%m-%d).txt"
 
-%.html: %.txt main.go match.go stats.go
+%.html: %.txt main.go match.go stats.go $(wildcard *.txt)
 	go run ./
 
-stats.html index.html: ## Build the website pages.
-stats.html index.html: main.go match.go stats.go $(wildcard *.txt)
+stats.html: stats.html.tpl main.go match.go stats.go $(wildcard *.txt)
 	go run ./
+
+index.html: index.html.tpl main.go match.go stats.go $(wildcard *.txt)
+	go run ./
+
+.PHONY: website
+website: ## Build the website pages.
+website: stats.html index.html
