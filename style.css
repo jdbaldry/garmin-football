@@ -19,8 +19,11 @@ th {
     cursor: pointer;
     user-select: none;
 }
-td {
+tr {
     background-color: #4f4f4f;
+}
+tr:hover {
+    filter: brightness(120%);
 }
 td:first-child {
     background-color: #4a4a4a;
