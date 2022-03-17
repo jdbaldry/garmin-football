@@ -33,16 +33,24 @@ public var activityState = ACTIVITY_NONE;
 public var session as Session?;
 
 public var players = {
-    "Baldry"=>:Baldry,
-    "Gwin"=>:Gwin,
-    "Shirley"=>:Shirley,
-    "Ben"=>:Ben,
     "Archie"=>:Archie,
+    "Baldry"=>:Baldry,
+    "Ben"=>:Ben,
+    "Dave"=>:Dave,
+    "Gwin"=>:Gwin,
+    "Jack"=>:Jack,
+    "Jake"=>:Jake,
+    "Jim"=>:Jim,
+    "Lee"=>:Lee,
+    "Leigh"=>:Leigh,
     "Liam"=>:Liam,
-    "Q"=>:Q,
+    "MG"=>:MG,
     "Mitch"=>:Mitch,
-    "Wrighty"=>:Wrighty,
     "Niall"=>:Niall,
+    "Q"=>:Q,
+    "Shirley"=>:Shirley,
+    "TC"=>:TC,
+    "Wrighty"=>:Wrighty,
 };
 // Team A variables.
 public var aMenu as WatchUi.Menu = new WatchUi.Menu();
@@ -98,8 +106,6 @@ public function join(arr as Array<String>, str as String) as String {
     }
     return joined;
 }
-
-
 
 public function timerTimeToString(timerTime as Number) as String {
     var options = {:seconds => (timerTime * 0.001).toNumber()};
