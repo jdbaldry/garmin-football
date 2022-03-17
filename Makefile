@@ -42,7 +42,7 @@ FootballApp.prg: bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FI
 deploy: ## Deploy the built PRG file to a Garmin device.
 deploy:  FootballApp.prg
 	steps=()
-	function cleanup { set -x; eval "$${steps[@]}"; };
+	function cleanup { set -x; IFS=';' eval "$${steps[*]}"; };
 	trap cleanup EXIT
 	tmp="$$(mktemp -d)"
 	steps+=("rmdir $${tmp}")
@@ -63,7 +63,7 @@ simulate: FootballApp.prg bin/iq sdk/bin/monkeydo
 import: ## Import the latest logs from the Football app.
 import:
 	steps=()
-	function cleanup { set -x; eval "$${steps[@]}"; };
+	function cleanup { set -x; IFS=';' eval "$${steps[*]}"; };
 	trap cleanup EXIT
 	tmp="$$(mktemp -d)"
 	steps+=("rmdir $${tmp}")
@@ -71,15 +71,34 @@ import:
 	steps+=("sudo umount $${tmp}")
 	cp "$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT" "$$(date +%Y-%m-%d).txt"
 
-%.html: %.txt main.go match.go stats.go $(wildcard *.txt)
+.PHONY: truncate
+truncate: ## Truncate the Football app logs on the Garmin device.
+	steps=()
+	function cleanup { set -x; IFS=';' eval "$${steps[*]}"; };
+	trap cleanup EXIT
+	tmp="$$(mktemp -d)"
+	steps+=("rmdir $${tmp}")
+	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
+	steps+=("sudo umount $${tmp}")
+	read -rp "Are you sure you wish to truncate the logs? " TRUNCATE
+	if [[ "${TRUNCATE}" == "yes" ]]; then
+		: >"$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT"
+	else
+			echo "Not truncating file"
+
+GO_FILES := $(wildcard *.go)
+%.html: %.txt $(GO_FILES) match-report.html.tpl
 	go run ./
 
-stats.html: stats.html.tpl style.css main.go match.go stats.go $(wildcard *.txt)
+stats.html: stats.html.tpl style.css table.js $(GO_FILES) $(wildcard *.txt)
 	go run ./
 
-index.html: index.html.tpl main.go match.go stats.go $(wildcard *.txt)
+index.html: index.html.tpl style.css table.js $(GO_FILES) $(wildcard *.txt)
 	go run ./
+
+.PHONY: match-reports
+match-reports: match-report.html.tpl
 
 .PHONY: website
 website: ## Build the website pages.
-website: stats.html index.html
+website: $(wildcard *.html)

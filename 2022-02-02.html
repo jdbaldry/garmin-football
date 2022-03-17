@@ -1,57 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>2022-02-02 Notley vs. Q</title>
-    <script>
-      const getCellValue = (tr, i) => tr.children[i].innerText || tr.children[i].textContent;
-      const compare = (a, b) => a !== '' && b !== '' && !isNaN(a) && !isNaN(b) ? a - b : a.toString().localeCompare(b);
-      const compareCol = (i, desc) => (a, b) => compare(getCellValue(desc ? b : a, i), getCellValue(desc ? a : b, i));
 
-      window.onload = () => {
-          document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
-              const table = th.closest('table');
-              Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
-                  .sort(compareCol(Array.from(th.parentNode.children).indexOf(th), this.desc = !this.desc))
-                  .forEach(tr => table.appendChild(tr) );
-          })));
-      };
-    </script>
-    <style>
-      div { text-align: center; width: 100%; }
-      table,td,th { border: 1px solid; }
-      table { cell-padding: 0; cell-spacing: 10; width: 100%; }
-      th { cursor: pointer; }
-      .black { background: black; color: white; }
-      .team { background: white; float: left; text-align: center; width: 50%; }
-      .result { font-size: xx-large; }
-      .minute { width: 20%; }
-      .type { width: 40%; }
-      .player { width: 40%; }
-      .Keeper { background: blue; color: white; float: left; }
-      .Goal { background: green; color: white; float: left; }
-      .Own { background: purple; color: white; float: left; }
-      .Yellow { background: yellow; float: left; }
-      .Red { background: red; color: white; float: left; }
-      .Kickoff,.Paused,.Full { background: grey; color: white; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="">
+    <script type="text/javascript" src="table.js"></script>
   </head>
   <body>
     <h1 align="center">2022-02-02 Notley vs. Q</h1>
-    <div class="black">Result</div>
+    <div>
+      <h2 class="black">Result</h2>
+    </div>
     <div class="result">
       11 - 11
     </div>
-    <div class="black">Players</div>
     <div>
-      <div class="team">
+      <h2 class="black">Players</h2>
+      <div class="team table">
         <table>
           <tr>
             <th>Player</th>
-            <th>Goals</th>
+            <th best="max">Goals</th>
             <th>Conceded</th>
             <th>Own goals</th>
-            <th>Yellows</th>
-            <th>Reds</th>
+            <th>🟨</th>
+            <th>🟥</th>
           </tr>
           
           
@@ -111,18 +87,17 @@
           </tr>
           
           
-
         </table>
       </div>
-      <div class="team">
+      <div class="team table">
         <table>
           <tr>
             <th>Player</th>
-            <th>Goals</th>
+            <th best="max">Goals</th>
             <th>Conceded</th>
             <th>Own goals</th>
-            <th>Yellows</th>
-            <th>Reds</th>
+            <th>🟨</th>
+            <th>🟥</th>
           </tr>
           
           
@@ -185,12 +160,14 @@
         </table>
       </div>
     </div>
-    <div class="black">Events</div>
-    <div>
+    <div class="events">
+      <h2 class="black">Events</h2>
       
       
       
-      <div align="center" class="Kickoff">0' Kickoff</div>
+      <div>
+        <div align="center" class="Kickoff">0' Kickoff</div>
+      </div>
       
       
       
@@ -200,8 +177,7 @@
       <div class="team">
         <div align="center" class="minute Goal">1'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Mitch</div>
-       </div>
+        <div align="center" class="player Goal">Mitch</div>       </div>
       
       
       
@@ -211,8 +187,7 @@
       <div class="team">
         <div align="center" class="minute Goal">2'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Mitch</div>
-       </div>
+        <div align="center" class="player Goal">Mitch</div>       </div>
       
       
       
@@ -222,8 +197,7 @@
       <div class="team">
         <div align="center" class="minute Goal">7'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Mitch</div>
-       </div>
+        <div align="center" class="player Goal">Mitch</div>       </div>
       
       
       
@@ -244,8 +218,7 @@
       <div class="team">
         <div align="center" class="minute Goal">11'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Shirley</div>
-       </div>
+        <div align="center" class="player Goal">Shirley</div>       </div>
       
       
       
@@ -266,8 +239,7 @@
       <div class="team">
         <div align="center" class="minute Goal">16'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Gwin</div>
-       </div>
+        <div align="center" class="player Goal">Gwin</div>       </div>
       
       
       
@@ -310,8 +282,7 @@
       <div class="team">
         <div align="center" class="minute Goal">28'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Baz</div>
-       </div>
+        <div align="center" class="player Goal">Baz</div>       </div>
       
       
       
@@ -321,20 +292,23 @@
       <div class="team">
         <div align="center" class="minute Goal">30'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Gwin</div>
-       </div>
+        <div align="center" class="player Goal">Gwin</div>       </div>
       
       
       
       
       
-      <div align="center" class="Paused">30' Paused</div>
+      <div>
+        <div align="center" class="Paused">30' Paused</div>
+      </div>
       
       
       
       
       
-      <div align="center" class="Kickoff">30' Kickoff</div>
+      <div>
+        <div align="center" class="Kickoff">30' Kickoff</div>
+      </div>
       
       
       
@@ -366,8 +340,7 @@
       <div class="team">
         <div align="center" class="minute Goal">40'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Mitch</div>
-       </div>
+        <div align="center" class="player Goal">Mitch</div>       </div>
       
       
       
@@ -377,8 +350,7 @@
       <div class="team">
         <div align="center" class="minute Goal">40'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Baz</div>
-       </div>
+        <div align="center" class="player Goal">Baz</div>       </div>
       
       
       
@@ -388,8 +360,7 @@
       <div class="team">
         <div align="center" class="minute Goal">44'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Mitch</div>
-       </div>
+        <div align="center" class="player Goal">Mitch</div>       </div>
       
       
       
@@ -399,8 +370,7 @@
       <div class="team">
         <div align="center" class="minute Goal">45'</div>
         <div align="center" class="type Goal">Goal</div>
-        <div align="center" class="player Goal">Shirley</div>
-       </div>
+        <div align="center" class="player Goal">Shirley</div>       </div>
       
       
       
@@ -450,7 +420,9 @@
       
       
       
-      <div align="center" class="Full time">56' Full time</div>
+      <div>
+        <div align="center" class="Full time">56' Full time</div>
+      </div>
       
       
       

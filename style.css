@@ -11,8 +11,16 @@ body > :not(:last-child) {
 h1 {
     margin: 0;
 }
+:link {
+    color: #d7faeb;
+}
+:visited {
+    color: #ebd7fa;
+}
 table {
+    background-color: #3a3a3a;
     width: 100%;
+    margin-bottom: 8px;
 }
 th {
     background-color: #3a3a3a;
@@ -34,3 +42,16 @@ td:first-child {
 td.best {
     background-color: #639d0b;
 }
+div { background-color: #4f4f4f; width: 100%; }
+.black { background: #1f1f1f; }
+.team { float: left; text-align: center; width: 50%; }
+.result { font-size: xx-large; }
+.minute { width: 20%; }
+.type { width: 40%; }
+.player { width: 40%; }
+.Full,.Paused,.Kickoff { background-color: #3a3a3a; }
+div.Keeper { background: #0d6faf; float: left; }
+div.Goal { background: #639d0b; float: left; }
+div.Own { background: #4d0daf; float: left; }
+div.Yellow { background: yellow; float: left; color: black }
+div.Red { background: red; float: left; }
