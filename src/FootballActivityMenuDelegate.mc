@@ -19,27 +19,10 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             }
 
             if (bKeeper == null) {
-                WatchUi.pushView(bMenu, new $.FootballKeeperMenuDelegate(TEAM_B, method(:popViewIfKeepersAreSet)), WatchUi.SLIDE_UP);
+                WatchUi.pushView(bMenu, new $.FootballKeeperMenuDelegate(TEAM_B, method(:startActivityIfKeepersAreSet)), WatchUi.SLIDE_UP);
             }
             if (aKeeper == null) {
-                WatchUi.pushView(aMenu, new $.FootballKeeperMenuDelegate(TEAM_A, method(:popViewIfKeepersAreSet)), WatchUi.SLIDE_UP);
-            }
-
-            if (session == null) {
-                session = ActivityRecording.createSession({
-                    :name=>"Football",
-                    :sport=>ActivityRecording.SPORT_GENERIC,
-                    :subSport=>ActivityRecording.SUB_SPORT_GENERIC
-                });
-            }
-            if (session.isRecording() == false) {
-                session.start();
-                activityState = ACTIVITY_RECORDING;
-                jsonLog(["event", "A", "value", "started"]);
-                jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
-                jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
-                jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
-                jsonLog(["event", "T", "team", TEAM_B, "players", bTeam]);
+                WatchUi.pushView(aMenu, new $.FootballKeeperMenuDelegate(TEAM_A, method(:startActivityIfKeepersAreSet)), WatchUi.SLIDE_UP);
             }
             break;
         case :Pause:

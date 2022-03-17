@@ -1,4 +1,5 @@
 import Toybox.Activity;
+import Toybox.ActivityRecording;
 import Toybox.Lang;
 import Toybox.System;
 import Toybox.Time;
@@ -75,13 +76,29 @@ public var bTeam = [
 public var bScore as Number = 0;
 public var bKeeper as Symbol? = null;
 
-
-// popView only if both keepers are set.
+// Start an activity and pop the view back to the football app
+// only if both keepers are set.
 // Used as a callback from the transient keeper menu that
-// is triggered by starting an activity.
-public function popViewIfKeepersAreSet() {
+// is triggered by choosing to start an activity.
+public function startActivityIfKeepersAreSet() {
     if ((aKeeper != null) && (bKeeper != null)) {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
+    }
+    if (session == null) {
+        session = ActivityRecording.createSession({
+                :name=>"Football",
+                    :sport=>ActivityRecording.SPORT_GENERIC,
+                    :subSport=>ActivityRecording.SUB_SPORT_GENERIC
+                    });
+    }
+    if (session.isRecording() == false) {
+        session.start();
+        activityState = ACTIVITY_RECORDING;
+        jsonLog(["event", "A", "value", "started"]);
+        jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
+        jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
+        jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
+        jsonLog(["event", "T", "team", TEAM_B, "players", bTeam]);
     }
 }
 
