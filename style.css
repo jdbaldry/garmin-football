@@ -22,7 +22,10 @@ th {
 tr {
     background-color: #4f4f4f;
 }
-tr:hover {
+tr:not(:first-child):hover {
+    filter: brightness(120%);
+}
+tr th:hover {
     filter: brightness(120%);
 }
 td:first-child {
