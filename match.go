@@ -46,8 +46,14 @@ type MatchReport struct {
 	A Team
 	// B has the present state of TEAM_B.
 	B Team
-	// Date is typically the date of the match in the format YYYY-MM-DD.
+	// Date is the date of the match in the format YYYY-MM-DD.
 	Date string
+	// Next the date of the next match in the format YYYY-MM-DD or the empty string if
+	// there is no next match.
+	Next string
+	// Prev the date of the previous match in the format YYYY-MM-DD or the empty string if
+	// there is no previous match.
+	Prev string
 	// Events are all the events that occurred during the match.
 	Events []MatchEvent
 }
@@ -100,6 +106,8 @@ func updateDurations(player string, keeper string, stats Stats, currentTime time
 }
 
 // reportMatch transforms a log of structured events into a match report.
+// Links to previous and next match reports are empty and must be filled out
+// afterwards.
 func reportMatch(events []Event) (match Report) {
 	match = Report{
 		MatchReport{},

@@ -101,11 +101,10 @@ func main() {
 		log.Fatalf("Failed to open stats file: %v\n", err)
 	}
 
-	var pages []Page
 	var rawOverall = make(map[string]RawStats)
-
+	var pages []Page
 	paths, _ := filepath.Glob(logsGlob)
-	for _, p := range paths {
+	for i, p := range paths {
 		f, err := os.Open(p)
 		if err != nil {
 			log.Printf("Failed to open file %q, skipping match report: %v\n", p, err)
@@ -133,6 +132,13 @@ func main() {
 		}
 
 		match := reportMatch(events)
+		if i > 0 {
+			match.MatchReport.Prev = strings.TrimSuffix(paths[i-1], ".txt") + ".html"
+		}
+		if i < len(paths)-1 {
+			match.MatchReport.Next = strings.TrimSuffix(paths[i+1], ".txt") + ".html"
+		}
+
 		pages = append(pages, Page{Path: op, Title: fmt.Sprintf("%s %s vs. %s", match.MatchReport.Date, match.MatchReport.A.Captain, match.MatchReport.B.Captain)})
 		updatePlayerStats(rawOverall, match)
 		if err := matchReportTemplate.Execute(of, match); err != nil {

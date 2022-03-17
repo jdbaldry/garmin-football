@@ -12,6 +12,10 @@
   <body>
     <h1 align="center">{{ .MatchReport.Date }} {{ .MatchReport.A.Captain }} vs. {{ .MatchReport.B.Captain }}</h1>
     <div>
+      <div class="team">{{ if ne .MatchReport.Prev "" }}<a href={{ .MatchReport.Prev }}>Previous</a>{{ else }}&nbsp{{ end }}</div>
+      <div class="team">{{ if ne .MatchReport.Next "" }}<a href={{ .MatchReport.Next }}>Next</a>{{ else }}&nbsp{{ end }}</div>
+    </div>
+    <div>
       <h2 class="black">Result</h2>
     </div>
     <div class="result">
