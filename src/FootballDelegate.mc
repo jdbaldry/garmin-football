@@ -48,6 +48,7 @@ public var players = {
     "MG"=>:MG,
     "Mitch"=>:Mitch,
     "Niall"=>:Niall,
+    "Olly"=>:Olly,
     "Q"=>:Q,
     "Shirley"=>:Shirley,
     "TC"=>:TC,
@@ -57,21 +58,21 @@ public var players = {
 public var aMenu as WatchUi.Menu = new WatchUi.Menu();
 public var aTeam = [
                     "Baldry",
-                    "Gwin",
-                    "Shirley",
                     "Ben",
-                    "Archie",
+                    "Niall",
+                    "Olly",
+                    "Gwin",
                     ];
 public var aScore as Number = 0;
 public var aKeeper as Symbol? = null;
 // Team B variables.
 public var bMenu as WatchUi.Menu = new WatchUi.Menu();
 public var bTeam = [
+                    "Archie",
                     "Liam",
-                    "Q",
+                    "Shirley",
                     "Mitch",
                     "Wrighty",
-                    "Niall",
                     ];
 public var bScore as Number = 0;
 public var bKeeper as Symbol? = null;
