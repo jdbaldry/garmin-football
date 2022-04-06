@@ -84,7 +84,7 @@ truncate: ## Truncate the Football app logs on the Garmin device.
 	if [[ "${TRUNCATE}" == "yes" ]]; then
 		: >"$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT"
 	else
-			echo "Not truncating file"
+		echo "Not truncating file"
 
 GO_FILES := $(wildcard *.go)
 %.html: %.txt $(GO_FILES) match-report.html.tpl
