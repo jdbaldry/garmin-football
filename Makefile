@@ -32,24 +32,34 @@ sdk: $(CURRENT_SDK) $(HOME)/.Garmin/ConnectIQ/current-sdk.cfg
 
 SRC_FILES := $(wildcard src/*)
 RESOURCE_FILES := $(shell find resources -type f -print)
+MOUNT_DIR := /tmp/garmin
 
 FootballApp.prg: ## Build the app PRG.
 FootballApp.prg: bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FILES) $(RESOURCE_FILES)
 	rm -f $@
 	./bin/iq monkeyc -o FootballApp.prg -d fenix6pro -f FootballApp.jungle -y developer_key.der
 
+
+$(MOUNT_DIR):
+	mkdir -p $(MOUNT_DIR)
+
+$(MOUNT_DIR)/Primary: | $(MOUNT_DIR)
+	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other $(MOUNT_DIR)
+	touch $@
+
+.PHONY: mount
+mount: ## Mount the Garmin device to $(MOUNT_DIR).
+mount: $(MOUNT_DIR)/Primary
+
+.PHONY: umount
+umount: ## Unmount the Garmin device from $(MOUNT_DIR).
+umount:
+	sudo umount $(MOUNT_DIR)
+
 .PHONY: deploy
 deploy: ## Deploy the built PRG file to a Garmin device.
-deploy:  FootballApp.prg
-	steps=()
-	function cleanup { set -x; IFS=';' eval "$${steps[*]}"; };
-	trap cleanup EXIT
-	tmp="$$(mktemp -d)"
-	steps+=("rmdir $${tmp}")
-	trap "rmdir $${tmp}" EXIT
-	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
-	steps+=("sudo umount $${tmp}")
-	mv $< "$${tmp}/Primary/GARMIN/Apps/"
+deploy: FootballApp.prg mount
+	mv $< "$(MOUNT_DIR)/Primary/GARMIN/Apps/"
 
 .PHONY: simulate
 simulate: ## Run the built PRG file in the Garmin Connect IQ simulator. Requires the simulator to be running.
@@ -61,30 +71,18 @@ simulate: FootballApp.prg bin/iq sdk/bin/monkeydo
 
 .PHONY: import
 import: ## Import the latest logs from the Football app.
-import:
-	steps=()
-	function cleanup { set -x; IFS=';' eval "$${steps[*]}"; };
-	trap cleanup EXIT
-	tmp="$$(mktemp -d)"
-	steps+=("rmdir $${tmp}")
-	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
-	steps+=("sudo umount $${tmp}")
-	cp "$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT" "$$(date +%Y-%m-%d).txt"
+import: mount
+	cp "$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.TXT" "$$(date +%Y-%m-%d).txt"
 
 .PHONY: truncate
 truncate: ## Truncate the Football app logs on the Garmin device.
-	steps=()
-	function cleanup { set -x; IFS=';' eval "$${steps[*]}"; };
-	trap cleanup EXIT
-	tmp="$$(mktemp -d)"
-	steps+=("rmdir $${tmp}")
-	sudo jmtpfs -o umask=0022,gid=100,uid=1000,allow_other "$${tmp}"
-	steps+=("sudo umount $${tmp}")
+truncate: mount
 	read -rp "Are you sure you wish to truncate the logs? " TRUNCATE
-	if [[ "${TRUNCATE}" == "yes" ]]; then
-		: >"$${tmp}/Primary/GARMIN/Apps/LOGS/FOOTBALLAPP.TXT"
+	if [[ "$${TRUNCATE}" == "yes" ]]; then
+		: >"$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.TXT"
 	else
 		echo "Not truncating file"
+	fi
 
 GO_FILES := $(wildcard *.go)
 %.html: %.txt $(GO_FILES) match-report.html.tpl
