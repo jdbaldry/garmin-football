@@ -33,6 +33,7 @@ sdk: $(CURRENT_SDK) $(HOME)/.Garmin/ConnectIQ/current-sdk.cfg
 SRC_FILES := $(wildcard src/*)
 RESOURCE_FILES := $(shell find resources -type f -print)
 MOUNT_DIR := /tmp/garmin
+MATCH_REPORT := "$(shell date +%Y-%m-%d).txt"
 
 FootballApp.prg: ## Build the app PRG.
 FootballApp.prg: bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FILES) $(RESOURCE_FILES)
@@ -72,7 +73,8 @@ simulate: FootballApp.prg bin/iq sdk/bin/monkeydo
 .PHONY: import
 import: ## Import the latest logs from the Football app.
 import: mount
-	cp "$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.TXT" "$$(date +%Y-%m-%d).txt"
+	cat "$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.BAK" \
+		"$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.TXT" >> $(MATCH_REPORT)
 
 .PHONY: truncate
 truncate: ## Truncate the Football app logs on the Garmin device.
@@ -80,6 +82,7 @@ truncate: mount
 	read -rp "Are you sure you wish to truncate the logs? " TRUNCATE
 	if [[ "$${TRUNCATE}" == "yes" ]]; then
 		: >"$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.TXT"
+		rm -vf "$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.BAK"
 	else
 		echo "Not truncating file"
 	fi
