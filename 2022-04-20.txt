@@ -15,8 +15,8 @@
 {"ts": "2022-04-20 19:16:36", "event": "G", "team": 1, "player": "Wrighty", "keeper": "Notley"}
 {"ts": "2022-04-20 19:17:02", "event": "G", "team": 0, "player": "Baldry", "keeper": "Ben"}
 {"ts": "2022-04-20 19:17:16", "event": "G", "team": 1, "player": "Wrighty", "keeper": "Notley"}
-{"ts": "2022-04-20 19:18:04", "event": "K", "team": 1, "player": "Wrighty"}
 {"ts": "2022-04-20 19:18:08", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2022-04-20 19:18:04", "event": "K", "team": 1, "player": "Wrighty"}
 {"ts": "2022-04-20 19:20:51", "event": "G", "team": 1, "player": "Liam", "keeper": "Baldry"}
 {"ts": "2022-04-20 19:21:03", "event": "G", "team": 0, "player": "Notley", "keeper": "Wrighty"}
 {"ts": "2022-04-20 19:23:16", "event": "G", "team": 1, "player": "Mitch", "keeper": "Baldry"}
@@ -48,12 +48,12 @@
 {"ts": "2022-04-20 19:47:28", "event": "K", "team": 0, "player": "Baldry"}
 {"ts": "2022-04-20 19:47:28", "event": "K", "team": 1, "player": "Wrighty"}
 {"ts": "2022-04-20 19:50:46", "event": "G", "team": 0, "player": "Notley", "keeper": "Wrighty"}
-{"ts": "2022-04-20 19:53:05", "event": "K", "team": 1, "player": "Mitch"}
 {"ts": "2022-04-20 19:53:09", "event": "K", "team": 0, "player": "Niall"}
+{"ts": "2022-04-20 19:53:05", "event": "K", "team": 1, "player": "Mitch"}
 {"ts": "2022-04-20 19:54:36", "event": "G", "team": 0, "player": "Archie", "keeper": "Mitch"}
 {"ts": "2022-04-20 19:56:32", "event": "G", "team": 1, "player": "Gwin", "keeper": "Niall"}
-{"ts": "2022-04-20 19:56:54", "event": "K", "team": 1, "player": "Liam"}
 {"ts": "2022-04-20 19:57:02", "event": "K", "team": 0, "player": "Archie"}
+{"ts": "2022-04-20 19:56:54", "event": "K", "team": 1, "player": "Liam"}
 {"ts": "2022-04-20 19:57:17", "event": "G", "team": 1, "player": "Gwin", "keeper": "Archie"}
 {"ts": "2022-04-20 19:57:27", "event": "G", "team": 0, "player": "Niall", "keeper": "Liam"}
 {"ts": "2022-04-20 19:57:55", "event": "G", "team": 1, "player": "Mitch", "keeper": "Archie"}
