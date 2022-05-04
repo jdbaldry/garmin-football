@@ -3,13 +3,13 @@
 {"ts": "2022-05-04 19:04:51", "event": "C", "team": 1, "player": "Shirley"}
 {"ts": "2022-05-04 19:04:51", "event": "T", "team": 0, "players": ["Notley", "Baldry", "Niall", "Ben", "Q"]}
 {"ts": "2022-05-04 19:04:51", "event": "T", "team": 1, "players": ["Shirley", "Gwin", "Liam", "Mabel", "Archie"]}
-{"ts": "2022-05-04 19:04:51", "event": "K", "team": 0, "player": "Ben"}
-{"ts": "2022-05-04 19:04:53", "event": "K", "team": 1, "player": "Shirley"}
+{"ts": "2022-05-04 19:04:51", "event": "K", "team": 0, "player": "Q"}
+{"ts": "2022-05-04 19:04:53", "event": "K", "team": 1, "player": "Gwin"}
 {"ts": "2022-05-04 19:07:12", "event": "G", "team": 0, "player": "Niall", "keeper": "Shirley"}
 {"ts": "2022-05-04 19:08:48", "event": "G", "team": 1, "player": "Mabel", "keeper": "Ben"}
 {"ts": "2022-05-04 19:09:03", "event": "G", "team": 0, "player": "Ben", "keeper": "Shirley"}
-{"ts": "2022-05-04 19:11:51", "event": "K", "team": 0, "player": "Q"}
-{"ts": "2022-05-04 19:11:53", "event": "K", "team": 1, "player": "Gwin"}
+{"ts": "2022-05-04 19:11:51", "event": "K", "team": 0, "player": "Ben"}
+{"ts": "2022-05-04 19:11:53", "event": "K", "team": 1, "player": "Shirley"}
 {"ts": "2022-05-04 19:13:13", "event": "G", "team": 1, "player": "Gwin", "keeper": "Ben"}
 {"ts": "2022-05-04 19:13:36", "event": "G", "team": 1, "player": "Archie", "keeper": "Ben"}
 {"ts": "2022-05-04 19:13:54", "event": "G", "team": 1, "player": "Gwin", "keeper": "Ben"}
@@ -38,8 +38,8 @@
 {"ts": "2022-05-04 19:39:06", "event": "K", "team": 1, "player": "Gwin"}
 {"ts": "2022-05-04 19:40:04", "event": "G", "team": 0, "player": "Niall", "keeper": "Gwin"}
 {"ts": "2022-05-04 19:43:33", "event": "G", "team": 0, "player": "Notley", "keeper": "Gwin"}
-{"ts": "2022-05-04 19:43:39", "event": "K", "team": 1, "player": "Shirley"}
 {"ts": "2022-05-04 19:43:50", "event": "K", "team": 0, "player": "Ben"}
+{"ts": "2022-05-04 19:43:39", "event": "K", "team": 1, "player": "Shirley"}
 {"ts": "2022-05-04 19:45:22", "event": "G", "team": 0, "player": "Notley", "keeper": "Shirley"}
 {"ts": "2022-05-04 19:45:28", "event": "G", "team": 0, "player": "Niall", "keeper": "Shirley"}
 {"ts": "2022-05-04 19:45:55", "event": "G", "team": 0, "player": "Q", "keeper": "Shirley"}
