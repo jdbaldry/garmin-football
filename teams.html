@@ -27,11 +27,15 @@
       const params = new URLSearchParams(window.location.search);
       const players = params.has("players") ? params.get("players").split("\n").filter(function(entry) { return entry.trim() != ''; }) : [];
       const seed = params.has("seed") ? params.get("seed") : xmur3((Math.random() + 1).toString(36).substring(7))();
+      console.log(seed);
       const rand = mulberry32(seed);
+
       var teamA = [];
       var teamB = [];
       window.addEventListener("load", () => {
-          document.getElementById("seed").setAttribute("value", seed);
+          document.getElementById("seed").innerText = seed;
+          document.getElementById("seed").innerHTML = seed;
+          console.log(seed);
           document.getElementById("players").innerHTML = params.get("players");
           if (players.length) {
               while (players.length) {
@@ -44,6 +48,7 @@
               document.getElementById("team-b").innerText = teamB.slice(1, teamB.length).join("\n");
           };
           document.getElementById("share").addEventListener("click", () => {
+                console.log(seed);
               const url = new URL(window.location.href);
               url.searchParams.set("seed", seed)
               alert("URL copied to clipboard");
@@ -55,16 +60,12 @@
   </head>
   <body>
     <h1>Team generator</h1>
-    <form action="" method="put">
+    <form action="" method="get">
       <div>
-        <div>
           <label for="players">List of players</label>
-        </div>
-        <div>
           <textarea id="players" name="players" rows="12" cols="20" placeholder="Baldry&#10Others"></textarea>
-        </div>
-        <input id="seed" type="hidden"></input>
-      </div>
+          <label for="seed">Random seed</label>
+          <input id="seed" value="seed"></input>
       <input type="submit" value="Generate"></input>
     </form>
     <div>
