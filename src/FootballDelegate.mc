@@ -36,8 +36,10 @@ public var session as Session?;
 public var players = {
     "Archie"=>:Archie,
     "Baldry"=>:Baldry,
-    "Ben"=>:Ben,
     "Barge"=>:Barge,
+    "Ben"=>:Ben,
+    "Bloor"=>:Bloor,
+    "Connor"=>:Connor,
     "Dave"=>:Dave,
     "Gwin"=>:Gwin,
     "Jack"=>:Jack,
@@ -46,8 +48,8 @@ public var players = {
     "Lee"=>:Lee,
     "Leigh"=>:Leigh,
     "Liam"=>:Liam,
-    "Mabel"=>:Mabel,
     "MG"=>:MG,
+    "Mabel"=>:Mabel,
     "Mitch"=>:Mitch,
     "Niall"=>:Niall,
     "Notley"=>:Notley,
@@ -60,21 +62,21 @@ public var players = {
 // Team A variables.
 public var aMenu as WatchUi.Menu = new WatchUi.Menu();
 public var aTeam = [
-                    "Notley",
+                    "Mitch",
+                    "Liam",
                     "Baldry",
-                    "Niall",
+                    "Gwin",
                     "Ben",
-                    "Q",
                     ];
 public var aScore as Number = 0;
 public var aKeeper as Symbol? = null;
 // Team B variables.
 public var bMenu as WatchUi.Menu = new WatchUi.Menu();
 public var bTeam = [
-                    "Shirley",
-                    "Gwin",
-                    "Liam",
                     "Mabel",
+                    "Bloor",
+                    "Notley",
+                    "Connor",
                     "Archie",
                     ];
 public var bScore as Number = 0;
