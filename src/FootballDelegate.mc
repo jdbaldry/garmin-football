@@ -55,6 +55,7 @@ public var players = {
     "Niall"=>:Niall,
     "Notley"=>:Notley,
     "Olly"=>:Olly,
+    "Other"=>:Other,
     "Q"=>:Q,
     "Shirley"=>:Shirley,
     "TC"=>:TC,
@@ -63,22 +64,22 @@ public var players = {
 // Team A variables.
 public var aMenu as WatchUi.Menu = new WatchUi.Menu();
 public var aTeam = [
-                    "Mitch",
-                    "Liam",
+                    "Chris",
+                    "Wrighty",
+                    "Ben",
                     "Baldry",
                     "Gwin",
-                    "Ben",
                     ];
 public var aScore as Number = 0;
 public var aKeeper as Symbol? = null;
 // Team B variables.
 public var bMenu as WatchUi.Menu = new WatchUi.Menu();
 public var bTeam = [
-                    "Mabel",
-                    "Bloor",
-                    "Notley",
-                    "Connor",
                     "Archie",
+                    "Other",
+                    "Notley",
+                    "Niall",
+                    "Q",
                     ];
 public var bScore as Number = 0;
 public var bKeeper as Symbol? = null;
