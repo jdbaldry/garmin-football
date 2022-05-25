@@ -118,7 +118,7 @@ func computeStats(raw map[string]RawStats) map[string]HistoricStats {
 
 	for p, stats := range raw {
 		// Filter players with an insignificant number of games.
-		if (stats.Games < 3 && p != "Niall") || p == "" {
+		if (stats.Games < 3 && p != "Chris") || p == "" {
 			continue
 		}
 		computed[p] = HistoricStats{
