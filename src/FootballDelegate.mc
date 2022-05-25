@@ -39,6 +39,7 @@ public var players = {
     "Barge"=>:Barge,
     "Ben"=>:Ben,
     "Bloor"=>:Bloor,
+    "Chris"=>:Chris,
     "Connor"=>:Connor,
     "Dave"=>:Dave,
     "Gwin"=>:Gwin,
