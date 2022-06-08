@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -eu -o pipefail
+
+function usage {
+  cat <<EOF
+Count the number of times each player has been a captain
+
+Usage:
+  $0
+
+Examples:
+  $0
+EOF
+}
+
+if [[ $# -ge 1 ]]; then
+  usage
+  exit 1
+fi
+
+jq -s '.[] | select(.event == "C") | .player' ./*-*-*.txt | sort | uniq -c | sort -r
