@@ -59,6 +59,7 @@ public var players = {
     "Other"=>:Other,
     "Q"=>:Q,
     "Shirley"=>:Shirley,
+    "Tom"=>:Tom,
     "TC"=>:TC,
     "Wardale"=>:Wardale,
     "Wrighty"=>:Wrighty,
