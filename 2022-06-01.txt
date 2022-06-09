@@ -1,24 +1,24 @@
 {"ts": "2022-06-01 19:04:39", "event": "A", "value": "started"}
 {"ts": "2022-06-01 19:04:39", "event": "C", "team": 0, "player": "Ben"}
 {"ts": "2022-06-01 19:04:39", "event": "C", "team": 1, "player": "Gwin"}
-{"ts": "2022-06-01 19:04:39", "event": "T", "team": 0, "players": ["Ben", "Q", "Connor", "Niall", "Other"]}
+{"ts": "2022-06-01 19:04:39", "event": "T", "team": 0, "players": ["Ben", "Q", "Connor", "Niall", "Nobby"]}
 {"ts": "2022-06-01 19:04:39", "event": "T", "team": 1, "players": ["Gwin", "Mabel", "Mitch", "Baldry", "Chris"]}
 {"ts": "2022-06-01 19:04:38", "event": "K", "team": 0, "player": "Q"}
 {"ts": "2022-06-01 19:04:39", "event": "K", "team": 1, "player": "Gwin"}
 {"ts": "2022-06-01 19:05:50", "event": "G", "team": 0, "player": "Ben", "keeper": "Gwin"}
 {"ts": "2022-06-01 19:07:04", "event": "G", "team": 1, "player": "Chris", "keeper": "Q"}
-{"ts": "2022-06-01 19:10:05", "event": "G", "team": 0, "player": "Other", "keeper": "Gwin"}
-{"ts": "2022-06-01 19:11:07", "event": "K", "team": 0, "player": "Other"}
+{"ts": "2022-06-01 19:10:05", "event": "G", "team": 0, "player": "Nobby", "keeper": "Gwin"}
+{"ts": "2022-06-01 19:11:07", "event": "K", "team": 0, "player": "Nobby"}
 {"ts": "2022-06-01 19:11:12", "event": "K", "team": 1, "player": "Baldry"}
-{"ts": "2022-06-01 19:15:56", "event": "G", "team": 1, "player": "Gwin", "keeper": "Other"}
+{"ts": "2022-06-01 19:15:56", "event": "G", "team": 1, "player": "Gwin", "keeper": "Nobby"}
 {"ts": "2022-06-01 19:17:00", "event": "G", "team": 0, "player": "Q", "keeper": "Baldry"}
 {"ts": "2022-06-01 19:17:10", "event": "K", "team": 0, "player": "Ben"}
 {"ts": "2022-06-01 19:17:15", "event": "K", "team": 1, "player": "Chris"}
-{"ts": "2022-06-01 19:18:41", "event": "G", "team": 0, "player": "Other", "keeper": "Chris"}
+{"ts": "2022-06-01 19:18:41", "event": "G", "team": 0, "player": "Nobby", "keeper": "Chris"}
 {"ts": "2022-06-01 19:18:52", "event": "G", "team": 1, "player": "Mitch", "keeper": "Ben"}
-{"ts": "2022-06-01 19:22:27", "event": "G", "team": 0, "player": "Other", "keeper": "Chris"}
+{"ts": "2022-06-01 19:22:27", "event": "G", "team": 0, "player": "Nobby", "keeper": "Chris"}
 {"ts": "2022-06-01 19:22:38", "event": "G", "team": 1, "player": "Gwin", "keeper": "Ben"}
-{"ts": "2022-06-01 19:22:51", "event": "G", "team": 0, "player": "Other", "keeper": "Chris"}
+{"ts": "2022-06-01 19:22:51", "event": "G", "team": 0, "player": "Nobby", "keeper": "Chris"}
 {"ts": "2022-06-01 19:23:36", "event": "G", "team": 1, "player": "Mitch", "keeper": "Ben"}
 {"ts": "2022-06-01 19:24:44", "event": "K", "team": 0, "player": "Niall"}
 {"ts": "2022-06-01 19:24:48", "event": "K", "team": 1, "player": "Mabel"}
@@ -29,7 +29,7 @@
 {"ts": "2022-06-01 19:29:29", "event": "K", "team": 1, "player": "Mitch"}
 {"ts": "2022-06-01 19:29:41", "event": "G", "team": 1, "player": "Mabel", "keeper": "Connor"}
 {"ts": "2022-06-01 19:30:30", "event": "G", "team": 0, "player": "Ben", "keeper": "Mitch"}
-{"ts": "2022-06-01 19:33:18", "event": "G", "team": 0, "player": "Other", "keeper": "Mitch"}
+{"ts": "2022-06-01 19:33:18", "event": "G", "team": 0, "player": "Nobby", "keeper": "Mitch"}
 {"ts": "2022-06-01 19:35:15", "event": "A", "value": "paused"}
 {"ts": "2022-06-01 19:37:48", "event": "A", "value": "started"}
 {"ts": "2022-06-01 19:37:48", "event": "K", "team": 0, "player": "Q"}
@@ -38,11 +38,11 @@
 {"ts": "2022-06-01 19:42:11", "event": "G", "team": 1, "player": "Mitch", "keeper": "Q"}
 {"ts": "2022-06-01 19:43:16", "event": "G", "team": 0, "player": "Ben", "keeper": "Gwin"}
 {"ts": "2022-06-01 19:43:57", "event": "G", "team": 1, "player": "Baldry", "keeper": "Q"}
-{"ts": "2022-06-01 19:44:17", "event": "K", "team": 0, "player": "Other"}
+{"ts": "2022-06-01 19:44:17", "event": "K", "team": 0, "player": "Nobby"}
 {"ts": "2022-06-01 19:44:20", "event": "K", "team": 1, "player": "Baldry"}
-{"ts": "2022-06-01 19:46:38", "event": "G", "team": 1, "player": "Gwin", "keeper": "Other"}
-{"ts": "2022-06-01 19:49:29", "event": "G", "team": 1, "player": "Mitch", "keeper": "Other"}
-{"ts": "2022-06-01 19:49:40", "event": "G", "team": 1, "player": "Mabel", "keeper": "Other"}
+{"ts": "2022-06-01 19:46:38", "event": "G", "team": 1, "player": "Gwin", "keeper": "Nobby"}
+{"ts": "2022-06-01 19:49:29", "event": "G", "team": 1, "player": "Mitch", "keeper": "Nobby"}
+{"ts": "2022-06-01 19:49:40", "event": "G", "team": 1, "player": "Mabel", "keeper": "Nobby"}
 {"ts": "2022-06-01 19:50:54", "event": "K", "team": 0, "player": "Ben"}
 {"ts": "2022-06-01 19:51:00", "event": "K", "team": 1, "player": "Chris"}
 {"ts": "2022-06-01 19:51:15", "event": "G", "team": 0, "player": "Niall", "keeper": "Chris"}
@@ -50,7 +50,7 @@
 {"ts": "2022-06-01 19:56:27", "event": "K", "team": 0, "player": "Niall"}
 {"ts": "2022-06-01 19:56:31", "event": "K", "team": 1, "player": "Mabel"}
 {"ts": "2022-06-01 19:57:05", "event": "G", "team": 1, "player": "Chris", "keeper": "Niall"}
-{"ts": "2022-06-01 19:57:16", "event": "G", "team": 0, "player": "Other", "keeper": "Mabel"}
+{"ts": "2022-06-01 19:57:16", "event": "G", "team": 0, "player": "Nobby", "keeper": "Mabel"}
 {"ts": "2022-06-01 19:58:19", "event": "OG", "team": 1, "player": "Baldry", "keeper": "Mabel"}
 {"ts": "2022-06-01 19:59:20", "event": "K", "team": 0, "player": "Connor"}
 {"ts": "2022-06-01 19:59:32", "event": "K", "team": 1, "player": "Mitch"}
