@@ -56,7 +56,7 @@ mkShell {
     monkeydo
     openjdk
     patchelf
-    sdkmanager
+    # sdkmanager
     simulator
   ];
   inputsFrom = buildInputs;
