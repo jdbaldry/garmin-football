@@ -35,8 +35,18 @@ RESOURCE_FILES := $(shell find resources -type f -print)
 MOUNT_DIR := /tmp/garmin
 MATCH_REPORT := "$(shell date +%Y-%m-%d).txt"
 
+src/FootballDelegate.mc: ## Generate source file from template.
+src/FootballDelegate.mc: src/FootballDelegate.mc.template
+ifndef TEAM_A
+	$(error TEAM_A environment variable is undefined)
+endif
+ifndef TEAM_B
+	$(error TEAM_B environment variable is undefined)
+endif
+	go run ./hack/generate/ --team-a $(TEAM_A) --team-b $(TEAM_B)
+
 FootballApp.prg: ## Build the app PRG.
-FootballApp.prg: bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FILES) $(RESOURCE_FILES)
+FootballApp.prg: src/FootballDelegate.mc bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FILES) $(RESOURCE_FILES)
 	rm -f $@
 	./bin/iq monkeyc -o FootballApp.prg -d fenix6pro -f FootballApp.jungle -y developer_key.der
 

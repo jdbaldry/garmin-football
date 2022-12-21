@@ -48,9 +48,12 @@ in
 mkShell {
   packages = [
     cfr
-    go_1_17
+
+    go_1_19
     gopls
     golangci-lint
+    gotools
+
     jmtpfs
     monkeyc
     monkeydo

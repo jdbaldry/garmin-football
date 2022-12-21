@@ -67,23 +67,15 @@ public var players = {
 // Team A variables.
 public var aMenu as WatchUi.Menu = new WatchUi.Menu();
 public var aTeam = [
-                    "Liam",
-                    "Q",
-                    "Baldry",
-                    "Archie",
-                    "Notley",
-                    ];
+{{ range .TeamA }}{{ printf "    \"%s\",\n" . }}{{ end -}}
+];
 public var aScore as Number = 0;
 public var aKeeper as Symbol? = null;
 // Team B variables.
 public var bMenu as WatchUi.Menu = new WatchUi.Menu();
 public var bTeam = [
-                    "Mitch",
-                    "Wardale",
-                    "Ben",
-                    "Gwin",
-                    "Other",
-                    ];
+{{ range .TeamB }}{{ printf "    \"%s\",\n" . }}{{ end -}}
+];
 public var bScore as Number = 0;
 public var bKeeper as Symbol? = null;
 
