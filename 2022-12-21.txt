@@ -1,7 +1,7 @@
 {"ts": "2022-12-21 19:04:14", "event": "A", "value": "started"}
 {"ts": "2022-12-21 19:04:15", "event": "T", "team": 0, "players": ["Baldry", "Notley", "Gwin", "Wrighty", "Shirley"]}
 {"ts": "2022-12-21 19:04:15", "event": "T", "team": 1, "players": ["Liam", "Mabel", "Ben", "Niall", "Archie"]}
-{"ts": "2022-12-21 19:04:15", "event": "C", "team": 0, "player": "Baldry"}
+{"ts": "2022-12-21 19:04:15", "event": "C", "team": 0, "player": "Notley"}
 {"ts": "2022-12-21 19:04:15", "event": "C", "team": 1, "player": "Liam"}
 {"ts": "2022-12-21 19:04:14", "event": "K", "team": 0, "player": "Gwin"}
 {"ts": "2022-12-21 19:04:17", "event": "K", "team": 1, "player": "Ben"}
