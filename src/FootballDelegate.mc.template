@@ -87,21 +87,21 @@ public function startActivityIfKeepersAreSet() {
     if ((aKeeper != null) && (bKeeper != null)) {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
     }
+    if (session.isRecording() == false) {
+        session.start();
+        activityState = ACTIVITY_RECORDING;
+        jsonLog(["event", "A", "value", "started"]);
+    }
     if (session == null) {
         session = ActivityRecording.createSession({
                 :name=>"Football",
                     :sport=>ActivityRecording.SPORT_GENERIC,
                     :subSport=>ActivityRecording.SUB_SPORT_GENERIC
                     });
-    }
-    if (session.isRecording() == false) {
-        session.start();
-        activityState = ACTIVITY_RECORDING;
-        jsonLog(["event", "A", "value", "started"]);
-        jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
-        jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
         jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
         jsonLog(["event", "T", "team", TEAM_B, "players", bTeam]);
+        jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
+        jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
     }
 }
 
