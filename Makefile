@@ -113,7 +113,7 @@ match-reports: match-report.html.tpl
 
 .PHONY: website
 website: ## Build the website pages.
-website: $(wildcard *.html)
+website: index.html stats.html $(wildcard *.html)
 
 TAGS: ## Generate a TAGS file for Emacs Xref.
 TAGS:
