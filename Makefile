@@ -35,6 +35,7 @@ RESOURCE_FILES := $(shell find resources -type f -print)
 MOUNT_DIR := /tmp/garmin
 MATCH_REPORT := "$(shell date +%Y-%m-%d).txt"
 
+.PHONY: src/FootballDelegate.mc # Always regenerate.
 src/FootballDelegate.mc: ## Generate source file from template.
 src/FootballDelegate.mc: src/FootballDelegate.mc.template
 ifndef TEAM_A
@@ -113,3 +114,7 @@ match-reports: match-report.html.tpl
 .PHONY: website
 website: ## Build the website pages.
 website: $(wildcard *.html)
+
+TAGS: ## Generate a TAGS file for Emacs Xref.
+TAGS:
+	etags --lang=java $$(find . -name '*.mc' -print -o -name '*.mc.template' -print)

@@ -28,6 +28,7 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
         case :Pause:
             if (session != null) {
                 if (session.isRecording()) {
+                    session.addLap();
                     session.stop();
                     activityState = ACTIVITY_PAUSED;
                     aKeeper = null;

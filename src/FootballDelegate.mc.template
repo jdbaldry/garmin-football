@@ -86,22 +86,29 @@ public var bKeeper as Symbol? = null;
 public function startActivityIfKeepersAreSet() {
     if ((aKeeper != null) && (bKeeper != null)) {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
-    }
-    if (session.isRecording() == false) {
-        session.start();
-        activityState = ACTIVITY_RECORDING;
-        jsonLog(["event", "A", "value", "started"]);
-    }
-    if (session == null) {
-        session = ActivityRecording.createSession({
-                :name=>"Football",
-                    :sport=>ActivityRecording.SPORT_SOCCER,
-                    :subSport=>ActivityRecording.SUB_SPORT_GENERIC
-                    });
-        jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
-        jsonLog(["event", "T", "team", TEAM_B, "players", bTeam]);
-        jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
-        jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
+        if (session == null) {
+            session = ActivityRecording.createSession({
+                    :name=>"Football",
+                        :sport=>ActivityRecording.SPORT_SOCCER,
+                        :subSport=>ActivityRecording.SUB_SPORT_GENERIC
+                        });
+            jsonLog(["event", "A", "value", "started"]);
+            jsonLog(["event", "K", "team", TEAM_A, "player", aKeeper]);
+            jsonLog(["event", "K", "team", TEAM_B, "player", bKeeper]);
+            jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
+            jsonLog(["event", "T", "team", TEAM_B, "players", bTeam]);
+            jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
+            jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
+            session.start();
+            activityState = ACTIVITY_RECORDING;
+        }
+        if (session.isRecording() == false) {
+            session.start();
+            activityState = ACTIVITY_RECORDING;
+            jsonLog(["event", "A", "value", "started"]);
+            jsonLog(["event", "K", "team", TEAM_A, "player", aKeeper]);
+            jsonLog(["event", "K", "team", TEAM_B, "player", bKeeper]);
+        }
     }
 }
 

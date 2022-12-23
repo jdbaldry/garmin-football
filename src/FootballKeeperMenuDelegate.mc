@@ -16,7 +16,11 @@ class FootballKeeperMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     public function onMenuItem(keeper as Symbol) as Void {
-        logKeeper(keeper);
+        // Log keeper in the middle of a match.
+        // Initial keepers are logged at the start of an activity.
+        if ((aKeeper != null) && (bKeeper != null)) {
+            logKeeper(keeper);
+        }
         switch (_team) {
         case TEAM_A:
             aKeeper = keeper;
