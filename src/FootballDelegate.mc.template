@@ -95,7 +95,7 @@ public function startActivityIfKeepersAreSet() {
     if (session == null) {
         session = ActivityRecording.createSession({
                 :name=>"Football",
-                    :sport=>ActivityRecording.SPORT_GENERIC,
+                    :sport=>ActivityRecording.SPORT_SOCCER,
                     :subSport=>ActivityRecording.SUB_SPORT_GENERIC
                     });
         jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
