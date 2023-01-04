@@ -28,8 +28,8 @@
 {"ts": "2023-01-04 19:37:16", "event": "A", "value": "started"}
 {"ts": "2023-01-04 19:37:16", "event": "K", "team": 0, "player": "Archie"}
 {"ts": "2023-01-04 19:37:16", "event": "K", "team": 1, "player": "Gwin"}
-{"ts": "2023-01-04 19:42:00", "event": "K", "team": 1, "player": "Wrighty"}
 {"ts": "2023-01-04 19:42:10", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-01-04 19:42:00", "event": "K", "team": 1, "player": "Wrighty"}
 {"ts": "2023-01-04 19:42:14", "event": "YC", "team": 0, "player": "Mabel"}
 {"ts": "2023-01-04 19:43:32", "event": "G", "team": 1, "player": "Notley", "keeper": "Baldry"}
 {"ts": "2023-01-04 19:43:58", "event": "G", "team": 0, "player": "Niall", "keeper": "Wrighty"}
