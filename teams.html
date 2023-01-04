@@ -48,7 +48,7 @@
               document.getElementById("team-b").innerText = teamB.slice(1, teamB.length).join("\n");
           };
           document.getElementById("share").addEventListener("click", () => {
-                console.log(seed);
+              console.log(seed);
               const url = new URL(window.location.href);
               url.searchParams.set("seed", seed)
               alert("URL copied to clipboard");
