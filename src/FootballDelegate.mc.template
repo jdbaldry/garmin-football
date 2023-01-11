@@ -52,6 +52,7 @@ public var players = {
     "MG"=>:MG,
     "Mabel"=>:Mabel,
     "Mitch"=>:Mitch,
+    "Monty"=>:Monty,
     "Niall"=>:Niall,
     "Nobby"=>:Nobby,
     "Notley"=>:Notley,
