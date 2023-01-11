@@ -46,6 +46,7 @@ public var players = {
     "Jack"=>:Jack,
     "Jake"=>:Jake,
     "Jim"=>:Jim,
+    "Joe"=>:Joe,
     "Lee"=>:Lee,
     "Leigh"=>:Leigh,
     "Liam"=>:Liam,
