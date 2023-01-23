@@ -1,0 +1,135 @@
+
+src/FootballApp.mc,110
+class FootballApp 4,50
+    function initialize(5,98
+    function onStart(9,163
+    function onStop(11,218
+
+src/FootballDelegate.mc,1145
+    TEAM_A,9,157
+    TEAM_B,10,169
+    CARD_YELLOW,14,198
+    CARD_RED,15,215
+    ACTION_GOAL,19,246
+    ACTION_KEEPER,20,263
+    ACTION_OWN_GOAL,21,282
+    ACTION_CARD,22,303
+    ACTIVITY_NONE,26,337
+    ACTIVITY_RECORDING,27,356
+    ACTIVITY_PAUSED,28,380
+    ACTIVITY_STOPPED29,401
+public var activityState 33,446
+public var players 36,521
+public var aMenu as WatchUi.Menu Menu70,1187
+public var aTeam 71,1242
+public var aScore as Number 78,1351
+public var bMenu as WatchUi.Menu Menu81,1443
+public var bTeam 82,1498
+public var bScore as Number 89,1607
+public function startActivityIfKeepersAreSet(96,1883
+public function popAdditional(127,3306
+public function quit(132,3409
+public function join(136,3456
+public function timerTimeToString(147,3713
+public function rfc3339(158,4146
+public function toJson(164,4500
+public function jsonLog(189,5169
+public function log(212,5741
+class FootballDelegate 216,5848
+    private var _parentView as InputView;217,5906
+    public function initialize(219,5949
+    public function onSelect(230,6305
+    public function onBack(255,7182
+    public function onKey(263,7501
+
+src/FootballOwnGoalMenuDelegate.mc,193
+class FootballOwnGoalMenuDelegate 4,46
+    private var _team as Number;5,116
+    public function initialize(8,188
+    private function logGoal(14,357
+    public function onMenuItem(22,657
+
+src/FootballActivityMenuDelegate.mc,118
+class FootballActivityMenuDelegate 5,73
+    public function initialize(8,183
+    public function onMenuItem(13,314
+
+src/FootballActionMenuDelegate.mc,155
+class FootballActionMenuDelegate 4,46
+    private var _team as number;5,115
+    public function initialize(7,149
+    public function onMenuItem(12,267
+
+src/FootballKeeperMenuDelegate.mc,237
+class FootballKeeperMenuDelegate 4,46
+    private var _team as Number;5,115
+    private var _callback as Method;6,148
+    public function initialize(8,186
+    private function logKeeper(14,355
+    public function onMenuItem(18,487
+
+src/FootballView.mc,245
+class FootballView 7,115
+    private var timer as Timer;8,157
+    public function initialize(10,190
+    public function onTick(16,344
+    public function onHide(20,415
+    public function onShow(22,456
+    public function onUpdate(24,497
+
+src/FootballGoalMenuDelegate.mc,190
+class FootballGoalMenuDelegate 4,46
+    private var _team as Number;5,113
+    public function initialize(8,185
+    private function logGoal(14,354
+    public function onMenuItem(22,652
+
+src/FootballDelegate.mc.template,1145
+    TEAM_A,9,157
+    TEAM_B,10,169
+    CARD_YELLOW,14,198
+    CARD_RED,15,215
+    ACTION_GOAL,19,246
+    ACTION_KEEPER,20,263
+    ACTION_OWN_GOAL,21,282
+    ACTION_CARD,22,303
+    ACTIVITY_NONE,26,337
+    ACTIVITY_RECORDING,27,356
+    ACTIVITY_PAUSED,28,380
+    ACTIVITY_STOPPED29,401
+public var activityState 33,446
+public var players 36,521
+public var aMenu as WatchUi.Menu Menu70,1187
+public var aTeam 71,1242
+public var aScore as Number 74,1365
+public var bMenu as WatchUi.Menu Menu77,1457
+public var bTeam 78,1512
+public var bScore as Number 81,1635
+public function startActivityIfKeepersAreSet(88,1911
+public function popAdditional(119,3334
+public function quit(124,3437
+public function join(128,3484
+public function timerTimeToString(139,3741
+public function rfc3339(150,4174
+public function toJson(156,4528
+public function jsonLog(181,5197
+public function log(204,5769
+class FootballDelegate 208,5876
+    private var _parentView as InputView;209,5934
+    public function initialize(211,5977
+    public function onSelect(222,6333
+    public function onBack(247,7210
+    public function onKey(255,7529
+
+src/FootballQuitMenuDelegate.mc,113
+class FootballQuitMenuDelegate 4,46
+    public function initialize(5,113
+    public function onMenuItem(9,195
+
+src/FootballCardMenuDelegate.mc,229
+class FootballCardMenuDelegate 4,46
+    private var _team as Number;5,113
+    private var _card as Number;6,146
+    public function initialize(9,218
+    private function logCard(16,425
+    public function onMenuItem(20,577
