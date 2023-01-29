@@ -11,7 +11,6 @@ help: ## Display this help.
 help:
 	@awk 'BEGIN {FS = ": ##"; printf "Usage:\n  make <target>\n\nTargets:\n"} /^[a-zA-Z0-9_\.\-\/%]+: ##/ { printf "  %-45s %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
-
 CURRENT_SDK = $(shell cat "$(HOME)/.Garmin/ConnectIQ/current-sdk.cfg")
 sdk: ## Copy in the active SDK that can only be download by the sdkmanager to the HOME directory.
 sdk: $(CURRENT_SDK) $(HOME)/.Garmin/ConnectIQ/current-sdk.cfg
@@ -40,12 +39,6 @@ DAY := $(shell date '+%a' | tr '[:upper:]' '[:lower:]')
 .PHONY: src/FootballDelegate.mc # Always regenerate.
 src/FootballDelegate.mc: ## Generate source file from template.
 src/FootballDelegate.mc: src/FootballDelegate.mc.template
-ifndef TEAM_A
-	$(error TEAM_A environment variable is undefined)
-endif
-ifndef TEAM_B
-	$(error TEAM_B environment variable is undefined)
-endif
 	go run ./hack/generate/ --team-a $(TEAM_A) --team-b $(TEAM_B)
 
 FootballApp.prg: ## Build the app PRG.
@@ -121,6 +114,7 @@ match-reports: match-report.html.tpl
 website: ## Build the website pages.
 website: index.html stats.html $(wildcard *.html)
 
+MONKEYC_FILES := $(shell find . -name '*.mc' -print -o -name '*.mc.template' -print)
 TAGS: ## Generate a TAGS file for Emacs Xref.
-TAGS:
-	etags --lang=java $$(find . -name '*.mc' -print -o -name '*.mc.template' -print)
+TAGS: $(MONKEYC_FILES)
+	etags --lang=java $(MONKEYC_FILES)
