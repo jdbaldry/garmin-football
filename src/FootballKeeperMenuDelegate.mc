@@ -11,26 +11,18 @@ class FootballKeeperMenuDelegate extends WatchUi.MenuInputDelegate {
         _callback = callback;
     }
 
-    private function logKeeper(keeper as Symbol) as Void {
-        jsonLog(["event", "K", "team", _team, "player", keeper]);
-    }
-
     public function onMenuItem(keeper as Symbol) as Void {
-        // Log keeper in the middle of a match.
-        // Initial keepers are logged at the start of an activity.
-        if ((aKeeper != null) && (bKeeper != null)) {
-            logKeeper(keeper);
-        }
         switch (_team) {
         case TEAM_A:
-            aKeeper = keeper;
+            events.add(new KeeperEvent(_team, keeper))
             break;
         case TEAM_B:
-            bKeeper = keeper;
+            events.add(new KeeperEvent(_team, keeper))
             break;
         default:
             throw new Lang.InvalidValueException(_team);
         }
+
         if (_callback != null) {
             _callback.invoke();
         }

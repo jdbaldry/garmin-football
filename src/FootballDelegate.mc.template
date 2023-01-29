@@ -81,6 +81,8 @@ public var bTeam = [
 public var bScore as Number = 0;
 public var bKeeper as Symbol? = null;
 
+public var events as Array<Event>;
+
 // Start an activity and pop the view back to the football app
 // only if both keepers are set.
 // Used as a callback from the transient keeper menu that
@@ -91,25 +93,27 @@ public function startActivityIfKeepersAreSet() {
         if (session == null) {
             session = ActivityRecording.createSession({
                     :name=>"Football",
-                        :sport=>ActivityRecording.SPORT_SOCCER,
-                        :subSport=>ActivityRecording.SUB_SPORT_GENERIC
-                        });
-            jsonLog(["event", "A", "value", "started"]);
-            jsonLog(["event", "K", "team", TEAM_A, "player", aKeeper]);
-            jsonLog(["event", "K", "team", TEAM_B, "player", bKeeper]);
-            jsonLog(["event", "T", "team", TEAM_A, "players", aTeam]);
-            jsonLog(["event", "T", "team", TEAM_B, "players", bTeam]);
-            jsonLog(["event", "C", "team", TEAM_A, "player", aTeam[0]]);
-            jsonLog(["event", "C", "team", TEAM_B, "player", bTeam[0]]);
+                    :sport=>ActivityRecording.SPORT_SOCCER,
+                    :subSport=>ActivityRecording.SUB_SPORT_GENERIC
+            });
+            events.add(new StartedEvent());
+            events.add(new KeeperEvent(TEAM_A, aKeeper));
+            events.add(new KeeperEvent(TEAM_B, bKeeper));
+            events.add(new TeamEvent(TEAM_A, aTeam));
+            events.add(new TeamEvent(TEAM_B, bTeam));
+            events.add(new CaptainEvent(TEAM_A, aTeam[0]));
+            events.add(new CaptainEvent(TEAM_B, bTeam[0]));
+
             session.start();
             activityState = ACTIVITY_RECORDING;
         }
         if (session.isRecording() == false) {
+            events.add(new StartedEvent());
+            events.add(new KeeperEvent(TEAM_A, aKeeper));
+            events.add(new KeeperEvent(TEAM_B, bKeeper));
+
             session.start();
             activityState = ACTIVITY_RECORDING;
-            jsonLog(["event", "A", "value", "started"]);
-            jsonLog(["event", "K", "team", TEAM_A, "player", aKeeper]);
-            jsonLog(["event", "K", "team", TEAM_B, "player", bKeeper]);
         }
     }
 }
@@ -176,10 +180,6 @@ public function toJson(anything) as String {
             throw new Lang.InvalidValueException();
         }
     }
-}
-
-public function createEvent(pairs as Array<String>) as Void {
-    jsonLog(pairs)
 }
 
 public function jsonLog(pairs as Array<String>) as Void {

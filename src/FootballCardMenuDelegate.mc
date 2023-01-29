@@ -13,17 +13,13 @@ class FootballCardMenuDelegate extends WatchUi.MenuInputDelegate {
         _callback = callback;
     }
 
-    private function logCard(color as String, offender as Symbol) as Void {
-        jsonLog(["event", "YC", "team", _team, "player", offender]);
-    }
-
     public function onMenuItem(offender as Symbol) as Void {
         switch (_card) {
         case CARD_YELLOW:
-            logCard("YC", offender);
+            events.add(new YellowCardEvent(_team, offender))
             break;
         case CARD_RED:
-            logCard("RC", offender);
+            events.add(new RedCardEvent(_team, offender))
             break;
         default:
             throw new Lang.InvalidValueException();

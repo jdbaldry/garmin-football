@@ -33,7 +33,8 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
                     activityState = ACTIVITY_PAUSED;
                     aKeeper = null;
                     bKeeper = null;
-                    jsonLog(["event", "A", "value", "paused"]);
+
+                    events.add(new PausedEvent())
                 }
             }
             break;
@@ -41,10 +42,10 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             if (session != null) {
                 if (session.isRecording()) {
                     session.stop();
-                    jsonLog(["event", "A", "value", "stopped"]);
+                    events.add(new StoppedEvent())
                 }
                 session.save();
-                jsonLog(["event", "A", "value", "saved"]);
+                events.add(new SavedEvent())
                 activityState = ACTIVITY_STOPPED;
                 session = null;
             }

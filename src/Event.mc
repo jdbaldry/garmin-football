@@ -1,8 +1,8 @@
 public class Event {
-    private var _event;
+    private var _kind as String;
 
-    public function initialize(event) {
-        _event = event;
+    public function initialize(kind as String) {
+        _kind = kind;
     }
 
     public function jsonLog() {
@@ -11,11 +11,13 @@ public class Event {
 }
 
 public class ActionEvent extends Event {
-    private var _action;
+    private var _action as String;
 
-    public function initialize(action) {
+    public function initialize(action as String) {
         Event.initialize("A")
         _action = action;
+
+        jsonLog()
     }
 
     public function jsonLog() {
@@ -41,14 +43,23 @@ public class StoppedEvent extends ActionEvent {
     }
 }
 
-public class KeeperEvent extends Event {
-    private var _team;
-    private var _player;
+public class SavedEvent extends ActionEvent {
+    public function initialize() {
+        ActionEvent.initialize("saved")
+    }
+}
 
-    public function initialize(team, player) {
+public class KeeperEvent extends Event {
+    private var _team as String;
+    private var _player as String;
+
+    public function initialize(team as String, player as String) {
         Event.initialize("K")
         _team = team;
         _player = player;
+
+
+        jsonLog();
     }
 
     public function jsonLog() {
@@ -57,11 +68,11 @@ public class KeeperEvent extends Event {
 }
 
 public class GoalEvent extends Event {
-    private var _team;
-    private var _player;
-    private var _keeper;
+    private var _team as String;
+    private var _player as String;
+    private var _keeper as String;
 
-    public function initialize(team, player) {
+    public function initialize(team as String, player as String, keeper as String) {
         Event.initialize("G")
         _team = team;
         _player = player;
@@ -74,13 +85,15 @@ public class GoalEvent extends Event {
 }
 
 public class CaptainEvent extends Event {
-    private var _team;
-    private var _captain;
+    private var _team as String;
+    private var _captain as String;
 
-    public function initialize(team, captain) {
+    public function initialize(team as String, captain as String) {
         Event.initialize("C")
         _team = team;
         _captain = captain;
+
+        jsonLog()
     }
 
     public function jsonLog() {
@@ -96,6 +109,8 @@ public class TeamEvent extends Event {
         Event.initialize("T")
         _team = team;
         _players = players;
+
+        jsonLog()
     }
 
     public function jsonLog() {
@@ -104,11 +119,11 @@ public class TeamEvent extends Event {
 }
 
 public class OwnGoalEvent extends Event {
-    private var _team;
-    private var _player;
-    private var _keeper;
+    private var _team as String;
+    private var _player as String;
+    private var _keeper as String;
 
-    public function initialize(team, player) {
+    public function initialize(team as String, player as String, keeper as String) {
         Event.initialize("OG")
         _team = team;
         _player = player;
@@ -121,11 +136,11 @@ public class OwnGoalEvent extends Event {
 }
 
 public class CardEvent extends Event {
-    private var _team;
-    private var _player;
+    private var _team as String;
+    private var _player as String;
 
-    public function initialize(event, team, player) {
-        Event.initialize(event)
+    public function initialize(kind as String, team as String, player as String) {
+        Event.initialize(kind)
         _team = team;
         _player = player;
     }
