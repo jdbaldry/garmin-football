@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -14,14 +15,12 @@ import (
 
 // Enum of possible teams.
 const (
-	TEAM_A = iota
-	TEAM_B
-	TEAM_BOTH // Used only by the MatchEvents for match reporting.
+	teamA = iota
+	teamB
+	teamBoth // Used only by the MatchEvents for match reporting.
 )
 
 const (
-	// logsGlob is a glob pattern for matching input log files.
-	logsGlob = "*-*-*.txt"
 	// matchReportTemplatePath is the template file for match reports.
 	matchReportTemplatePath = "match-report.html.tpl"
 	// statsTemplatePath is the template file for the stats page.
@@ -30,6 +29,16 @@ const (
 	indexTemplatePath = "index.html.tpl"
 )
 
+var days = map[string]string{
+	"mon": "Monday",
+	"tue": "Tuesday",
+	"wed": "Wednesday",
+	"thu": "Thursday",
+	"fri": "Friday",
+	"sat": "Saturday",
+	"sun": "Sunday",
+}
+
 // Time is a custom time structure that handles unmarshaling RFC3339 time strings
 // with precision to the second.
 type Time struct{ time.Time }
@@ -37,11 +46,14 @@ type Time struct{ time.Time }
 // UnmarshalJSON unmarshals RFC3339 time strings that have precision to the second.
 func (t *Time) UnmarshalJSON(b []byte) error {
 	s := string(b)
+
 	parsed, err := time.Parse("2006-01-02 15:04:05", strings.Trim(s, `"`))
 	if err != nil {
 		return err
 	}
+
 	t.Time = parsed
+
 	return nil
 }
 
@@ -78,6 +90,16 @@ type Page struct {
 }
 
 func main() {
+	flag.Parse()
+
+	if flag.NArg() != 1 {
+		log.Println("Argument <DAY> required but not provided")
+		log.Println("Usage:")
+		log.Fatalf("  %s <DAY>\n", os.Args[0])
+	}
+
+	day := flag.Args()[0]
+
 	matchReportTemplate, err := template.ParseFiles(matchReportTemplatePath)
 	if err != nil {
 		log.Fatalf("Failed to parse match report template file: %v\n", err)
@@ -87,7 +109,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to parse template file: %v\n", err)
 	}
-	indexFile, err := os.Create("index.html")
+	indexFile, err := os.Create(filepath.Join(day, "index.html"))
 	if err != nil {
 		log.Fatalf("Failed to open index file: %v\n", err)
 	}
@@ -96,13 +118,17 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to parse template file: %v\n", err)
 	}
-	statsFile, err := os.Create("stats.html")
+	statsFile, err := os.Create(filepath.Join(day, "stats.html"))
 	if err != nil {
 		log.Fatalf("Failed to open stats file: %v\n", err)
 	}
 
+	// logsGlob is a glob pattern for matching input log files.
+	logsGlob := filepath.Join(day, "*-*-*.txt")
+
 	var rawOverall = make(map[string]RawStats)
 	var pages []Page
+
 	paths, _ := filepath.Glob(logsGlob)
 	for i, p := range paths {
 		f, err := os.Open(p)
@@ -139,14 +165,23 @@ func main() {
 			match.MatchReport.Next = strings.TrimSuffix(paths[i+1], ".txt") + ".html"
 		}
 
-		pages = append(pages, Page{Path: op, Title: fmt.Sprintf("%s %s vs. %s", match.MatchReport.Date, match.MatchReport.A.Captain, match.MatchReport.B.Captain)})
+		pages = append(pages, Page{
+			Path:  filepath.Base(op),
+			Title: fmt.Sprintf("%s %s vs. %s", match.MatchReport.Date, match.MatchReport.A.Captain, match.MatchReport.B.Captain),
+		})
 		updatePlayerStats(rawOverall, match)
 		if err := matchReportTemplate.Execute(of, match); err != nil {
 			log.Printf("Failed to execute template for match report %q, skipping match report: %v\n", op, err)
 		}
 	}
 
-	if err := indexTemplate.Execute(indexFile, pages); err != nil {
+	if err := indexTemplate.Execute(indexFile, struct {
+		Pages []Page
+		Day   string
+	}{
+		Pages: pages,
+		Day:   days[day],
+	}); err != nil {
 		log.Fatalf("Failed to execute template: %v\n", err)
 	}
 
@@ -154,5 +189,4 @@ func main() {
 	if err := statsTemplate.Execute(statsFile, computed); err != nil {
 		log.Fatalf("Failed to execute template: %v\n", err)
 	}
-
 }

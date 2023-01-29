@@ -21,18 +21,7 @@
         <th title="Goals scored whilst outfield" best="max">G</th>
         <th title="Goals per hour played outfield" best="max">GPH</th>
       </tr>
-      {{ range $player, $stats :=  . }}
-      <tr>
-        <td>{{ $player }}</td>
-        <td>{{ $stats.Games }}</td>
-        <td>{{ $stats.Wins }}</td>
-        <td>{{ $stats.Draws }}</td>
-        <td>{{ $stats.Losses }}</td>
-        <td>{{ printf "%.2f" $stats.WinRatio }}</td>
-        <td>{{ $stats.Goals }}</td>
-        <td>{{ printf "%.2f" $stats.GPH }}</td>
-      </tr>
-      {{ end }}
+      
     </table>
     <h1>Secondary stats</h1>
     <table>
@@ -45,17 +34,7 @@
         <th title="Yellow cards">🟨</th>
         <th title="Red cards">🟥</th>
       </tr>
-      {{ range $player, $stats :=  . }}
-      <tr>
-        <td>{{ $player }}</td>
-        <td>{{ printf "%v" $stats.Outfield }}</td>
-        <td>{{ printf "%v" $stats.InGoal }}</td>
-        <td>{{ $stats.Conceded }}</td>
-        <td>{{ $stats.OwnGoals }}</td>
-        <td>{{ $stats.YellowCards }}</td>
-        <td>{{ $stats.RedCards }}</td>
-      </tr>
-      {{ end }}
+      
     </table>
   </body>
 </html>

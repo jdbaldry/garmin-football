@@ -35,6 +35,8 @@ RESOURCE_FILES := $(shell find resources -type f -print)
 MOUNT_DIR := /tmp/garmin
 MATCH_REPORT := "$(shell date +%Y-%m-%d).txt"
 
+DAY := $(shell date '+%a' | tr '[:upper:]' '[:lower:]')
+
 .PHONY: src/FootballDelegate.mc # Always regenerate.
 src/FootballDelegate.mc: ## Generate source file from template.
 src/FootballDelegate.mc: src/FootballDelegate.mc.template
@@ -50,7 +52,6 @@ FootballApp.prg: ## Build the app PRG.
 FootballApp.prg: src/FootballDelegate.mc bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FILES) $(RESOURCE_FILES)
 	rm -f $@
 	./bin/iq monkeyc -o FootballApp.prg -d fenix6pro -f FootballApp.jungle -y developer_key.der
-
 
 $(MOUNT_DIR):
 	mkdir -p $(MOUNT_DIR)
@@ -81,11 +82,16 @@ simulate: FootballApp.prg bin/iq sdk/bin/monkeydo
 	./bin/iq simulator &
 	./bin/iq monkeydo $< fenix6pro ""
 
+mon:
+	mkdir -p mon
+wed:
+	mkdir -p wed
+
 .PHONY: import
 import: ## Import the latest logs from the Football app.
-import: mount
+import: mount | $(DAY)
 	cat "$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.BAK" \
-		"$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.TXT" >> $(MATCH_REPORT)
+		"$(MOUNT_DIR)/Primary/GARMIN/Apps/LOGS/FootballApp.TXT" >> $(DAY)/$(MATCH_REPORT)
 
 .PHONY: truncate
 truncate: ## Truncate the Football app logs on the Garmin device.

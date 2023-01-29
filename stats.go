@@ -63,10 +63,10 @@ func updateStats(player string, team int, stats RawStats, match Report) (RawStat
 	var won bool
 
 	switch team {
-	case TEAM_A:
+	case teamA:
 		matchStats = match.StatsReport.A[player]
 		won = match.MatchReport.A.Score > match.MatchReport.B.Score
-	case TEAM_B:
+	case teamB:
 		matchStats = match.StatsReport.B[player]
 		won = match.MatchReport.B.Score > match.MatchReport.A.Score
 	default:
@@ -97,14 +97,14 @@ func updateStats(player string, team int, stats RawStats, match Report) (RawStat
 // instead of being returned.
 func updatePlayerStats(playerStats map[string]RawStats, match Report) {
 	for p := range match.StatsReport.A {
-		stats, err := updateStats(p, TEAM_A, playerStats[p], match)
+		stats, err := updateStats(p, teamA, playerStats[p], match)
 		if err != nil {
 			log.Printf("Failed to update stats for player %q: %v\n", p, err)
 		}
 		playerStats[p] = stats
 	}
 	for p := range match.StatsReport.B {
-		stats, err := updateStats(p, TEAM_B, playerStats[p], match)
+		stats, err := updateStats(p, teamB, playerStats[p], match)
 		if err != nil {
 			log.Printf("Failed to update stats for player %q: %v\n", p, err)
 		}

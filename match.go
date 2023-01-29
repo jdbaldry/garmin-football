@@ -30,10 +30,10 @@ type MatchEvent struct {
 	// Unlike the log Event events, there is no secondary subject so this field may
 	// be used to represent groups of players or primary and secondary subjects, or
 	// even to represent players from both teams.
-	// If Players has players from both teams, the Team should be TEAM_BOTH.
+	// If Players has players from both teams, the Team should be teamBoth.
 	Players []string
 	// Team is the team that the Player or Players belong to.
-	// Team should be one of TEAM_A, TEAM_B, or TEAM_BOTH.
+	// Team should be one of teamA, teamB, or teamBoth.
 	Team int
 	// Type is the type of event represented as a string.
 	// For example, "Goal", "Own goal", or "Keeper".
@@ -42,9 +42,9 @@ type MatchEvent struct {
 
 // MatchReport is a report of a match.
 type MatchReport struct {
-	// A has the present state of TEAM_A.
+	// A has the present state of teamA.
 	A Team
-	// B has the present state of TEAM_B.
+	// B has the present state of teamB.
 	B Team
 	// Date is the date of the match in the format YYYY-MM-DD.
 	Date string
@@ -82,9 +82,9 @@ type Stats struct {
 
 // StatsReport is the complete statistics for all players of both teams.
 type StatsReport struct {
-	// A is a map of player names to their match statistics for players in TEAM_A.
+	// A is a map of player names to their match statistics for players in teamA.
 	A map[string]Stats
-	// B is a map of player names to their match statistics for players in TEAM_B.
+	// B is a map of player names to their match statistics for players in teamB.
 	B map[string]Stats
 }
 
@@ -139,7 +139,7 @@ func reportMatch(events []Event) (match Report) {
 
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
 					Minute: e.Ts.Sub(start).Minutes(),
-					Team:   TEAM_BOTH,
+					Team:   teamBoth,
 					Type:   "Kickoff",
 				})
 			case "paused":
@@ -155,7 +155,7 @@ func reportMatch(events []Event) (match Report) {
 
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
 					Minute: e.Ts.Sub(start).Minutes(),
-					Team:   TEAM_BOTH,
+					Team:   teamBoth,
 					Type:   "Paused",
 				})
 			case "stopped":
@@ -171,7 +171,7 @@ func reportMatch(events []Event) (match Report) {
 
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
 					Minute: e.Ts.Sub(start).Minutes(),
-					Team:   TEAM_BOTH,
+					Team:   teamBoth,
 					Type:   "Full time",
 				})
 			case "saved":
@@ -181,9 +181,9 @@ func reportMatch(events []Event) (match Report) {
 
 		case "C":
 			switch e.Team {
-			case TEAM_A:
+			case teamA:
 				match.MatchReport.A.Captain = e.Player
-			case TEAM_B:
+			case teamB:
 				match.MatchReport.B.Captain = e.Player
 			default:
 				log.Printf("Unrecognized team value: %q\n", e.Team)
@@ -191,12 +191,12 @@ func reportMatch(events []Event) (match Report) {
 
 		case "T":
 			switch e.Team {
-			case TEAM_A:
+			case teamA:
 				match.MatchReport.A.Players = e.Players
 				for _, player := range e.Players {
 					match.StatsReport.A[player] = Stats{}
 				}
-			case TEAM_B:
+			case teamB:
 				match.MatchReport.B.Players = e.Players
 				for _, player := range e.Players {
 					match.StatsReport.B[player] = Stats{}
@@ -227,14 +227,14 @@ func reportMatch(events []Event) (match Report) {
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
 					Minute:  e.Ts.Sub(start).Minutes(),
 					Players: []string{match.MatchReport.A.Keeper, match.MatchReport.B.Keeper},
-					Team:    TEAM_BOTH,
+					Team:    teamBoth,
 					Type:    "Keeper",
 				})
 			} else {
 				switch e.Team {
-				case TEAM_A:
+				case teamA:
 					match.MatchReport.A.Keeper = e.Keeper
-				case TEAM_B:
+				case teamB:
 					match.MatchReport.B.Keeper = e.Keeper
 				default:
 					log.Printf("Unrecognized team value: %q\n", e.Team)
@@ -255,7 +255,7 @@ func reportMatch(events []Event) (match Report) {
 				Type:   "Goal",
 			})
 			switch e.Team {
-			case TEAM_A:
+			case teamA:
 				match.MatchReport.A.Score++
 
 				stats := match.StatsReport.A[e.Player]
@@ -265,7 +265,7 @@ func reportMatch(events []Event) (match Report) {
 				stats = match.StatsReport.B[e.Keeper]
 				stats.Conceded++
 				match.StatsReport.B[e.Keeper] = stats
-			case TEAM_B:
+			case teamB:
 				match.MatchReport.B.Score++
 
 				stats := match.StatsReport.B[e.Player]
@@ -287,7 +287,7 @@ func reportMatch(events []Event) (match Report) {
 				Type:   "Own goal",
 			})
 			switch e.Team {
-			case TEAM_A:
+			case teamA:
 				match.MatchReport.B.Score++
 
 				stats := match.StatsReport.A[e.Player]
@@ -297,7 +297,7 @@ func reportMatch(events []Event) (match Report) {
 				stats = match.StatsReport.A[e.Keeper]
 				stats.Conceded++
 				match.StatsReport.A[e.Keeper] = stats
-			case TEAM_B:
+			case teamB:
 				match.MatchReport.A.Score++
 
 				stats := match.StatsReport.B[e.Player]
@@ -319,11 +319,11 @@ func reportMatch(events []Event) (match Report) {
 				Type:   "Red card",
 			})
 			switch e.Team {
-			case TEAM_A:
+			case teamA:
 				stats := match.StatsReport.A[e.Player]
 				stats.RedCards++
 				match.StatsReport.A[e.Player] = stats
-			case TEAM_B:
+			case teamB:
 				stats := match.StatsReport.B[e.Player]
 				stats.RedCards++
 				match.StatsReport.B[e.Player] = stats
@@ -339,11 +339,11 @@ func reportMatch(events []Event) (match Report) {
 				Type:   "Yellow card",
 			})
 			switch e.Team {
-			case TEAM_A:
+			case teamA:
 				stats := match.StatsReport.A[e.Player]
 				stats.YellowCards++
 				match.StatsReport.A[e.Player] = stats
-			case TEAM_B:
+			case teamB:
 				stats := match.StatsReport.B[e.Player]
 				stats.YellowCards++
 				match.StatsReport.B[e.Player] = stats
