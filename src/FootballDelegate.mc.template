@@ -178,6 +178,10 @@ public function toJson(anything) as String {
     }
 }
 
+public function createEvent(pairs as Array<String>) as Void {
+    jsonLog(pairs)
+}
+
 public function jsonLog(pairs as Array<String>) as Void {
     // {"ts": "<timestamp>"
     var line = "{\"ts\": \"" + rfc3339(Time.now()) + "\"";
