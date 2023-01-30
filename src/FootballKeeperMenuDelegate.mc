@@ -14,14 +14,16 @@ class FootballKeeperMenuDelegate extends WatchUi.MenuInputDelegate {
     public function onMenuItem(keeper as Symbol) as Void {
         switch (_team) {
         case TEAM_A:
-            events.add(new KeeperEvent(_team, keeper))
+            aKeeper = keeper;
             break;
         case TEAM_B:
-            events.add(new KeeperEvent(_team, keeper))
+            bKeeper = keeper;
             break;
         default:
             throw new Lang.InvalidValueException(_team);
         }
+
+        events.add(new KeeperEvent(_team, keeper));
 
         if (_callback != null) {
             _callback.invoke();
