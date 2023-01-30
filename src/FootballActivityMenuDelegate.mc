@@ -34,7 +34,7 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
                     aKeeper = null;
                     bKeeper = null;
 
-                    events.add(new PausedEvent())
+                    events.add(new PausedEvent());
                 }
             }
             break;
@@ -42,12 +42,14 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
             if (session != null) {
                 if (session.isRecording()) {
                     session.stop();
-                    events.add(new StoppedEvent())
+
+                    events.add(new StoppedEvent());
                 }
                 session.save();
-                events.add(new SavedEvent())
                 activityState = ACTIVITY_STOPPED;
                 session = null;
+
+                events.add(new SavedEvent());
             }
             break;
         default:
