@@ -39,7 +39,7 @@ DAY := $(shell date '+%a' | tr '[:upper:]' '[:lower:]')
 .PHONY: src/FootballDelegate.mc # Always regenerate.
 src/FootballDelegate.mc: ## Generate source file from template.
 src/FootballDelegate.mc: src/FootballDelegate.mc.template
-	go run ./hack/generate/ --team-a $(TEAM_A) --team-b $(TEAM_B)
+	go run ./hack/generate/ --team-a '$(TEAM_A)' --team-b '$(TEAM_B)'
 
 FootballApp.prg: ## Build the app PRG.
 FootballApp.prg: src/FootballDelegate.mc bin/iq sdk/bin/monkeyc FootballApp.jungle manifest.xml $(SRC_FILES) $(RESOURCE_FILES)
