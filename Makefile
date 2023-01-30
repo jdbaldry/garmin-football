@@ -99,13 +99,13 @@ truncate: mount
 
 GO_FILES := $(wildcard *.go)
 %.html: %.txt $(GO_FILES) match-report.html.tpl
-	go run ./
+	go run ./ $(DAY)
 
 stats.html: stats.html.tpl style.css table.js $(GO_FILES) $(wildcard *.txt)
-	go run ./
+	go run ./ $(DAY)
 
 index.html: index.html.tpl style.css table.js $(GO_FILES) $(wildcard *.txt)
-	go run ./
+	go run ./ $(DAY)
 
 .PHONY: match-reports
 match-reports: match-report.html.tpl
