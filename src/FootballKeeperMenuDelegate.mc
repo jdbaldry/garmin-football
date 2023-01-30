@@ -12,6 +12,11 @@ class FootballKeeperMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     public function onMenuItem(keeper as Symbol) as Void {
+        // Event must be created before the keeper is set because it
+        // suppresses premature logging of initial keepers which is instead
+        // handled by a callback.
+        events.add(new KeeperEvent(_team, keeper));
+
         switch (_team) {
         case TEAM_A:
             aKeeper = keeper;
@@ -22,8 +27,6 @@ class FootballKeeperMenuDelegate extends WatchUi.MenuInputDelegate {
         default:
             throw new Lang.InvalidValueException(_team);
         }
-
-        events.add(new KeeperEvent(_team, keeper));
 
         if (_callback != null) {
             _callback.invoke();
