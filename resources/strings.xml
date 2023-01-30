@@ -22,6 +22,7 @@
 
     <string id="ATitle">Team A</string>
     <string id="BTitle">Team B</string>
+
     <string id="Archie">Archie</string>
     <string id="Baldry">Baldry</string>
     <string id="Barge">Barge</string>
@@ -29,16 +30,9 @@
     <string id="Bloor">Bloor</string>
     <string id="Chris">Chris</string>
     <string id="Connor">Connor</string>
-    <string id="Dave">Dave</string>
     <string id="Gwin">Gwin</string>
     <string id="Jack">Jack</string>
-    <string id="Jake">Jake</string>
-    <string id="Jim">Jim</string>
-    <string id="Joe">Joe</string>
-    <string id="Lee">Lee</string>
-    <string id="Leigh">Leigh</string>
     <string id="Liam">Liam</string>
-    <string id="MG">MG</string>
     <string id="Mabel">Mabel</string>
     <string id="Mitch">Mitch</string>
     <string id="Monty">Monty</string>
@@ -50,8 +44,21 @@
     <string id="Q">Q</string>
     <string id="Shirley">Shirley</string>
     <string id="Tom">Tom</string>
-    <string id="TC">TC</string>
     <string id="Wardale">Wardale</string>
     <string id="Wrighty">Wrighty</string>
+
+    <string id="Ash">Ash</string>
+    <string id="Bal">Bal</string>
+    <string id="Brad">Brad</string>
+    <string id="Cal">Cal</string>
+    <string id="Conor">Conor</string>
+    <string id="Dave">Dave</string>
+    <string id="Fran">Fran</string>
+    <string id="Harry">Harry</string>
+    <string id="Jake">Jake</string>
+    <string id="Joe">Joe</string>
+    <string id="MattC">Matt C</string>
+    <string id="Sewy">Sewy</string>
+    <string id="Wes">Wes</string>
   </strings>
 </resources>
