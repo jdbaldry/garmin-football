@@ -29,6 +29,9 @@ const (
 	indexTemplatePath = "index.html.tpl"
 )
 
+// Map of the lower cased locale's abbreviated weekday name (%a) in coreutils date.
+//
+//nolint:gochecknoglobals
 var days = map[string]string{
 	"mon": "Monday",
 	"tue": "Tuesday",
@@ -59,10 +62,9 @@ func (t *Time) UnmarshalJSON(b []byte) error {
 
 // Event is an event from a JSON structured log file.
 type Event struct {
-	// Ts is the timestamp for the log in RFC3339 format with precision to the second.
+	// Timestamp is the timestamp for the log in RFC3339 format with precision to the second.
 	// It is present on all events.
-	Ts Time
-
+	Timestamp Time
 	// Kind is the kind of the Event.
 	// Kind is extracted from the "event" member.
 	// It is present on all events.
@@ -109,6 +111,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to parse template file: %v\n", err)
 	}
+
 	indexFile, err := os.Create(filepath.Join(day, "index.html"))
 	if err != nil {
 		log.Fatalf("Failed to open index file: %v\n", err)
@@ -118,6 +121,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to parse template file: %v\n", err)
 	}
+
 	statsFile, err := os.Create(filepath.Join(day, "stats.html"))
 	if err != nil {
 		log.Fatalf("Failed to open stats file: %v\n", err)
@@ -126,8 +130,10 @@ func main() {
 	// logsGlob is a glob pattern for matching input log files.
 	logsGlob := filepath.Join(day, "*-*-*.txt")
 
-	var rawOverall = make(map[string]RawStats)
-	var pages []Page
+	var (
+		rawOverall = make(map[string]RawStats)
+		pages      []Page
+	)
 
 	paths, _ := filepath.Glob(logsGlob)
 	for i, p := range paths {
@@ -136,24 +142,31 @@ func main() {
 			log.Printf("Failed to open file %q, skipping match report: %v\n", p, err)
 			continue
 		}
-		op := strings.TrimSuffix(p, ".txt") + ".html"
-		of, err := os.Create(op)
+
+		outputPath := strings.TrimSuffix(p, ".txt") + ".html"
+
+		outputFile, err := os.Create(outputPath)
 		if err != nil {
-			log.Fatalf("Failed to open match report output file %q, skipping match report: %v\n", op, err)
+			log.Fatalf("Failed to open match report output file %q, skipping match report: %v\n", outputPath, err)
 		}
 
 		events := []Event{}
+
 		scanner := bufio.NewScanner(f)
 		for scanner.Scan() {
-			e := &Event{}
-			if err := json.Unmarshal(scanner.Bytes(), e); err != nil {
+			var event *Event
+			if err := json.Unmarshal(scanner.Bytes(), event); err != nil {
 				log.Printf("Failed to unmarshal line %q, skipping line: %v\n", scanner.Text(), err)
+
 				continue
 			}
-			events = append(events, *e)
+
+			events = append(events, *event)
 		}
+
 		if err := scanner.Err(); err != nil {
 			log.Printf("Error reading lines from file %q, skipping match report: %v\n", p, err)
+
 			continue
 		}
 
@@ -161,17 +174,20 @@ func main() {
 		if i > 0 {
 			match.MatchReport.Prev = strings.TrimSuffix(paths[i-1], ".txt") + ".html"
 		}
+
 		if i < len(paths)-1 {
 			match.MatchReport.Next = strings.TrimSuffix(paths[i+1], ".txt") + ".html"
 		}
 
 		pages = append(pages, Page{
-			Path:  filepath.Base(op),
+			Path:  filepath.Base(outputPath),
 			Title: fmt.Sprintf("%s %s vs. %s", match.MatchReport.Date, match.MatchReport.A.Captain, match.MatchReport.B.Captain),
 		})
+
 		updatePlayerStats(rawOverall, match)
-		if err := matchReportTemplate.Execute(of, match); err != nil {
-			log.Printf("Failed to execute template for match report %q, skipping match report: %v\n", op, err)
+
+		if err := matchReportTemplate.Execute(outputFile, match); err != nil {
+			log.Printf("Failed to execute template for match report %q, skipping match report: %v\n", outputPath, err)
 		}
 	}
 

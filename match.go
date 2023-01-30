@@ -111,7 +111,24 @@ func updateDurations(player string, keeper string, stats Stats, currentTime time
 // afterwards.
 func reportMatch(events []Event) (match Report) {
 	match = Report{
-		MatchReport{},
+		MatchReport{
+			A: Team{
+				Captain: "",
+				Keeper:  "",
+				Players: []string{},
+				Score:   0,
+			},
+			B: Team{
+				Captain: "",
+				Keeper:  "",
+				Players: []string{},
+				Score:   0,
+			},
+			Date:   "",
+			Next:   "",
+			Prev:   "",
+			Events: []MatchEvent{},
+		},
 		StatsReport{
 			A: make(map[string]Stats),
 			B: make(map[string]Stats),
@@ -125,236 +142,312 @@ func reportMatch(events []Event) (match Report) {
 	// The time when the "in goal" and "out field" durations were
 	// last updated.
 	var durationsLastUpdated time.Time
-	for i, e := range events {
-		switch e.Kind {
+
+	for i, event := range events {
+		switch event.Kind {
 		case "A":
-			switch e.Value {
+			switch event.Value {
 			case "started":
 				if !started {
-					start = e.Ts.Time
-					durationsLastUpdated = e.Ts.Time
+					start = event.Timestamp.Time
+					durationsLastUpdated = event.Timestamp.Time
 					started = true
 				}
 
-				match.MatchReport.Date = e.Ts.Format("2006-01-02")
+				match.MatchReport.Date = event.Timestamp.Format("2006-01-02")
 
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-					Minute: e.Ts.Sub(start).Minutes(),
-					Team:   teamBoth,
-					Type:   "Kickoff",
+					Minute:  event.Timestamp.Sub(start).Minutes(),
+					Player:  "",
+					Players: []string{},
+					Team:    teamBoth,
+					Type:    "Kickoff",
 				})
 			case "paused":
-				for _, p := range match.MatchReport.A.Players {
-					stats := updateDurations(p, match.MatchReport.A.Keeper, match.StatsReport.A[p], e.Ts.Time, durationsLastUpdated)
-					match.StatsReport.A[p] = stats
+				for _, player := range match.MatchReport.A.Players {
+					stats := updateDurations(
+						player,
+						match.MatchReport.A.Keeper,
+						match.StatsReport.A[player],
+						event.Timestamp.Time,
+						durationsLastUpdated,
+					)
+					match.StatsReport.A[player] = stats
 				}
-				for _, p := range match.MatchReport.B.Players {
-					stats := updateDurations(p, match.MatchReport.B.Keeper, match.StatsReport.B[p], e.Ts.Time, durationsLastUpdated)
-					match.StatsReport.B[p] = stats
+
+				for _, player := range match.MatchReport.B.Players {
+					stats := updateDurations(
+						player,
+						match.MatchReport.B.Keeper,
+						match.StatsReport.B[player],
+						event.Timestamp.Time,
+						durationsLastUpdated,
+					)
+					match.StatsReport.B[player] = stats
 				}
-				durationsLastUpdated = e.Ts.Time
+
+				durationsLastUpdated = event.Timestamp.Time
 
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-					Minute: e.Ts.Sub(start).Minutes(),
-					Team:   teamBoth,
-					Type:   "Paused",
+					Minute:  event.Timestamp.Sub(start).Minutes(),
+					Player:  "",
+					Players: []string{},
+					Team:    teamBoth,
+					Type:    "Paused",
 				})
 			case "stopped":
-				for _, p := range match.MatchReport.A.Players {
-					stats := updateDurations(p, match.MatchReport.A.Keeper, match.StatsReport.A[p], e.Ts.Time, durationsLastUpdated)
-					match.StatsReport.A[p] = stats
+				for _, player := range match.MatchReport.A.Players {
+					stats := updateDurations(
+						player,
+						match.MatchReport.A.Keeper,
+						match.StatsReport.A[player],
+						event.Timestamp.Time,
+						durationsLastUpdated,
+					)
+					match.StatsReport.A[player] = stats
 				}
-				for _, p := range match.MatchReport.B.Players {
-					stats := updateDurations(p, match.MatchReport.B.Keeper, match.StatsReport.B[p], e.Ts.Time, durationsLastUpdated)
-					match.StatsReport.B[p] = stats
+
+				for _, player := range match.MatchReport.B.Players {
+					stats := updateDurations(
+						player,
+						match.MatchReport.B.Keeper,
+						match.StatsReport.B[player],
+						event.Timestamp.Time,
+						durationsLastUpdated,
+					)
+					match.StatsReport.B[player] = stats
 				}
-				durationsLastUpdated = e.Ts.Time
+
+				durationsLastUpdated = event.Timestamp.Time
 
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-					Minute: e.Ts.Sub(start).Minutes(),
-					Team:   teamBoth,
-					Type:   "Full time",
+					Minute:  event.Timestamp.Sub(start).Minutes(),
+					Player:  "",
+					Players: []string{},
+					Team:    teamBoth,
+					Type:    "Full time",
 				})
 			case "saved":
 			default:
-				log.Printf("Unrecognized activity value: %q\n", e.Value)
+				log.Printf("Unrecognized activity value: %q\n", event.Value)
 			}
 
 		case "C":
-			switch e.Team {
+			switch event.Team {
 			case teamA:
-				match.MatchReport.A.Captain = e.Player
+				match.MatchReport.A.Captain = event.Player
 			case teamB:
-				match.MatchReport.B.Captain = e.Player
+				match.MatchReport.B.Captain = event.Player
 			default:
-				log.Printf("Unrecognized team value: %q\n", e.Team)
+				log.Printf("Unrecognized team value: %q\n", event.Team)
 			}
 
 		case "T":
-			switch e.Team {
+			switch event.Team {
 			case teamA:
-				match.MatchReport.A.Players = e.Players
-				for _, player := range e.Players {
-					match.StatsReport.A[player] = Stats{}
+				match.MatchReport.A.Players = event.Players
+				for _, player := range event.Players {
+					match.StatsReport.A[player] = Stats{
+						InGoal:      0,
+						Outfield:    0,
+						Conceded:    0,
+						Goals:       0,
+						OwnGoals:    0,
+						RedCards:    0,
+						YellowCards: 0,
+					}
 				}
 			case teamB:
-				match.MatchReport.B.Players = e.Players
-				for _, player := range e.Players {
-					match.StatsReport.B[player] = Stats{}
+				match.MatchReport.B.Players = event.Players
+				for _, player := range event.Players {
+					match.StatsReport.B[player] = Stats{
+						InGoal:      0,
+						Outfield:    0,
+						Conceded:    0,
+						Goals:       0,
+						OwnGoals:    0,
+						RedCards:    0,
+						YellowCards: 0,
+					}
 				}
 			default:
-				log.Printf("Unrecognized team value: %q\n", e.Team)
+				log.Printf("Unrecognized team value: %q\n", event.Team)
 			}
 
 		case "K":
-			for _, p := range match.MatchReport.A.Players {
-				stats := updateDurations(p, match.MatchReport.A.Keeper, match.StatsReport.A[p], e.Ts.Time, durationsLastUpdated)
-				match.StatsReport.A[p] = stats
+			for _, player := range match.MatchReport.A.Players {
+				stats := updateDurations(
+					player,
+					match.MatchReport.A.Keeper,
+					match.StatsReport.A[player],
+					event.Timestamp.Time,
+					durationsLastUpdated,
+				)
+				match.StatsReport.A[player] = stats
 			}
-			for _, p := range match.MatchReport.B.Players {
-				stats := updateDurations(p, match.MatchReport.B.Keeper, match.StatsReport.B[p], e.Ts.Time, durationsLastUpdated)
-				match.StatsReport.B[p] = stats
+
+			for _, player := range match.MatchReport.B.Players {
+				stats := updateDurations(
+					player,
+					match.MatchReport.B.Keeper,
+					match.StatsReport.B[player],
+					event.Timestamp.Time,
+					durationsLastUpdated,
+				)
+				match.StatsReport.B[player] = stats
 			}
-			durationsLastUpdated = e.Ts.Time
+
+			durationsLastUpdated = event.Timestamp.Time
 
 			// Group together double keeper changes.
 			// TODO: should consider some reasonable delta as the same keeper change.
 			if i+1 < len(events) && events[i+1].Kind == "K" {
 				continue
 			}
+
 			if i-1 >= 0 && events[i-1].Kind == "K" {
 				match.MatchReport.A.Keeper = events[i-1].Player
-				match.MatchReport.B.Keeper = e.Player
+				match.MatchReport.B.Keeper = event.Player
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-					Minute:  e.Ts.Sub(start).Minutes(),
+					Minute:  event.Timestamp.Sub(start).Minutes(),
+					Player:  "",
 					Players: []string{match.MatchReport.A.Keeper, match.MatchReport.B.Keeper},
 					Team:    teamBoth,
 					Type:    "Keeper",
 				})
 			} else {
-				switch e.Team {
+				switch event.Team {
 				case teamA:
-					match.MatchReport.A.Keeper = e.Keeper
+					match.MatchReport.A.Keeper = event.Keeper
 				case teamB:
-					match.MatchReport.B.Keeper = e.Keeper
+					match.MatchReport.B.Keeper = event.Keeper
 				default:
-					log.Printf("Unrecognized team value: %q\n", e.Team)
+					log.Printf("Unrecognized team value: %q\n", event.Team)
 				}
 				match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-					Minute: e.Ts.Sub(start).Minutes(),
-					Player: e.Player,
-					Team:   e.Team,
+					Minute: event.Timestamp.Sub(start).Minutes(),
+					Player: event.Player,
+					Team:   event.Team,
 					Type:   "Keeper",
 				})
 			}
 
 		case "G":
 			match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-				Minute: e.Ts.Sub(start).Minutes(),
-				Player: e.Player,
-				Team:   e.Team,
-				Type:   "Goal",
+				Minute:  event.Timestamp.Sub(start).Minutes(),
+				Player:  event.Player,
+				Players: []string{},
+				Team:    event.Team,
+				Type:    "Goal",
 			})
-			switch e.Team {
+
+			switch event.Team {
 			case teamA:
 				match.MatchReport.A.Score++
 
-				stats := match.StatsReport.A[e.Player]
+				stats := match.StatsReport.A[event.Player]
 				stats.Goals++
-				match.StatsReport.A[e.Player] = stats
+				match.StatsReport.A[event.Player] = stats
 
-				stats = match.StatsReport.B[e.Keeper]
+				stats = match.StatsReport.B[event.Keeper]
 				stats.Conceded++
-				match.StatsReport.B[e.Keeper] = stats
+				match.StatsReport.B[event.Keeper] = stats
 			case teamB:
 				match.MatchReport.B.Score++
 
-				stats := match.StatsReport.B[e.Player]
+				stats := match.StatsReport.B[event.Player]
 				stats.Goals++
-				match.StatsReport.B[e.Player] = stats
+				match.StatsReport.B[event.Player] = stats
 
-				stats = match.StatsReport.A[e.Keeper]
+				stats = match.StatsReport.A[event.Keeper]
 				stats.Conceded++
-				match.StatsReport.A[e.Keeper] = stats
+				match.StatsReport.A[event.Keeper] = stats
 			default:
-				log.Printf("Unrecognized team value: %q\n", e.Team)
+				log.Printf("Unrecognized team value: %q\n", event.Team)
 			}
 
 		case "OG":
 			match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-				Minute: e.Ts.Sub(start).Minutes(),
-				Player: e.Player,
-				Team:   e.Team,
-				Type:   "Own goal",
+				Minute:  event.Timestamp.Sub(start).Minutes(),
+				Player:  event.Player,
+				Players: []string{},
+				Team:    event.Team,
+				Type:    "Own goal",
 			})
-			switch e.Team {
+
+			switch event.Team {
 			case teamA:
 				match.MatchReport.B.Score++
 
-				stats := match.StatsReport.A[e.Player]
+				stats := match.StatsReport.A[event.Player]
 				stats.OwnGoals++
-				match.StatsReport.A[e.Player] = stats
+				match.StatsReport.A[event.Player] = stats
 
-				stats = match.StatsReport.A[e.Keeper]
+				stats = match.StatsReport.A[event.Keeper]
 				stats.Conceded++
-				match.StatsReport.A[e.Keeper] = stats
+				match.StatsReport.A[event.Keeper] = stats
 			case teamB:
 				match.MatchReport.A.Score++
 
-				stats := match.StatsReport.B[e.Player]
+				stats := match.StatsReport.B[event.Player]
 				stats.OwnGoals++
-				match.StatsReport.B[e.Player] = stats
+				match.StatsReport.B[event.Player] = stats
 
-				stats = match.StatsReport.A[e.Keeper]
+				stats = match.StatsReport.A[event.Keeper]
 				stats.Conceded++
-				match.StatsReport.B[e.Keeper] = stats
+				match.StatsReport.B[event.Keeper] = stats
 			default:
-				log.Printf("Unrecognized team value: %q\n", e.Team)
+				log.Printf("Unrecognized team value: %q\n", event.Team)
 			}
 
 		case "RC":
 			match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-				Minute: e.Ts.Sub(start).Minutes(),
-				Player: e.Player,
-				Team:   e.Team,
-				Type:   "Red card",
+				Minute:  event.Timestamp.Sub(start).Minutes(),
+				Player:  event.Player,
+				Players: []string{},
+				Team:    event.Team,
+				Type:    "Red card",
 			})
-			switch e.Team {
+
+			switch event.Team {
 			case teamA:
-				stats := match.StatsReport.A[e.Player]
+				stats := match.StatsReport.A[event.Player]
 				stats.RedCards++
-				match.StatsReport.A[e.Player] = stats
+				match.StatsReport.A[event.Player] = stats
 			case teamB:
-				stats := match.StatsReport.B[e.Player]
+				stats := match.StatsReport.B[event.Player]
 				stats.RedCards++
-				match.StatsReport.B[e.Player] = stats
+				match.StatsReport.B[event.Player] = stats
 			default:
-				log.Printf("Unrecognized team value: %q\n", e.Team)
+				log.Printf("Unrecognized team value: %q\n", event.Team)
 			}
 
 		case "YC":
 			match.MatchReport.Events = append(match.MatchReport.Events, MatchEvent{
-				Minute: e.Ts.Sub(start).Minutes(),
-				Player: e.Player,
-				Team:   e.Team,
-				Type:   "Yellow card",
+				Minute:  event.Timestamp.Sub(start).Minutes(),
+				Player:  event.Player,
+				Players: []string{},
+				Team:    event.Team,
+				Type:    "Yellow card",
 			})
-			switch e.Team {
+
+			switch event.Team {
 			case teamA:
-				stats := match.StatsReport.A[e.Player]
+				stats := match.StatsReport.A[event.Player]
 				stats.YellowCards++
-				match.StatsReport.A[e.Player] = stats
+				match.StatsReport.A[event.Player] = stats
 			case teamB:
-				stats := match.StatsReport.B[e.Player]
+				stats := match.StatsReport.B[event.Player]
 				stats.YellowCards++
-				match.StatsReport.B[e.Player] = stats
+				match.StatsReport.B[event.Player] = stats
 			default:
-				log.Printf("Unrecognized team value: %q\n", e.Team)
+				log.Printf("Unrecognized team value: %q\n", event.Team)
 			}
 
 		default:
-			log.Printf("Unrecognized event type: %q\n", e.Kind)
+			log.Printf("Unrecognized event type: %q\n", event.Kind)
 		}
 	}
+
 	return match
 }

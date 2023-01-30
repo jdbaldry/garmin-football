@@ -59,8 +59,10 @@ type HistoricStats struct {
 
 // updateStats updates a player's stats with the events from a match report.
 func updateStats(player string, team int, stats RawStats, match Report) (RawStats, error) {
-	var matchStats Stats
-	var won bool
+	var (
+		matchStats Stats
+		won        bool
+	)
 
 	switch team {
 	case teamA:
@@ -74,13 +76,16 @@ func updateStats(player string, team int, stats RawStats, match Report) (RawStat
 	}
 
 	stats.Games++
-	if won {
+
+	switch {
+	case won:
 		stats.Wins++
-	} else if match.MatchReport.A.Score == match.MatchReport.B.Score {
+	case match.MatchReport.A.Score == match.MatchReport.B.Score:
 		stats.Draws++
-	} else {
+	default:
 		stats.Losses++
 	}
+
 	stats.Goals += matchStats.Goals
 	stats.OwnGoals += matchStats.OwnGoals
 	stats.Conceded += matchStats.Conceded
@@ -96,19 +101,22 @@ func updateStats(player string, team int, stats RawStats, match Report) (RawStat
 // If there is an error when updating an individuals players stats, it is logged rather
 // instead of being returned.
 func updatePlayerStats(playerStats map[string]RawStats, match Report) {
-	for p := range match.StatsReport.A {
-		stats, err := updateStats(p, teamA, playerStats[p], match)
+	for player := range match.StatsReport.A {
+		stats, err := updateStats(player, teamA, playerStats[player], match)
 		if err != nil {
-			log.Printf("Failed to update stats for player %q: %v\n", p, err)
+			log.Printf("Failed to update stats for player %q: %v\n", player, err)
 		}
-		playerStats[p] = stats
+
+		playerStats[player] = stats
 	}
-	for p := range match.StatsReport.B {
-		stats, err := updateStats(p, teamB, playerStats[p], match)
+
+	for player := range match.StatsReport.B {
+		stats, err := updateStats(player, teamB, playerStats[player], match)
 		if err != nil {
-			log.Printf("Failed to update stats for player %q: %v\n", p, err)
+			log.Printf("Failed to update stats for player %q: %v\n", player, err)
 		}
-		playerStats[p] = stats
+
+		playerStats[player] = stats
 	}
 }
 
@@ -120,6 +128,7 @@ func computeStats(raw map[string]RawStats) map[string]HistoricStats {
 		if p == "" || p == "Other" {
 			continue
 		}
+
 		computed[p] = HistoricStats{
 			RawStats: stats,
 			WinRatio: float64(stats.Wins) / float64(stats.Games),
