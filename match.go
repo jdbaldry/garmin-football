@@ -102,6 +102,7 @@ func updateDurations(player string, keeper string, stats Stats, currentTime time
 	} else {
 		stats.Outfield += elapsed
 	}
+
 	return stats
 }
 

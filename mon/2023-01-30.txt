@@ -16,8 +16,8 @@
 {"ts": "2023-01-30 18:38:54", "event": "K", "team": 0, "player": "Bal"}
 {"ts": "2023-01-30 18:42:12", "event": "K", "team": 1, "player": "Conor"}
 {"ts": "2023-01-30 18:42:36", "event": "K", "team": 0, "player": "Ash"}
-{"ts": "2023-01-30 18:44:40", "event": "K", "team": 1, "player": "Harry"}
 {"ts": "2023-01-30 18:46:57", "event": "K", "team": 0, "player": "Brad"}
+{"ts": "2023-01-30 18:44:40", "event": "K", "team": 1, "player": "Harry"}
 {"ts": "2023-01-30 18:47:29", "event": "G", "team": 0, "player": "Baldry", "keeper": "Harry"}
 {"ts": "2023-01-30 18:48:25", "event": "G", "team": 1, "player": "Jake", "keeper": "Brad"}
 {"ts": "2023-01-30 18:52:36", "event": "K", "team": 0, "player": "Dave"}
