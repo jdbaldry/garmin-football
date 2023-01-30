@@ -1,4 +1,5 @@
 <menu id="QuitMenu" title="@Strings.QuitMenu">
+  <menu-item id="Events" label="@Strings.EventsLabel"/>
   <menu-item id="No" label="@Strings.NoLabel"/>
   <menu-item id="Yes" label="@Strings.YesLabel"/>
 </menu>

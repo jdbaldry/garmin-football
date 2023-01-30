@@ -18,6 +18,7 @@
     <string id="QuitMenu">Quit</string>
     <string id="NoLabel">No</string>
     <string id="YesLabel">Yes</string>
+    <string id="EventsLabel">Events</string>
 
     <string id="ATitle">Team A</string>
     <string id="BTitle">Team B</string>
