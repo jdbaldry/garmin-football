@@ -128,7 +128,6 @@ func computeStats(raw map[string]RawStats) map[string]HistoricStats {
 		if p == "" || p == "Other" {
 			continue
 		}
-
 		computed[p] = HistoricStats{
 			RawStats: stats,
 			WinRatio: float64(stats.Wins) / float64(stats.Games),

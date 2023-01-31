@@ -64,7 +64,8 @@ func (t *Time) UnmarshalJSON(b []byte) error {
 type Event struct {
 	// Timestamp is the timestamp for the log in RFC3339 format with precision to the second.
 	// It is present on all events.
-	Timestamp Time
+	Timestamp Time `json:"ts"`
+
 	// Kind is the kind of the Event.
 	// Kind is extracted from the "event" member.
 	// It is present on all events.
@@ -154,7 +155,7 @@ func main() {
 
 		scanner := bufio.NewScanner(f)
 		for scanner.Scan() {
-			var event *Event
+			event := &Event{}
 			if err := json.Unmarshal(scanner.Bytes(), event); err != nil {
 				log.Printf("Failed to unmarshal line %q, skipping line: %v\n", scanner.Text(), err)
 

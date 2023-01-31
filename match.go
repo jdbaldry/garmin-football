@@ -318,9 +318,9 @@ func reportMatch(events []Event) (match Report) {
 			} else {
 				switch event.Team {
 				case teamA:
-					match.MatchReport.A.Keeper = event.Keeper
+					match.MatchReport.A.Keeper = event.Player
 				case teamB:
-					match.MatchReport.B.Keeper = event.Keeper
+					match.MatchReport.B.Keeper = event.Player
 				default:
 					log.Printf("Unrecognized team value: %q\n", event.Team)
 				}
