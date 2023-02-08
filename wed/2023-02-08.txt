@@ -1,0 +1,53 @@
+{"ts": "2023-02-08 19:03:02", "event": "A", "value": "started"}
+{"ts": "2023-02-08 19:03:02", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-02-08 19:03:02", "event": "K", "team": 1, "player": "Gwin"}
+{"ts": "2023-02-08 19:03:02", "event": "T", "team": 0, "players": ["Mabel", "Baldry", "Ben", "Wrighty", "Other"]}
+{"ts": "2023-02-08 19:03:02", "event": "T", "team": 1, "players": ["Gwin", "Liam", "Shirley", "Notley", "Niall"]}
+{"ts": "2023-02-08 19:03:02", "event": "C", "team": 0, "player": "Mabel"}
+{"ts": "2023-02-08 19:03:02", "event": "C", "team": 1, "player": "Gwin"}
+{"ts": "2023-02-08 19:07:22", "event": "G", "team": 1, "player": "Notley", "keeper": "Baldry"}
+{"ts": "2023-02-08 19:07:28", "event": "G", "team": 1, "player": "Niall", "keeper": "Baldry"}
+{"ts": "2023-02-08 19:07:57", "event": "G", "team": 1, "player": "Niall", "keeper": "Baldry"}
+{"ts": "2023-02-08 19:09:34", "event": "K", "team": 0, "player": "Ben"}
+{"ts": "2023-02-08 19:09:38", "event": "K", "team": 1, "player": "Shirley"}
+{"ts": "2023-02-08 19:11:34", "event": "G", "team": 0, "player": "Wrighty", "keeper": "Shirley"}
+{"ts": "2023-02-08 19:16:17", "event": "K", "team": 0, "player": "Other"}
+{"ts": "2023-02-08 19:16:21", "event": "K", "team": 1, "player": "Notley"}
+{"ts": "2023-02-08 19:21:19", "event": "K", "team": 0, "player": "Wrighty"}
+{"ts": "2023-02-08 19:21:22", "event": "K", "team": 1, "player": "Niall"}
+{"ts": "2023-02-08 19:23:14", "event": "G", "team": 1, "player": "Liam", "keeper": "Wrighty"}
+{"ts": "2023-02-08 19:24:45", "event": "G", "team": 0, "player": "Other", "keeper": "Niall"}
+{"ts": "2023-02-08 19:25:18", "event": "G", "team": 1, "player": "Shirley", "keeper": "Wrighty"}
+{"ts": "2023-02-08 19:27:25", "event": "G", "team": 1, "player": "Gwin", "keeper": "Wrighty"}
+{"ts": "2023-02-08 19:27:36", "event": "K", "team": 0, "player": "Mabel"}
+{"ts": "2023-02-08 19:27:38", "event": "K", "team": 1, "player": "Liam"}
+{"ts": "2023-02-08 19:29:07", "event": "G", "team": 1, "player": "Notley", "keeper": "Mabel"}
+{"ts": "2023-02-08 19:29:27", "event": "G", "team": 1, "player": "Shirley", "keeper": "Mabel"}
+{"ts": "2023-02-08 19:30:58", "event": "G", "team": 0, "player": "Wrighty", "keeper": "Liam"}
+{"ts": "2023-02-08 19:33:21", "event": "A", "value": "paused"}
+{"ts": "2023-02-08 19:35:31", "event": "A", "value": "started"}
+{"ts": "2023-02-08 19:35:31", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-02-08 19:35:31", "event": "K", "team": 1, "player": "Gwin"}
+{"ts": "2023-02-08 19:38:09", "event": "G", "team": 0, "player": "Mabel", "keeper": "Gwin"}
+{"ts": "2023-02-08 19:39:04", "event": "G", "team": 0, "player": "Ben", "keeper": "Gwin"}
+{"ts": "2023-02-08 19:40:05", "event": "G", "team": 0, "player": "Mabel", "keeper": "Gwin"}
+{"ts": "2023-02-08 19:40:54", "event": "K", "team": 0, "player": "Ben"}
+{"ts": "2023-02-08 19:40:58", "event": "K", "team": 1, "player": "Shirley"}
+{"ts": "2023-02-08 19:43:06", "event": "G", "team": 0, "player": "Baldry", "keeper": "Shirley"}
+{"ts": "2023-02-08 19:43:54", "event": "G", "team": 1, "player": "Niall", "keeper": "Ben"}
+{"ts": "2023-02-08 19:45:54", "event": "K", "team": 0, "player": "Other"}
+{"ts": "2023-02-08 19:45:58", "event": "K", "team": 1, "player": "Notley"}
+{"ts": "2023-02-08 19:49:03", "event": "G", "team": 1, "player": "Shirley", "keeper": "Other"}
+{"ts": "2023-02-08 19:50:26", "event": "G", "team": 1, "player": "Liam", "keeper": "Other"}
+{"ts": "2023-02-08 19:50:34", "event": "K", "team": 0, "player": "Wrighty"}
+{"ts": "2023-02-08 19:50:40", "event": "K", "team": 1, "player": "Niall"}
+{"ts": "2023-02-08 19:51:08", "event": "G", "team": 1, "player": "Gwin", "keeper": "Wrighty"}
+{"ts": "2023-02-08 19:55:22", "event": "K", "team": 0, "player": "Mabel"}
+{"ts": "2023-02-08 19:55:26", "event": "K", "team": 1, "player": "Liam"}
+{"ts": "2023-02-08 19:57:03", "event": "G", "team": 0, "player": "Ben", "keeper": "Liam"}
+{"ts": "2023-02-08 19:57:54", "event": "G", "team": 0, "player": "Baldry", "keeper": "Liam"}
+{"ts": "2023-02-08 19:59:32", "event": "G", "team": 1, "player": "Shirley", "keeper": "Mabel"}
+{"ts": "2023-02-08 19:59:36", "event": "G", "team": 1, "player": "Shirley", "keeper": "Mabel"}
+{"ts": "2023-02-08 20:00:03", "event": "G", "team": 0, "player": "Ben", "keeper": "Liam"}
+{"ts": "2023-02-08 20:00:06", "event": "A", "value": "stopped"}
+{"ts": "2023-02-08 20:00:07", "event": "A", "value": "saved"}
