@@ -39,6 +39,7 @@
 {"ts": "2023-02-01 19:55:14", "event": "K", "team": 0, "player": "Ben"}
 {"ts": "2023-02-01 19:55:18", "event": "K", "team": 1, "player": "Liam"}
 {"ts": "2023-02-01 19:57:14", "event": "G", "team": 0, "player": "Joe", "keeper": "Liam"}
+{"ts": "2023-02-01 19:57:14", "event": "G", "team": 0, "player": "Notley", "keeper": "Liam"}
 {"ts": "2023-02-01 19:57:41", "event": "G", "team": 1, "player": "Niall", "keeper": "Ben"}
 {"ts": "2023-02-01 20:00:55", "event": "G", "team": 1, "player": "Shirley", "keeper": "Ben"}
 {"ts": "2023-02-01 20:01:08", "event": "A", "value": "stopped"}
