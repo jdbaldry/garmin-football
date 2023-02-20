@@ -1,0 +1,41 @@
+{"ts": "2023-02-20 18:04:16", "event": "A", "value": "started"}
+{"ts": "2023-02-20 18:11:59", "event": "A", "value": "started"}
+{"ts": "2023-02-20 18:12:00", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-02-20 18:12:00", "event": "K", "team": 1, "player": "Conor"}
+{"ts": "2023-02-20 18:12:00", "event": "T", "team": 0, "players": ["Oli", "Baldry", "Joe", "MattC", "Ash"]}
+{"ts": "2023-02-20 18:12:00", "event": "T", "team": 1, "players": ["Dave", "Rob", "Fran", "Bal", "Conor", "Wazzy"]}
+{"ts": "2023-02-20 18:12:00", "event": "C", "team": 0, "player": "Oli"}
+{"ts": "2023-02-20 18:12:00", "event": "C", "team": 1, "player": "Dave"}
+{"ts": "2023-02-20 18:14:47", "event": "G", "team": 0, "player": "MattC", "keeper": "Conor"}
+{"ts": "2023-02-20 18:16:45", "event": "G", "team": 0, "player": "Oli", "keeper": "Conor"}
+{"ts": "2023-02-20 18:17:00", "event": "K", "team": 0, "player": "Oli"}
+{"ts": "2023-02-20 18:17:00", "event": "K", "team": 1, "player": "Wazzy"}
+{"ts": "2023-02-20 18:19:46", "event": "G", "team": 1, "player": "Bal", "keeper": "Oli"}
+{"ts": "2023-02-20 18:20:00", "event": "K", "team": 0, "player": "MattC"}
+{"ts": "2023-02-20 18:21:35", "event": "G", "team": 1, "player": "Conor", "keeper": "MattC"}
+{"ts": "2023-02-20 18:30:03", "event": "G", "team": 1, "player": "Bal", "keeper": "MattC"}
+{"ts": "2023-02-20 18:31:00", "event": "K", "team": 0, "player": "Joe"}
+{"ts": "2023-02-20 18:32:59", "event": "G", "team": 1, "player": "Conor", "keeper": "Joe"}
+{"ts": "2023-02-20 18:33:00", "event": "K", "team": 1, "player": "Rob"}
+{"ts": "2023-02-20 18:35:50", "event": "G", "team": 0, "player": "Joe", "keeper": "Rob"}
+{"ts": "2023-02-20 18:36:00", "event": "K", "team": 1, "player": "Bal"}
+{"ts": "2023-02-20 18:38:35", "event": "G", "team": 0, "player": "Ash", "keeper": "Bal"}
+{"ts": "2023-02-20 18:39:00", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-02-20 18:39:00", "event": "G", "team": 1, "player": "Fran", "keeper": "Baldry"}
+{"ts": "2023-02-20 18:40:04", "event": "G", "team": 0, "player": "Ash", "keeper": "Bal"}
+{"ts": "2023-02-20 18:41:00", "event": "K", "team": 0, "player": "Ash"}
+{"ts": "2023-02-20 18:42:54", "event": "OG", "team": 0, "player": "Baldry", "keeper": "Ash"}
+{"ts": "2023-02-20 18:43:00", "event": "K", "team": 1, "player": "Dave"}
+{"ts": "2023-02-20 18:43:46", "event": "G", "team": 0, "player": "Joe", "keeper": "Dave"}
+{"ts": "2023-02-20 18:45:38", "event": "YC", "team": 1, "player": "Dave"}
+{"ts": "2023-02-20 18:46:23", "event": "G", "team": 0, "player": "Oli", "keeper": "Dave"}
+{"ts": "2023-02-20 18:50:37", "event": "OG", "team": 1, "player": "Fran", "keeper": "Dave"}
+{"ts": "2023-02-20 18:51:00", "event": "K", "team": 0, "player": "MattC"}
+{"ts": "2023-02-20 18:52:15", "event": "G", "team": 1, "player": "Fran", "keeper": "MattC"}
+{"ts": "2023-02-20 18:52:30", "event": "K", "team": 1, "player": "Wazzy"}
+{"ts": "2023-02-20 18:52:53", "event": "G", "team": 0, "player": "Oli", "keeper": "Wazzy"}
+{"ts": "2023-02-20 18:53:00", "event": "K", "team": 1, "player": "Conor"}
+{"ts": "2023-02-20 18:54:43", "event": "G", "team": 0, "player": "Joe", "keeper": "Conor"}
+{"ts": "2023-02-20 18:57:05", "event": "G", "team": 1, "player": "Fran", "keeper": "MattC"}
+{"ts": "2023-02-20 18:58:00", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-02-20 19:00:21", "event": "A", "value": "stopped"}
