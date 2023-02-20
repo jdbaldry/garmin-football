@@ -49,7 +49,7 @@ class FootballActivityMenuDelegate extends WatchUi.MenuInputDelegate {
                 activityState = ACTIVITY_STOPPED;
                 session = null;
 
-                events.add(new SavedEvent());
+                new SavedEvent();
             }
             break;
         default:
