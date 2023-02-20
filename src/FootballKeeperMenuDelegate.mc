@@ -15,7 +15,7 @@ class FootballKeeperMenuDelegate extends WatchUi.MenuInputDelegate {
         // Event must be created before the keeper is set because it
         // suppresses premature logging of initial keepers which is instead
         // handled by a callback.
-        new KeeperEvent(_team, keeper);
+        events.add(new KeeperEvent(_team, keeper));
 
         switch (_team) {
         case TEAM_A:

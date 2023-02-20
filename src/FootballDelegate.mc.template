@@ -109,20 +109,20 @@ public function startActivityIfKeepersAreSet() {
                     :subSport=>ActivityRecording.SUB_SPORT_GENERIC
             });
             events.add(new StartedEvent());
-            new KeeperEvent(TEAM_A, aKeeper);
-            new KeeperEvent(TEAM_B, bKeeper);
-            new TeamEvent(TEAM_A, aTeam);
-            new TeamEvent(TEAM_B, bTeam);
-            new CaptainEvent(TEAM_A, aTeam[0]);
-            new CaptainEvent(TEAM_B, bTeam[0]);
+            events.add(new KeeperEvent(TEAM_A, aKeeper));
+            events.add(new KeeperEvent(TEAM_B, bKeeper));
+            events.add(new TeamEvent(TEAM_A, aTeam));
+            events.add(new TeamEvent(TEAM_B, bTeam));
+            events.add(new CaptainEvent(TEAM_A, aTeam[0]));
+            events.add(new CaptainEvent(TEAM_B, bTeam[0]));
 
             session.start();
             activityState = ACTIVITY_RECORDING;
         }
         if (session.isRecording() == false) {
             events.add(new StartedEvent());
-            new KeeperEvent(TEAM_A, aKeeper);
-            new KeeperEvent(TEAM_B, bKeeper);
+            events.add(new KeeperEvent(TEAM_A, aKeeper));
+            events.add(new KeeperEvent(TEAM_B, bKeeper));
 
             session.start();
             activityState = ACTIVITY_RECORDING;
