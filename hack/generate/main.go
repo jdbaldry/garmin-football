@@ -34,9 +34,20 @@ func main() {
 		TeamA []string
 		TeamB []string
 	}{
-		TeamA: strings.Split(*teamA, ","),
-		TeamB: strings.Split(*teamB, ","),
+		TeamA: splitOnComma(*teamA),
+		TeamB: splitOnComma(*teamB),
 	}); err != nil {
 		log.Fatalln(err)
 	}
+}
+
+func splitOnComma(str string) []string {
+	arr := []string{}
+	for _, x := range strings.Split(str, ",") {
+		if x != "" {
+			arr = append(arr, x)
+		}
+	}
+
+	return arr
 }
