@@ -72,7 +72,10 @@ public var players = {
     "Joe"=>:Joe,
     "Joe"=>:Joe,
     "MattC"=>:MattC,
+    "Oli"=>:Oli,
+    "Rob"=>:Rob,
     "Sewy"=>:Sewy,
+    "Wazzy"=>:Wazzy,
     "Wes"=>:Wes,
 };
 // Team A variables.
