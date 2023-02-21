@@ -2,7 +2,7 @@
 {"ts": "2023-02-20 18:11:59", "event": "A", "value": "started"}
 {"ts": "2023-02-20 18:12:00", "event": "K", "team": 0, "player": "Baldry"}
 {"ts": "2023-02-20 18:12:00", "event": "K", "team": 1, "player": "Conor"}
-{"ts": "2023-02-20 18:12:00", "event": "T", "team": 0, "players": ["Oli", "Baldry", "Joe", "MattC", "Ash"]}
+{"ts": "2023-02-20 18:12:00", "event": "T", "team": 0, "players": ["Oli", "Baldry", "Joe", "MattC", "Ash", "Brad"]}
 {"ts": "2023-02-20 18:12:00", "event": "T", "team": 1, "players": ["Dave", "Rob", "Fran", "Bal", "Conor", "Wazzy"]}
 {"ts": "2023-02-20 18:12:00", "event": "C", "team": 0, "player": "Oli"}
 {"ts": "2023-02-20 18:12:00", "event": "C", "team": 1, "player": "Dave"}
