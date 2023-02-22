@@ -125,7 +125,7 @@ func computeStats(raw map[string]RawStats) map[string]HistoricStats {
 	computed := make(map[string]HistoricStats)
 
 	for p, stats := range raw {
-		if p == "" || p == "Other" {
+		if p == "" || p == "Other" || (stats.Games < 3 && p != "Archie") {
 			continue
 		}
 		computed[p] = HistoricStats{
