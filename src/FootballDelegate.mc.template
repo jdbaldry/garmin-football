@@ -35,6 +35,7 @@ public var session as Session?;
 
 public var players = {
     "Archie"=>:Archie,
+    "Bailey"=>:Bailey,
     "Baldry"=>:Baldry,
     "Barge"=>:Barge,
     "Ben"=>:Ben,
@@ -42,6 +43,7 @@ public var players = {
     "Chris"=>:Chris,
     "Connor"=>:Connor,
     "Gwin"=>:Gwin,
+    "Harley"=>:Harley,
     "Jack"=>:Jack,
     "Liam"=>:Liam,
     "Mabel"=>:Mabel,
@@ -53,6 +55,7 @@ public var players = {
     "Olly"=>:Olly,
     "Other"=>:Other,
     "Q"=>:Q,
+    "Ryan"=>:Ryan,
     "Shirley"=>:Shirley,
     "Tom"=>:Tom,
     "Wardale"=>:Wardale,
