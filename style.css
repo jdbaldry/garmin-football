@@ -46,13 +46,29 @@ div {
   background-color: #4f4f4f;
   width: 100%;
 }
+.span {
+  width: 100%;
+}
 .black {
   background: #1f1f1f;
+}
+.players {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .team {
   float: left;
   text-align: center;
   width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .players {
+    flex-direction: column;
+  }
+  .team {
+    width: 100%;
+  }
 }
 .events {
   clear: left;
