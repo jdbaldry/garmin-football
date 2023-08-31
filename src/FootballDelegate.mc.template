@@ -61,6 +61,15 @@ public var players = {
     "Wardale"=>:Wardale,
     "Wrighty"=>:Wrighty,
 
+    "Joel"=>:Joel,
+    "JackP"=>:JackP,
+    "Sam"=>:Sam,
+    "Henry"=>:Henry,
+    "TomC"=>:TomC,
+    "Pandit"=>:Pandit,
+    "LouisH"=>:LouisH,
+    "LouisP"=>:LouisP,
+
     "Ash"=>:Ash,
     "Bal"=>:Bal,
     "Brad"=>:Brad,

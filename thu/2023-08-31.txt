@@ -1,0 +1,18 @@
+{"ts": "2023-08-31 20:22:27", "event": "A", "value": "started"}
+{"ts": "2023-08-31 20:22:27", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-08-31 20:22:27", "event": "K", "team": 1, "player": "Other"}
+{"ts": "2023-08-31 20:22:27", "event": "T", "team": 0, "players": ["Baldry", "JackP", "Sam", "Henry", "TomC", "Pandit", "LouisH", "LouisP"]}
+{"ts": "2023-08-31 20:22:27", "event": "T", "team": 1, "players": ["Other"]}
+{"ts": "2023-08-31 20:22:27", "event": "C", "team": 0, "player": "Highbury Square"}
+{"ts": "2023-08-31 20:22:27", "event": "C", "team": 1, "player": "Stingers"}
+{"ts": "2023-08-31 20:24:37", "event": "G", "team": 0, "player": "Pandit", "keeper": "Other"}
+{"ts": "2023-08-31 20:37:52", "event": "G", "team": 1, "player": "Other", "keeper": "Baldry"}
+{"ts": "2023-08-31 20:40:04", "event": "A", "value": "paused"}
+{"ts": "2023-08-31 20:43:32", "event": "A", "value": "started"}
+{"ts": "2023-08-31 20:43:32", "event": "K", "team": 0, "player": "Baldry"}
+{"ts": "2023-08-31 20:43:32", "event": "K", "team": 1, "player": "Other"}
+{"ts": "2023-08-31 20:46:35", "event": "G", "team": 1, "player": "Other", "keeper": "Baldry"}
+{"ts": "2023-08-31 20:50:04", "event": "G", "team": 0, "player": "JackP", "keeper": "Other"}
+{"ts": "2023-08-31 20:54:11", "event": "G", "team": 0, "player": "Henry", "keeper": "Other"}
+{"ts": "2023-08-31 21:00:27", "event": "A", "value": "stopped"}
+{"ts": "2023-08-31 21:00:28", "event": "A", "value": "saved"}

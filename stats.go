@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
+	"strconv"
 	"time"
 )
 
@@ -120,12 +122,22 @@ func updatePlayerStats(playerStats map[string]RawStats, match Report) {
 	}
 }
 
+// includePlayer determines whether a player is included in stats.
+func includePlayer(p string, stats RawStats) bool {
+	minimum := 3
+
+	if minEnv := os.Getenv("MINIMUM_GAMES"); minEnv != "" {
+		minimum, _ = strconv.Atoi(minEnv)
+	}
+	return p == "" || p == "Other" || (stats.Games < minimum && p != "Archie")
+}
+
 // computeStats computes historic stats for all players from their raw stats.
 func computeStats(raw map[string]RawStats) map[string]HistoricStats {
 	computed := make(map[string]HistoricStats)
 
 	for p, stats := range raw {
-		if p == "" || p == "Other" || (stats.Games < 3 && p != "Archie") {
+		if includePlayer(p, stats) {
 			continue
 		}
 		computed[p] = HistoricStats{
