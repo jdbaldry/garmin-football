@@ -29,7 +29,6 @@
     <string id="Barge">Barge</string>
     <string id="Ben">Ben</string>
     <string id="Bloor">Bloor</string>
-    <string id="Chris">Chris</string>
     <string id="Connor">Connor</string>
     <string id="Gwin">Gwin</string>
     <string id="Harley">Harley</string>
@@ -50,14 +49,16 @@
     <string id="Wardale">Wardale</string>
     <string id="Wrighty">Wrighty</string>
 
-    <string id="Joel">Joel</string>
-    <string id="JackP">JackP</string>
-    <string id="Sam">Sam</string>
+    <string id="Chris">Chris</string>
+    <string id="Harry">Harry</string>
     <string id="Henry">Henry</string>
-    <string id="TomC">TomC</string>
-    <string id="Pandit">Pandit</string>
+    <string id="JackP">JackP</string>
+    <string id="Joel">Joel</string>
     <string id="LouisH">LouisH</string>
     <string id="LouisP">LouisP</string>
+    <string id="Pandit">Pandit</string>
+    <string id="Sam">Sam</string>
+    <string id="TomC">TomC</string>
 
     <string id="Ash">Ash</string>
     <string id="Bal">Bal</string>
