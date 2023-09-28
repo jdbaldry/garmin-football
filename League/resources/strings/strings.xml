@@ -1,0 +1,41 @@
+<strings>
+    <string id="AppName">League</string>
+
+    <string id="Title">Football</string>
+
+    <string id="ConfigTitle">Config</string>
+    <string id="ModeTitle">Mode</string>
+    <string id="PlayersTitle">Players</string>
+    <string id="CardTitle">Card</string>
+    <string id="AttackTitle">Attack</string>
+    <string id="DefenceTitle">Defence</string>
+    <string id="KeeperTitle">Keeper</string>
+    <string id="ActivityTitle">Activity</string>
+    <string id="ConfirmTitle">Confirm</string>
+    <string id="SubTitle">Sub</string>
+
+    <string id="Yes">Yes</string>
+    <string id="No">No</string>
+
+    <string id="Begin">Start</string>
+    <string id="Stop">Stop</string>
+    <string id="Pause">Pause</string>
+    <string id="Quit">Quit</string>
+
+    <string id="RedCard">Red</string>
+    <string id="YellowCard">Yellow</string>
+    <string id="Goal">Goal</string>
+    <string id="Concede">Concede</string>
+    <string id="Miss">Miss</string>
+    <string id="Save">Save</string>
+    <string id="Tackle">Tackle</string>
+    <string id="Foul">Foul</string>
+    <string id="Block">Block</string>
+    <string id="Pass">Pass</string>
+    <string id="In">In</string>
+    <string id="Out">Out</string>
+
+    <string id="League">League</string>
+
+    <string id="PlayersPrompt">Comma separated list of players</string>
+</strings>

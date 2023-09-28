@@ -1,0 +1,4 @@
+<menu2 id="Config" title="@Strings.ConfigTitle">
+    <menu-item id="Players" label="@Strings.PlayersTitle" />
+    <menu-item id="Mode" label="@Strings.ModeTitle" />
+</menu2>

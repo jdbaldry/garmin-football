@@ -1,0 +1,7 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Join.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Join.mc"; @line = 2; ]
+import Toybox.Test;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Join.mc"; @line = 1; ]
+<init> {
+}

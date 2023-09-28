@@ -1,0 +1,61 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 5; ]
+class LeagueApp extends Application.AppBase{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 6; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueApp_mc_6_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc" 7 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueApp_mc_6_26_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 11; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 14; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 17; ]
+    function getInitialView() as Array<Views or InputDelegates> or Null {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueApp_mc_17_65_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc" 18 8 ]
+        %tmp.1 = newa Array<Views or InputDelegates> 2;
+        %tmp.5 = getv ? :LeagueView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        %tmp.11 = getv ? :LeagueDelegate;
+        %tmp.8 = newc %tmp.11 ();
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 1 %tmp.8;
+        ret %tmp.13;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueApp_mc_17_65_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 25; ]
+function getApp() as LeagueApp {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueApp_mc_25_31_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc" 26 4 ]
+    %tmp.1 = getm $.Toybox.Application;
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 LeagueApp;
+    ret %tmp.4;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueApp_mc_25_31_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueApp.mc"; @line = 1; ]
+<init> {
+}

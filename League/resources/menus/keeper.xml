@@ -1,0 +1,5 @@
+<menu2 id="Keeper" title="@Strings.KeeperTitle">
+    <menu-item id="Concede" label="@Strings.Concede" />
+    <menu-item id="Save" label="@Strings.Save" />
+    <menu-item id="Pass" label="@Strings.Pass" />
+</menu2>

@@ -1,0 +1,581 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 3; ]
+class Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 4; @position = 16; ]
+    private
+    var _kind as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 6; ]
+    function initialize(kind as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_6_40_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 7 8 ]
+        %tmp.2 = lgetv %kind;
+        putv self :_kind %tmp.2;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_6_40_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 10; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_10_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 11 8 ]
+        %tmp.1 = getm $;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "E";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.13 = "log() not implemented";
+        %tmp.14 = dup %tmp.12;
+        %tmp.15 = aputv %tmp.14 3 %tmp.13;
+        invoke %tmp.1 %tmp.2(%tmp.15);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_10_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 15; ]
+class TimeEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 15; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 15; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 16; @position = 16; ]
+    private
+    var _time as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 18; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_18_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 19 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Time";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 20 8 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :YYYYMMDD;
+        %tmp.8 = getv ? :Time;
+        %tmp.9 = getv function %tmp.8 :now;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = invoke %tmp.5 %tmp.6(%tmp.10);
+        putv self :_time %tmp.11;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 22 8 ]
+        %tmp.12 = self;
+        %tmp.13 = getv function %tmp.12 :log;
+        invoke %tmp.12 %tmp.13();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_18_26_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 25; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_25_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 26 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "T";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_time;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_25_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 30; ]
+class MatchEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 30; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 30; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 31; @position = 16; ]
+    private
+    var _action as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 33; ]
+    function initialize(action as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_33_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 34 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Match";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 35 8 ]
+        %tmp.6 = lgetv %action;
+        putv self :_action %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 37 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_33_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 40; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_40_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 41 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "M";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_action;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_40_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 45; ]
+class BeginEvent extends MatchEvent{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 45; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 45; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 46; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_46_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 47 8 ]
+        %tmp.2 = getv ? :MatchEvent;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "B";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_46_26_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 51; ]
+class PauseEvent extends MatchEvent{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 51; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 51; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 52; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_52_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 53 8 ]
+        %tmp.2 = getv ? :MatchEvent;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "P";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_52_26_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 57; ]
+class StopEvent extends MatchEvent{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 57; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 57; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 58; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_58_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 59 8 ]
+        %tmp.2 = getv ? :MatchEvent;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "S";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_58_26_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 63; ]
+class KeeperEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 63; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 63; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 64; @position = 16; ]
+    private
+    var _action as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 66; ]
+    function initialize(action as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_66_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 67 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Keeper";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 68 8 ]
+        %tmp.6 = lgetv %action;
+        putv self :_action %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 70 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_66_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 73; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_73_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 74 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "K";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_action;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_73_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 78; ]
+class DefenceEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 78; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 78; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 79; @position = 16; ]
+    private
+    var _action as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 81; ]
+    function initialize(action as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_81_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 82 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Defence";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 83 8 ]
+        %tmp.6 = lgetv %action;
+        putv self :_action %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 85 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_81_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 88; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_88_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 89 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "D";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_action;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_88_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 93; ]
+class AttackEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 93; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 93; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 94; @position = 16; ]
+    private
+    var _action as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 96; ]
+    function initialize(action as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_96_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 97 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Attack";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 98 8 ]
+        %tmp.6 = lgetv %action;
+        putv self :_action %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 100 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_96_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 103; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_103_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 104 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "A";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_action;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_103_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 108; ]
+class GoalEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 108; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 108; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 109; @position = 16; ]
+    private
+    var _player as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 111; ]
+    function initialize(player as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_111_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 112 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Goal";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 113 8 ]
+        %tmp.6 = lgetv %player;
+        putv self :_player %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 115 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_111_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 118; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_118_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 119 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "G";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_player;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_118_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 123; ]
+class HelpEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 123; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 123; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 124; @position = 16; ]
+    private
+    var _player as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 126; ]
+    function initialize(player as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_126_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 127 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Help";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 128 8 ]
+        %tmp.6 = lgetv %player;
+        putv self :_player %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 130 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_126_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 133; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_133_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 134 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "H";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_player;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_133_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 138; ]
+class InEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 138; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 138; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 139; @position = 16; ]
+    private
+    var _player as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 141; ]
+    function initialize(player as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_141_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 142 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "In";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 143 8 ]
+        %tmp.6 = lgetv %player;
+        putv self :_player %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 145 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_141_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 148; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_148_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 149 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "I";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_player;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_148_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 153; ]
+class OutEvent extends Event{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 153; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 153; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 154; @position = 16; ]
+    private
+    var _player as String;
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 156; ]
+    function initialize(player as String) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_156_42_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 157 8 ]
+        %tmp.2 = getv ? :Event;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.4 = "Out";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 158 8 ]
+        %tmp.6 = lgetv %player;
+        putv self :_player %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 160 8 ]
+        %tmp.7 = self;
+        %tmp.8 = getv function %tmp.7 :log;
+        invoke %tmp.7 %tmp.8();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_156_42_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 163; ]
+    function log() {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_163_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc" 164 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :jsonLog;
+        %tmp.3 = newa 4;
+        %tmp.4 = "E";
+        %tmp.5 = dup %tmp.3;
+        %tmp.6 = aputv %tmp.5 0 %tmp.4;
+        %tmp.7 = "O";
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 1 %tmp.7;
+        %tmp.10 = "V";
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 2 %tmp.10;
+        %tmp.14 = getv ? :_player;
+        %tmp.15 = dup %tmp.12;
+        %tmp.16 = aputv %tmp.15 3 %tmp.14;
+        invoke %tmp.1 %tmp.2(%tmp.16);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Event_mc_163_19_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Event.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,124 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 4; ]
+class GoalMenuDelegate extends WatchUi.Menu2InputDelegate{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 5; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_5_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 6 8 ]
+        %tmp.2 = getv ? :Menu2InputDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_5_26_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 9; ]
+    function onSelect(item as MenuItem) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 10 8 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_stop" ]
+        %id.1 = local;
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getId;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :toString;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = as %tmp.5 String;
+        lputv %id.1 %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 12 8 ]
+        %tmp.8 = getv ? :EVENTS;
+        %tmp.9 = getv function %tmp.8 :add;
+        %tmp.13 = getv ? :GoalEvent;
+        %tmp.15 = lgetv %id.1;
+        %tmp.10 = newc %tmp.13 (%tmp.15);
+        invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 13 8 ]
+        %tmp.18 = getv ? :SCORE_A;
+        %tmp.19 = add %tmp.18 1;
+        putv self :SCORE_A dup %tmp.19;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 15 8 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_stop" ]
+        %menu.2 = local;
+        %tmp.22 = getm $.Toybox.WatchUi;
+        %tmp.23 = getv function ? %tmp.22 :Menu2;
+        %tmp.24 = newd 1;
+        %tmp.26 = const :title;
+        %tmp.27 = "Assist";
+        %tmp.28 = dup %tmp.24;
+        %tmp.29 = aputv %tmp.28 %tmp.26 %tmp.27;
+        %tmp.20 = newc %tmp.23 (%tmp.29);
+        lputv %menu.2 %tmp.20;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 16 8 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_stop" ]
+        %players.3 = local;
+        %tmp.30 = self;
+        %tmp.31 = getv function %tmp.30 :split;
+        %tmp.33 = getv ? :Application;
+        %tmp.34 = getv %tmp.33 :Properties;
+        %tmp.35 = getv function %tmp.34 :getValue;
+        %tmp.36 = "Players";
+        %tmp.37 = invoke %tmp.34 %tmp.35(%tmp.36);
+        %tmp.38 = ",";
+        %tmp.39 = invoke %tmp.30 %tmp.31(%tmp.37, %tmp.38);
+        lputv %players.3 %tmp.39;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 18 8 ]
+        for @_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_test @_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_incr @_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_init:
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_begin" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_end" ]
+        %i.4 = local;
+        %tmp.40 = 0;
+        lputv %i.4 %tmp.40;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_test:
+        %tmp.42 = lgetv %i.4;
+        %tmp.43 = lgetv %players.3;
+        %tmp.44 = getv function %tmp.43 :size;
+        %tmp.45 = invoke %tmp.43 %tmp.44();
+        %tmp.46 = lt %tmp.42 %tmp.45;
+        bf %tmp.46 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_begin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_49_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 19 12 ]
+        %tmp.47 = lgetv %menu.2;
+        %tmp.48 = getv function %tmp.47 :addItem;
+        %tmp.52 = getv ? :MenuItem;
+        %tmp.54 = lgetv %players.3;
+        %tmp.56 = lgetv %i.4;
+        %tmp.57 = agetv %tmp.54 %tmp.56;
+        %tmp.58 = "";
+        %tmp.60 = lgetv %players.3;
+        %tmp.62 = lgetv %i.4;
+        %tmp.63 = agetv %tmp.60 %tmp.62;
+        %tmp.64 = newd 0;
+        %tmp.49 = newc %tmp.52 (%tmp.57, %tmp.58, %tmp.63, %tmp.64);
+        invoke %tmp.47 %tmp.48(%tmp.49);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_49_stop:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_incr:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 18 ]
+        %tmp.67 = lgetv %i.4;
+        %tmp.68 = add %tmp.67 1;
+        lputv %i.4 %tmp.68;
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_test;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_18_8_for_end:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc" 21 8 ]
+        %tmp.69 = getm $.Toybox.WatchUi;
+        %tmp.70 = getv function %tmp.69 :pushView;
+        %tmp.72 = lgetv %menu.2;
+        %tmp.76 = getv ? :AssistMenuDelegate;
+        %tmp.73 = newc %tmp.76 ();
+        %tmp.77 = getm $.Toybox.WatchUi;
+        %tmp.78 = getv %tmp.77 :SLIDE_IMMEDIATE;
+        invoke %tmp.69 %tmp.70(%tmp.72, %tmp.73, %tmp.78);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_GoalMenuDelegate_mc_9_48_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/GoalMenuDelegate.mc"; @line = 1; ]
+<init> {
+}

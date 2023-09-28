@@ -1,0 +1,132 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc"; @line = 2; ]
+import Toybox.Test;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc"; @line = 4; ]
+function split(str as String, sep as String) as Array<String> {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_4_62_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 5 4 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_4_62_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_4_62_stop" ]
+    %parts.1 = local;
+    %tmp.1 = newa Array<String> 0;
+    lputv %parts.1 %tmp.1;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 6 4 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_4_62_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_4_62_stop" ]
+    %index.2 = local;
+    %tmp.2 = lgetv %str;
+    %tmp.3 = getv function %tmp.2 :find;
+    %tmp.5 = lgetv %sep;
+    %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.5);
+    lputv %index.2 %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 8 4 ]
+    while @_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_4_while_test @_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_4_while_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_4_while_test:
+    %tmp.8 = lgetv %index.2;
+    bf %tmp.8 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_4_while_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_4_while_begin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_18_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 9 8 ]
+    %tmp.9 = lgetv %parts.1;
+    %tmp.10 = getv function %tmp.9 :add;
+    %tmp.11 = lgetv %str;
+    %tmp.12 = getv function %tmp.11 :substring;
+    %tmp.13 = 0;
+    %tmp.15 = lgetv %index.2;
+    %tmp.16 = invoke %tmp.11 %tmp.12(%tmp.13, %tmp.15);
+    invoke %tmp.9 %tmp.10(%tmp.16);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 10 8 ]
+    %tmp.17 = lgetv %str;
+    %tmp.18 = getv function %tmp.17 :substring;
+    %tmp.20 = lgetv %index.2;
+    %tmp.21 = lgetv %sep;
+    %tmp.22 = getv function %tmp.21 :length;
+    %tmp.23 = invoke %tmp.21 %tmp.22();
+    %tmp.24 = add %tmp.20 %tmp.23;
+    %tmp.25 = lgetv %str;
+    %tmp.26 = getv function %tmp.25 :length;
+    %tmp.27 = invoke %tmp.25 %tmp.26();
+    %tmp.28 = invoke %tmp.17 %tmp.18(%tmp.24, %tmp.27);
+    lputv %str %tmp.28;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 11 8 ]
+    %tmp.29 = lgetv %str;
+    %tmp.30 = getv function %tmp.29 :find;
+    %tmp.32 = lgetv %sep;
+    %tmp.33 = invoke %tmp.29 %tmp.30(%tmp.32);
+    lputv %index.2 %tmp.33;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_18_stop:
+    goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_4_while_test;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_8_4_while_end:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 14 4 ]
+    %tmp.34 = lgetv %parts.1;
+    %tmp.35 = getv function %tmp.34 :add;
+    %tmp.37 = lgetv %str;
+    invoke %tmp.34 %tmp.35(%tmp.37);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 16 4 ]
+    %tmp.39 = lgetv %parts.1;
+    ret %tmp.39;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_4_62_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc"; @line = 19; test = true; ]
+function testSplit(logger as Logger) as Boolean {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 21 4 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_stop" ]
+    %in.1 = local;
+    %tmp.1 = "A,B,C";
+    lputv %in.1 %tmp.1;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 22 4 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_stop" ]
+    %want.2 = local;
+    %tmp.2 = newa 3;
+    %tmp.3 = "A";
+    %tmp.4 = dup %tmp.2;
+    %tmp.5 = aputv %tmp.4 0 %tmp.3;
+    %tmp.6 = "B";
+    %tmp.7 = dup %tmp.5;
+    %tmp.8 = aputv %tmp.7 1 %tmp.6;
+    %tmp.9 = "C";
+    %tmp.10 = dup %tmp.8;
+    %tmp.11 = aputv %tmp.10 2 %tmp.9;
+    lputv %want.2 %tmp.11;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 23 4 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_stop" ]
+    %got.3 = local;
+    %tmp.12 = self;
+    %tmp.13 = getv function %tmp.12 :split;
+    %tmp.15 = lgetv %in.1;
+    %tmp.16 = ",";
+    %tmp.17 = invoke %tmp.12 %tmp.13(%tmp.15, %tmp.16);
+    lputv %got.3 %tmp.17;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 25 4 ]
+    %tmp.18 = lgetv %logger;
+    %tmp.19 = getv function %tmp.18 :debug;
+    %tmp.20 = "want: ";
+    %tmp.21 = lgetv %want.2;
+    %tmp.22 = getv function %tmp.21 :toString;
+    %tmp.23 = invoke %tmp.21 %tmp.22();
+    %tmp.24 = add %tmp.20 %tmp.23;
+    invoke %tmp.18 %tmp.19(%tmp.24);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 26 4 ]
+    %tmp.25 = lgetv %logger;
+    %tmp.26 = getv function %tmp.25 :debug;
+    %tmp.27 = " got: ";
+    %tmp.28 = lgetv %got.3;
+    %tmp.29 = getv function %tmp.28 :toString;
+    %tmp.30 = invoke %tmp.28 %tmp.29();
+    %tmp.31 = add %tmp.27 %tmp.30;
+    invoke %tmp.25 %tmp.26(%tmp.31);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc" 28 4 ]
+    %tmp.32 = lgetv %got.3;
+    %tmp.33 = getv function %tmp.32 :toString;
+    %tmp.34 = invoke %tmp.32 %tmp.33();
+    %tmp.35 = getv function %tmp.34 :equals;
+    %tmp.36 = lgetv %want.2;
+    %tmp.37 = getv function %tmp.36 :toString;
+    %tmp.38 = invoke %tmp.36 %tmp.37();
+    %tmp.39 = invoke %tmp.34 %tmp.35(%tmp.38);
+    ret %tmp.39;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_Split_mc_20_48_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/Split.mc"; @line = 1; ]
+<init> {
+}

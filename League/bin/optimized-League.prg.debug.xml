@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="/Users/jdb/ext/jdbaldry/garmin-football/League/manifest.xml"/>
+<pcToLineNum>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="11" lineNum="9" parent="globals" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="20" lineNum="5" parent="globals/GoalMenuDelegate" pc="268435475" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="21" lineNum="6" parent="globals/GoalMenuDelegate" pc="268435494" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="21" lineNum="7" parent="globals/GoalMenuDelegate" pc="268435496" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="10" parent="globals/GoalMenuDelegate" pc="268435515" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="11" parent="globals/GoalMenuDelegate" pc="268435519" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="13" parent="globals/GoalMenuDelegate" pc="268435541" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="14" parent="globals/GoalMenuDelegate" pc="268435587" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="16" parent="globals/GoalMenuDelegate" pc="268435606" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="17" parent="globals/GoalMenuDelegate" pc="268435653" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="23" parent="globals/GoalMenuDelegate" pc="268435691" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="24" parent="globals/GoalMenuDelegate" pc="268435698" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="25" parent="globals/GoalMenuDelegate" pc="268435715" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/GoalMenuDelegate.mc" id="22" lineNum="30" parent="globals/GoalMenuDelegate" pc="268435787" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="23" lineNum="7" parent="globals/Rez" pc="268435837" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="24" lineNum="139" parent="globals/InEvent" pc="268435861" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="25" lineNum="149" parent="globals/InEvent" pc="268435880" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="25" lineNum="150" parent="globals/InEvent" pc="268435882" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="26" lineNum="142" parent="globals/InEvent" pc="268435956" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="26" lineNum="143" parent="globals/InEvent" pc="268435958" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="26" lineNum="144" parent="globals/InEvent" pc="268435981" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="26" lineNum="146" parent="globals/InEvent" pc="268435991" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="27" lineNum="109" parent="globals/GoalEvent" pc="268436004" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="28" lineNum="119" parent="globals/GoalEvent" pc="268436023" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="28" lineNum="120" parent="globals/GoalEvent" pc="268436025" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="29" lineNum="112" parent="globals/GoalEvent" pc="268436099" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="29" lineNum="113" parent="globals/GoalEvent" pc="268436101" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="29" lineNum="114" parent="globals/GoalEvent" pc="268436124" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="29" lineNum="116" parent="globals/GoalEvent" pc="268436134" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/InMenuDelegate.mc" id="30" lineNum="4" parent="globals/InMenuDelegate" pc="268436147" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/InMenuDelegate.mc" id="31" lineNum="5" parent="globals/InMenuDelegate" pc="268436166" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/InMenuDelegate.mc" id="31" lineNum="6" parent="globals/InMenuDelegate" pc="268436168" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/InMenuDelegate.mc" id="32" lineNum="9" parent="globals/InMenuDelegate" pc="268436187" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/InMenuDelegate.mc" id="32" lineNum="10" parent="globals/InMenuDelegate" pc="268436189" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/InMenuDelegate.mc" id="32" lineNum="12" parent="globals/InMenuDelegate" pc="268436211" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/InMenuDelegate.mc" id="32" lineNum="14" parent="globals/InMenuDelegate" pc="268436257" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="4" parent="globals" pc="268436275" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="5" parent="globals" pc="268436287" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="6" parent="globals" pc="268436295" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="8" parent="globals" pc="268436310" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="9" parent="globals" pc="268436315" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="10" parent="globals" pc="268436345" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="11" parent="globals" pc="268436383" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="14" parent="globals" pc="268436401" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Split.mc" id="33" lineNum="16" parent="globals" pc="268436415" symbol="split"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="34" lineNum="5" parent="globals/SubMenuDelegate" pc="268436418" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="35" lineNum="6" parent="globals/SubMenuDelegate" pc="268436437" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="35" lineNum="7" parent="globals/SubMenuDelegate" pc="268436439" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="10" parent="globals/SubMenuDelegate" pc="268436458" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="11" parent="globals/SubMenuDelegate" pc="268436462" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="12" parent="globals/SubMenuDelegate" pc="268436462" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="13" parent="globals/SubMenuDelegate" pc="268436469" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="15" parent="globals/SubMenuDelegate" pc="268436491" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="16" parent="globals/SubMenuDelegate" pc="268436538" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="22" parent="globals/SubMenuDelegate" pc="268436576" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="23" parent="globals/SubMenuDelegate" pc="268436580" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="24" parent="globals/SubMenuDelegate" pc="268436597" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="30" parent="globals/SubMenuDelegate" pc="268436669" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="31" parent="globals/SubMenuDelegate" pc="268436671" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="40" parent="globals/SubMenuDelegate" pc="268436691" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="32" parent="globals/SubMenuDelegate" pc="268436714" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="38" parent="globals/SubMenuDelegate" pc="268436760" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="41" parent="globals/SubMenuDelegate" pc="268436763" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/SubMenuDelegate.mc" id="36" lineNum="47" parent="globals/SubMenuDelegate" pc="268436809" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="37" lineNum="5" parent="globals/LeagueApp" pc="268436814" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="38" lineNum="11" parent="globals/LeagueApp" pc="268436833" symbol="onStart"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="39" lineNum="17" parent="globals/LeagueApp" pc="268436836" symbol="getInitialView"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="39" lineNum="18" parent="globals/LeagueApp" pc="268436838" symbol="getInitialView"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="40" lineNum="6" parent="globals/LeagueApp" pc="268436913" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="40" lineNum="7" parent="globals/LeagueApp" pc="268436915" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="41" lineNum="14" parent="globals/LeagueApp" pc="268436934" symbol="onStop"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="42" lineNum="16" parent="globals/TimeEvent" pc="268436937" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="43" lineNum="26" parent="globals/TimeEvent" pc="268436956" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="43" lineNum="27" parent="globals/TimeEvent" pc="268436958" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="44" lineNum="19" parent="globals/TimeEvent" pc="268437032" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="44" lineNum="20" parent="globals/TimeEvent" pc="268437034" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="44" lineNum="21" parent="globals/TimeEvent" pc="268437057" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="44" lineNum="23" parent="globals/TimeEvent" pc="268437091" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="45" lineNum="20" parent="globals" pc="268437104" symbol="YYYYMMDD"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="45" lineNum="21" parent="globals" pc="268437114" symbol="YYYYMMDD"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="45" lineNum="26" parent="globals" pc="268437138" symbol="YYYYMMDD"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="46" lineNum="94" parent="globals/AttackEvent" pc="268437255" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="47" lineNum="104" parent="globals/AttackEvent" pc="268437274" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="47" lineNum="105" parent="globals/AttackEvent" pc="268437276" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="48" lineNum="97" parent="globals/AttackEvent" pc="268437350" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="48" lineNum="98" parent="globals/AttackEvent" pc="268437352" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="48" lineNum="99" parent="globals/AttackEvent" pc="268437375" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="48" lineNum="101" parent="globals/AttackEvent" pc="268437385" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="40" parent="globals" pc="268437398" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="42" parent="globals" pc="268437410" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="44" parent="globals" pc="268437450" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="46" parent="globals" pc="268437474" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="48" parent="globals" pc="268437507" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="50" parent="globals" pc="268437530" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="52" parent="globals" pc="268437566" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="49" lineNum="55" parent="globals" pc="268437589" symbol="jsonLog"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="50" lineNum="79" parent="globals/DefenceEvent" pc="268437614" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="51" lineNum="89" parent="globals/DefenceEvent" pc="268437633" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="51" lineNum="90" parent="globals/DefenceEvent" pc="268437635" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="52" lineNum="82" parent="globals/DefenceEvent" pc="268437709" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="52" lineNum="83" parent="globals/DefenceEvent" pc="268437711" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="52" lineNum="84" parent="globals/DefenceEvent" pc="268437734" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="52" lineNum="86" parent="globals/DefenceEvent" pc="268437744" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="53" lineNum="4" parent="globals/AssistMenuDelegate" pc="268437757" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="54" lineNum="21" parent="globals/AssistMenuDelegate" pc="268437776" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="54" lineNum="22" parent="globals/AssistMenuDelegate" pc="268437780" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="54" lineNum="23" parent="globals/AssistMenuDelegate" pc="268437780" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="54" lineNum="24" parent="globals/AssistMenuDelegate" pc="268437787" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="54" lineNum="25" parent="globals/AssistMenuDelegate" pc="268437801" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="54" lineNum="26" parent="globals/AssistMenuDelegate" pc="268437815" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="55" lineNum="5" parent="globals/AssistMenuDelegate" pc="268437830" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="55" lineNum="6" parent="globals/AssistMenuDelegate" pc="268437832" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="9" parent="globals/AssistMenuDelegate" pc="268437851" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="10" parent="globals/AssistMenuDelegate" pc="268437855" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="11" parent="globals/AssistMenuDelegate" pc="268437855" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="12" parent="globals/AssistMenuDelegate" pc="268437862" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="14" parent="globals/AssistMenuDelegate" pc="268437884" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="16" parent="globals/AssistMenuDelegate" pc="268437930" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="17" parent="globals/AssistMenuDelegate" pc="268437944" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AssistMenuDelegate.mc" id="56" lineNum="18" parent="globals/AssistMenuDelegate" pc="268437958" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="57" lineNum="124" parent="globals/HelpEvent" pc="268437973" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="58" lineNum="134" parent="globals/HelpEvent" pc="268437992" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="58" lineNum="135" parent="globals/HelpEvent" pc="268437994" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="59" lineNum="127" parent="globals/HelpEvent" pc="268438068" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="59" lineNum="128" parent="globals/HelpEvent" pc="268438070" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="59" lineNum="129" parent="globals/HelpEvent" pc="268438093" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="59" lineNum="131" parent="globals/HelpEvent" pc="268438103" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="60" lineNum="6" parent="globals" pc="268438116" symbol="timerTimeToString"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="60" lineNum="7" parent="globals" pc="268438126" symbol="timerTimeToString"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="60" lineNum="10" parent="globals" pc="268438183" symbol="timerTimeToString"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="61" lineNum="4" parent="globals/KeeperMenuDelegate" pc="268438235" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="62" lineNum="5" parent="globals/KeeperMenuDelegate" pc="268438254" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="62" lineNum="6" parent="globals/KeeperMenuDelegate" pc="268438256" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="9" parent="globals/KeeperMenuDelegate" pc="268438275" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="11" parent="globals/KeeperMenuDelegate" pc="268438279" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="10" parent="globals/KeeperMenuDelegate" pc="268438279" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="12" parent="globals/KeeperMenuDelegate" pc="268438286" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="13" parent="globals/KeeperMenuDelegate" pc="268438306" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="20" parent="globals/KeeperMenuDelegate" pc="268438326" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="28" parent="globals/KeeperMenuDelegate" pc="268438346" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="14" parent="globals/KeeperMenuDelegate" pc="268438369" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="16" parent="globals/KeeperMenuDelegate" pc="268438418" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="18" parent="globals/KeeperMenuDelegate" pc="268438432" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="21" parent="globals/KeeperMenuDelegate" pc="268438435" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="22" parent="globals/KeeperMenuDelegate" pc="268438454" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="24" parent="globals/KeeperMenuDelegate" pc="268438503" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="26" parent="globals/KeeperMenuDelegate" pc="268438517" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="29" parent="globals/KeeperMenuDelegate" pc="268438520" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="31" parent="globals/KeeperMenuDelegate" pc="268438569" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/KeeperMenuDelegate.mc" id="63" lineNum="33" parent="globals/KeeperMenuDelegate" pc="268438583" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="64" lineNum="24" parent="globals" pc="268438588" symbol="getApp"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueApp.mc" id="64" lineNum="25" parent="globals" pc="268438598" symbol="getApp"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="65" lineNum="31" parent="globals/MatchEvent" pc="268438614" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="66" lineNum="41" parent="globals/MatchEvent" pc="268438633" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="66" lineNum="42" parent="globals/MatchEvent" pc="268438635" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="67" lineNum="34" parent="globals/MatchEvent" pc="268438709" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="67" lineNum="35" parent="globals/MatchEvent" pc="268438711" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="67" lineNum="36" parent="globals/MatchEvent" pc="268438734" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="67" lineNum="38" parent="globals/MatchEvent" pc="268438744" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="68" lineNum="154" parent="globals/OutEvent" pc="268438757" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="69" lineNum="164" parent="globals/OutEvent" pc="268438776" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="69" lineNum="165" parent="globals/OutEvent" pc="268438778" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="70" lineNum="157" parent="globals/OutEvent" pc="268438852" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="70" lineNum="158" parent="globals/OutEvent" pc="268438854" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="70" lineNum="159" parent="globals/OutEvent" pc="268438877" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="70" lineNum="161" parent="globals/OutEvent" pc="268438887" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="71" lineNum="14" parent="globals/LeagueDelegate" pc="268438900" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="72" lineNum="48" parent="globals/LeagueDelegate" pc="268438919" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="72" lineNum="49" parent="globals/LeagueDelegate" pc="268438921" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="72" lineNum="50" parent="globals/LeagueDelegate" pc="268438938" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="72" lineNum="57" parent="globals/LeagueDelegate" pc="268439022" symbol="onBack"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="73" lineNum="35" parent="globals/LeagueDelegate" pc="268439025" symbol="onMenu"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="73" lineNum="36" parent="globals/LeagueDelegate" pc="268439027" symbol="onMenu"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="73" lineNum="37" parent="globals/LeagueDelegate" pc="268439044" symbol="onMenu"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="73" lineNum="44" parent="globals/LeagueDelegate" pc="268439128" symbol="onMenu"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="74" lineNum="15" parent="globals/LeagueDelegate" pc="268439131" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="74" lineNum="16" parent="globals/LeagueDelegate" pc="268439133" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="75" lineNum="20" parent="globals/LeagueDelegate" pc="268439152" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="75" lineNum="21" parent="globals/LeagueDelegate" pc="268439154" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="75" lineNum="27" parent="globals/LeagueDelegate" pc="268439235" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="60" parent="globals/LeagueDelegate" pc="268439238" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="61" parent="globals/LeagueDelegate" pc="268439240" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="62" parent="globals/LeagueDelegate" pc="268439257" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="64" parent="globals/LeagueDelegate" pc="268439268" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="74" parent="globals/LeagueDelegate" pc="268439288" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="83" parent="globals/LeagueDelegate" pc="268439308" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="65" parent="globals/LeagueDelegate" pc="268439311" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="71" parent="globals/LeagueDelegate" pc="268439392" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="75" parent="globals/LeagueDelegate" pc="268439395" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="81" parent="globals/LeagueDelegate" pc="268439476" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="84" parent="globals/LeagueDelegate" pc="268439479" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="86" parent="globals/LeagueDelegate" pc="268439512" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueDelegate.mc" id="76" lineNum="90" parent="globals/LeagueDelegate" pc="268439519" symbol="onKey"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="77" lineNum="4" parent="globals/DefenceMenuDelegate" pc="268439522" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="78" lineNum="5" parent="globals/DefenceMenuDelegate" pc="268439541" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="78" lineNum="6" parent="globals/DefenceMenuDelegate" pc="268439543" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="9" parent="globals/DefenceMenuDelegate" pc="268439562" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="11" parent="globals/DefenceMenuDelegate" pc="268439566" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="10" parent="globals/DefenceMenuDelegate" pc="268439566" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="12" parent="globals/DefenceMenuDelegate" pc="268439573" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="13" parent="globals/DefenceMenuDelegate" pc="268439593" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="20" parent="globals/DefenceMenuDelegate" pc="268439613" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="27" parent="globals/DefenceMenuDelegate" pc="268439633" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="14" parent="globals/DefenceMenuDelegate" pc="268439656" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="16" parent="globals/DefenceMenuDelegate" pc="268439705" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="18" parent="globals/DefenceMenuDelegate" pc="268439719" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="21" parent="globals/DefenceMenuDelegate" pc="268439722" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="23" parent="globals/DefenceMenuDelegate" pc="268439771" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="25" parent="globals/DefenceMenuDelegate" pc="268439785" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="28" parent="globals/DefenceMenuDelegate" pc="268439788" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="30" parent="globals/DefenceMenuDelegate" pc="268439837" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/DefenceMenuDelegate.mc" id="79" lineNum="32" parent="globals/DefenceMenuDelegate" pc="268439851" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="80" lineNum="4" parent="globals/QuitConfirmationDelegate" pc="268439856" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="9" parent="globals/QuitConfirmationDelegate" pc="268439875" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="10" parent="globals/QuitConfirmationDelegate" pc="268439877" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="11" parent="globals/QuitConfirmationDelegate" pc="268439888" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="12" parent="globals/QuitConfirmationDelegate" pc="268439898" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="13" parent="globals/QuitConfirmationDelegate" pc="268439911" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="14" parent="globals/QuitConfirmationDelegate" pc="268439918" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="15" parent="globals/QuitConfirmationDelegate" pc="268439930" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="81" lineNum="18" parent="globals/QuitConfirmationDelegate" pc="268439945" symbol="onResponse"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="82" lineNum="5" parent="globals/QuitConfirmationDelegate" pc="268439965" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" id="82" lineNum="6" parent="globals/QuitConfirmationDelegate" pc="268439967" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="83" lineNum="52" parent="globals/PauseEvent" pc="268439986" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="84" lineNum="53" parent="globals/PauseEvent" pc="268440005" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="84" lineNum="54" parent="globals/PauseEvent" pc="268440007" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="5" parent="globals" pc="268440031" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="6" parent="globals" pc="268440043" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="7" parent="globals" pc="268440043" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="8" parent="globals" pc="268440050" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="9" parent="globals" pc="268440052" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="12" parent="globals" pc="268440070" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="15" parent="globals" pc="268440088" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="18" parent="globals" pc="268440106" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="29" parent="globals" pc="268440124" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="10" parent="globals" pc="268440127" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="13" parent="globals" pc="268440146" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="16" parent="globals" pc="268440155" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="19" parent="globals" pc="268440167" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="21" parent="globals" pc="268440174" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="22" parent="globals" pc="268440198" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="23" parent="globals" pc="268440209" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="25" parent="globals" pc="268440222" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="27" parent="globals" pc="268440256" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="30" parent="globals" pc="268440265" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="31" parent="globals" pc="268440276" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/JSON.mc" id="85" lineNum="33" parent="globals" pc="268440297" symbol="toJson"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/OutMenuDelegate.mc" id="86" lineNum="4" parent="globals/OutMenuDelegate" pc="268440340" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/OutMenuDelegate.mc" id="87" lineNum="5" parent="globals/OutMenuDelegate" pc="268440359" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/OutMenuDelegate.mc" id="87" lineNum="6" parent="globals/OutMenuDelegate" pc="268440361" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/OutMenuDelegate.mc" id="88" lineNum="9" parent="globals/OutMenuDelegate" pc="268440380" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/OutMenuDelegate.mc" id="88" lineNum="10" parent="globals/OutMenuDelegate" pc="268440382" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/OutMenuDelegate.mc" id="88" lineNum="12" parent="globals/OutMenuDelegate" pc="268440404" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/OutMenuDelegate.mc" id="88" lineNum="14" parent="globals/OutMenuDelegate" pc="268440450" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="89" lineNum="8" parent="globals/LeagueView" pc="268440468" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="91" lineNum="14" parent="globals/LeagueView" pc="268440487" symbol="onLayout"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="91" lineNum="15" parent="globals/LeagueView" pc="268440489" symbol="onLayout"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="92" lineNum="9" parent="globals/LeagueView" pc="268440531" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="92" lineNum="10" parent="globals/LeagueView" pc="268440533" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="24" parent="globals/LeagueView" pc="268440552" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="26" parent="globals/LeagueView" pc="268440556" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="25" parent="globals/LeagueView" pc="268440556" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="27" parent="globals/LeagueView" pc="268440563" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="29" parent="globals/LeagueView" pc="268440570" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="31" parent="globals/LeagueView" pc="268440590" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="36" parent="globals/LeagueView" pc="268440612" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="37" parent="globals/LeagueView" pc="268440629" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="49" parent="globals/LeagueView" pc="268440749" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="57" parent="globals/LeagueView" pc="268440822" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="58" parent="globals/LeagueView" pc="268440859" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="59" parent="globals/LeagueView" pc="268440882" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/LeagueView.mc" id="94" lineNum="60" parent="globals/LeagueView" pc="268440889" symbol="onUpdate"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="95" lineNum="58" parent="globals/StopEvent" pc="268440970" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="96" lineNum="59" parent="globals/StopEvent" pc="268440989" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="96" lineNum="60" parent="globals/StopEvent" pc="268440991" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="97" lineNum="64" parent="globals/KeeperEvent" pc="268441015" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="98" lineNum="74" parent="globals/KeeperEvent" pc="268441034" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="98" lineNum="75" parent="globals/KeeperEvent" pc="268441036" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="99" lineNum="67" parent="globals/KeeperEvent" pc="268441110" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="99" lineNum="68" parent="globals/KeeperEvent" pc="268441112" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="99" lineNum="69" parent="globals/KeeperEvent" pc="268441135" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="99" lineNum="71" parent="globals/KeeperEvent" pc="268441145" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="100" lineNum="34" parent="globals" pc="268441158" symbol="HHMMSS"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="100" lineNum="35" parent="globals" pc="268441170" symbol="HHMMSS"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="100" lineNum="36" parent="globals" pc="268441170" symbol="HHMMSS"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="100" lineNum="37" parent="globals" pc="268441177" symbol="HHMMSS"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" id="100" lineNum="42" parent="globals" pc="268441201" symbol="HHMMSS"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="101" lineNum="11" parent="globals/Event" pc="268441309" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="101" lineNum="12" parent="globals/Event" pc="268441311" symbol="log"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="102" lineNum="7" parent="globals/Event" pc="268441386" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="102" lineNum="8" parent="globals/Event" pc="268441388" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="103" lineNum="5" parent="globals/AttackMenuDelegate" pc="268441399" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="104" lineNum="6" parent="globals/AttackMenuDelegate" pc="268441418" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="104" lineNum="7" parent="globals/AttackMenuDelegate" pc="268441420" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="10" parent="globals/AttackMenuDelegate" pc="268441439" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="12" parent="globals/AttackMenuDelegate" pc="268441443" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="11" parent="globals/AttackMenuDelegate" pc="268441443" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="13" parent="globals/AttackMenuDelegate" pc="268441450" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="15" parent="globals/AttackMenuDelegate" pc="268441470" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="38" parent="globals/AttackMenuDelegate" pc="268441490" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="45" parent="globals/AttackMenuDelegate" pc="268441510" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="16" parent="globals/AttackMenuDelegate" pc="268441533" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="17" parent="globals/AttackMenuDelegate" pc="268441580" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="23" parent="globals/AttackMenuDelegate" pc="268441618" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="24" parent="globals/AttackMenuDelegate" pc="268441622" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="25" parent="globals/AttackMenuDelegate" pc="268441639" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="30" parent="globals/AttackMenuDelegate" pc="268441711" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="36" parent="globals/AttackMenuDelegate" pc="268441757" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="39" parent="globals/AttackMenuDelegate" pc="268441760" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="41" parent="globals/AttackMenuDelegate" pc="268441809" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="43" parent="globals/AttackMenuDelegate" pc="268441823" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="46" parent="globals/AttackMenuDelegate" pc="268441826" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="48" parent="globals/AttackMenuDelegate" pc="268441875" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/AttackMenuDelegate.mc" id="105" lineNum="50" parent="globals/AttackMenuDelegate" pc="268441889" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="106" lineNum="5" parent="globals/MatchMenuDelegate" pc="268441894" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="28" parent="globals/MatchMenuDelegate" pc="268441913" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="30" parent="globals/MatchMenuDelegate" pc="268441917" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="29" parent="globals/MatchMenuDelegate" pc="268441917" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="31" parent="globals/MatchMenuDelegate" pc="268441927" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="32" parent="globals/MatchMenuDelegate" pc="268441940" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="33" parent="globals/MatchMenuDelegate" pc="268441952" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="34" parent="globals/MatchMenuDelegate" pc="268441964" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="107" lineNum="36" parent="globals/MatchMenuDelegate" pc="268441973" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="10" parent="globals/MatchMenuDelegate" pc="268442018" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="12" parent="globals/MatchMenuDelegate" pc="268442022" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="11" parent="globals/MatchMenuDelegate" pc="268442022" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="13" parent="globals/MatchMenuDelegate" pc="268442029" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="14" parent="globals/MatchMenuDelegate" pc="268442039" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="16" parent="globals/MatchMenuDelegate" pc="268442049" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="17" parent="globals/MatchMenuDelegate" pc="268442062" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="22" parent="globals/MatchMenuDelegate" pc="268442127" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="24" parent="globals/MatchMenuDelegate" pc="268442145" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="108" lineNum="25" parent="globals/MatchMenuDelegate" pc="268442189" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="109" lineNum="6" parent="globals/MatchMenuDelegate" pc="268442234" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="109" lineNum="7" parent="globals/MatchMenuDelegate" pc="268442236" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="39" parent="globals/MatchMenuDelegate" pc="268442255" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="41" parent="globals/MatchMenuDelegate" pc="268442259" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="40" parent="globals/MatchMenuDelegate" pc="268442259" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="42" parent="globals/MatchMenuDelegate" pc="268442266" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="43" parent="globals/MatchMenuDelegate" pc="268442273" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="44" parent="globals/MatchMenuDelegate" pc="268442280" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="45" parent="globals/MatchMenuDelegate" pc="268442300" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="73" parent="globals/MatchMenuDelegate" pc="268442320" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="87" parent="globals/MatchMenuDelegate" pc="268442340" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="106" parent="globals/MatchMenuDelegate" pc="268442360" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="46" parent="globals/MatchMenuDelegate" pc="268442383" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="47" parent="globals/MatchMenuDelegate" pc="268442391" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="54" parent="globals/MatchMenuDelegate" pc="268442408" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="61" parent="globals/MatchMenuDelegate" pc="268442428" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="48" parent="globals/MatchMenuDelegate" pc="268442448" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="50" parent="globals/MatchMenuDelegate" pc="268442460" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="52" parent="globals/MatchMenuDelegate" pc="268442474" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="55" parent="globals/MatchMenuDelegate" pc="268442477" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="57" parent="globals/MatchMenuDelegate" pc="268442489" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="59" parent="globals/MatchMenuDelegate" pc="268442503" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="62" parent="globals/MatchMenuDelegate" pc="268442506" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="63" parent="globals/MatchMenuDelegate" pc="268442516" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="64" parent="globals/MatchMenuDelegate" pc="268442534" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="66" parent="globals/MatchMenuDelegate" pc="268442578" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="68" parent="globals/MatchMenuDelegate" pc="268442592" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="71" parent="globals/MatchMenuDelegate" pc="268442596" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="74" parent="globals/MatchMenuDelegate" pc="268442599" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="75" parent="globals/MatchMenuDelegate" pc="268442607" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="76" parent="globals/MatchMenuDelegate" pc="268442627" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="77" parent="globals/MatchMenuDelegate" pc="268442637" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="78" parent="globals/MatchMenuDelegate" pc="268442655" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="80" parent="globals/MatchMenuDelegate" pc="268442699" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="82" parent="globals/MatchMenuDelegate" pc="268442713" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="85" parent="globals/MatchMenuDelegate" pc="268442717" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="88" parent="globals/MatchMenuDelegate" pc="268442720" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="89" parent="globals/MatchMenuDelegate" pc="268442728" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="96" parent="globals/MatchMenuDelegate" pc="268442745" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="90" parent="globals/MatchMenuDelegate" pc="268442765" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="92" parent="globals/MatchMenuDelegate" pc="268442777" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="94" parent="globals/MatchMenuDelegate" pc="268442791" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="97" parent="globals/MatchMenuDelegate" pc="268442794" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="99" parent="globals/MatchMenuDelegate" pc="268442806" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="101" parent="globals/MatchMenuDelegate" pc="268442820" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="104" parent="globals/MatchMenuDelegate" pc="268442824" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="107" parent="globals/MatchMenuDelegate" pc="268442827" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" id="110" lineNum="113" parent="globals/MatchMenuDelegate" pc="268442898" symbol="onSelect"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="111" lineNum="46" parent="globals/BeginEvent" pc="268442903" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="112" lineNum="47" parent="globals/BeginEvent" pc="268442922" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Event.mc" id="112" lineNum="48" parent="globals/BeginEvent" pc="268442924" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="113" lineNum="19" parent="globals/Rez/Layouts" pc="268442948" symbol="MainLayout"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="113" lineNum="20" parent="globals/Rez/Layouts" pc="268442960" symbol="MainLayout"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="113" lineNum="22" parent="globals/Rez/Layouts" pc="268443091" symbol="MainLayout"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="114" lineNum="35" parent="globals/Rez/Menus/Sub" pc="268443108" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="115" lineNum="36" parent="globals/Rez/Menus/Sub" pc="268443127" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="115" lineNum="37" parent="globals/Rez/Menus/Sub" pc="268443129" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="115" lineNum="38" parent="globals/Rez/Menus/Sub" pc="268443185" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="115" lineNum="39" parent="globals/Rez/Menus/Sub" pc="268443254" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="116" lineNum="58" parent="globals/Rez/Menus/Config" pc="268443324" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="117" lineNum="59" parent="globals/Rez/Menus/Config" pc="268443343" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="117" lineNum="60" parent="globals/Rez/Menus/Config" pc="268443345" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="117" lineNum="61" parent="globals/Rez/Menus/Config" pc="268443401" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="117" lineNum="62" parent="globals/Rez/Menus/Config" pc="268443470" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="118" lineNum="43" parent="globals/Rez/Menus/Mode" pc="268443540" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="119" lineNum="44" parent="globals/Rez/Menus/Mode" pc="268443559" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="119" lineNum="45" parent="globals/Rez/Menus/Mode" pc="268443561" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="119" lineNum="46" parent="globals/Rez/Menus/Mode" pc="268443617" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="120" lineNum="93" parent="globals/Rez/Menus/Keeper" pc="268443687" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="121" lineNum="94" parent="globals/Rez/Menus/Keeper" pc="268443706" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="121" lineNum="95" parent="globals/Rez/Menus/Keeper" pc="268443708" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="121" lineNum="96" parent="globals/Rez/Menus/Keeper" pc="268443764" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="121" lineNum="97" parent="globals/Rez/Menus/Keeper" pc="268443833" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="121" lineNum="98" parent="globals/Rez/Menus/Keeper" pc="268443902" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="122" lineNum="66" parent="globals/Rez/Menus/Confirm" pc="268443972" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="123" lineNum="67" parent="globals/Rez/Menus/Confirm" pc="268443991" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="123" lineNum="68" parent="globals/Rez/Menus/Confirm" pc="268443993" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="123" lineNum="69" parent="globals/Rez/Menus/Confirm" pc="268444049" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="123" lineNum="70" parent="globals/Rez/Menus/Confirm" pc="268444118" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="124" lineNum="74" parent="globals/Rez/Menus/Activity" pc="268444188" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="125" lineNum="75" parent="globals/Rez/Menus/Activity" pc="268444207" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="125" lineNum="76" parent="globals/Rez/Menus/Activity" pc="268444209" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="125" lineNum="77" parent="globals/Rez/Menus/Activity" pc="268444265" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="125" lineNum="78" parent="globals/Rez/Menus/Activity" pc="268444334" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="125" lineNum="79" parent="globals/Rez/Menus/Activity" pc="268444403" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="125" lineNum="80" parent="globals/Rez/Menus/Activity" pc="268444472" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="126" lineNum="84" parent="globals/Rez/Menus/Attack" pc="268444542" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="127" lineNum="85" parent="globals/Rez/Menus/Attack" pc="268444561" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="127" lineNum="86" parent="globals/Rez/Menus/Attack" pc="268444563" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="127" lineNum="87" parent="globals/Rez/Menus/Attack" pc="268444619" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="127" lineNum="88" parent="globals/Rez/Menus/Attack" pc="268444688" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="127" lineNum="89" parent="globals/Rez/Menus/Attack" pc="268444757" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="128" lineNum="50" parent="globals/Rez/Menus/Defence" pc="268444827" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="129" lineNum="51" parent="globals/Rez/Menus/Defence" pc="268444846" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="129" lineNum="52" parent="globals/Rez/Menus/Defence" pc="268444848" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="129" lineNum="53" parent="globals/Rez/Menus/Defence" pc="268444904" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="129" lineNum="54" parent="globals/Rez/Menus/Defence" pc="268444973" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="130" lineNum="27" parent="globals/Rez/Menus/Card" pc="268445043" symbol="&lt;init&gt;"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="131" lineNum="28" parent="globals/Rez/Menus/Card" pc="268445062" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="131" lineNum="29" parent="globals/Rez/Menus/Card" pc="268445064" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="131" lineNum="30" parent="globals/Rez/Menus/Card" pc="268445120" symbol="initialize"/>
+<entry filename="/Users/jdb/ext/jdbaldry/garmin-football/League/bin/gen/006-B3290-00/source/Rez.mcgen" id="131" lineNum="31" parent="globals/Rez/Menus/Card" pc="268445189" symbol="initialize"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry field="true" id="55" symbol="&lt;globals/OutEvent/&lt;&gt;_player&gt;"/>
+<entry field="true" id="37" symbol="SESSION"/>
+<entry field="true" id="54" symbol="&lt;globals/MatchEvent/&lt;&gt;_action&gt;"/>
+<entry id="8389346" symbol="text"/>
+<entry id="8389344" symbol="seconds"/>
+<entry field="true" id="88" symbol="Out"/>
+<entry id="10" object="true" symbol="AttackEvent"/>
+<entry id="45" method="true" symbol="toJson"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="7" module="true" symbol="globals/Rez/Menus"/>
+<entry field="true" id="28" symbol="MATCH_STATE"/>
+<entry id="8388638" module="true" symbol="ActivityRecording"/>
+<entry id="61" method="true" symbol="MainLayout"/>
+<entry field="true" id="74" symbol="Block"/>
+<entry id="16" object="true" symbol="Event"/>
+<entry field="true" id="8388890" symbol="sport"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="22" object="true" symbol="InMenuDelegate"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="8389108" method="true" symbol="onResponse"/>
+<entry field="true" id="98" symbol="Tackle"/>
+<entry field="true" id="76" symbol="Concede"/>
+<entry id="8388649" module="true" object="true" symbol="Test"/>
+<entry field="true" id="50" symbol="&lt;globals/TimeEvent/&lt;&gt;_time&gt;"/>
+<entry field="true" id="89" symbol="Pass"/>
+<entry field="true" id="71" symbol="AppName"/>
+<entry field="true" id="78" symbol="ConfirmTitle"/>
+<entry id="8" module="true" symbol="globals/Rez/Strings"/>
+<entry field="true" id="73" symbol="Begin"/>
+<entry id="8389080" method="true" symbol="onMenu"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="8388631" module="true" object="true" symbol="Activity"/>
+<entry field="true" id="48" symbol="&lt;globals/InEvent/&lt;&gt;_player&gt;"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="63" object="true" symbol="Card"/>
+<entry id="8389081" method="true" symbol="onBack"/>
+<entry id="62" object="true" symbol="Attack"/>
+<entry id="8390425" module="true" symbol="Properties"/>
+<entry field="true" id="93" symbol="Quit"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry id="26" object="true" symbol="LeagueDelegate"/>
+<entry id="66" object="true" symbol="Defence"/>
+<entry id="19" method="true" symbol="HHMMSS"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="59" method="true" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;"/>
+<entry id="64" object="true" symbol="Config"/>
+<entry id="17" object="true" symbol="GoalEvent"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389348" symbol="font"/>
+<entry id="69" object="true" symbol="Sub"/>
+<entry id="8388783" method="true" symbol="toString"/>
+<entry id="47" module="true" symbol="Menus"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="97" symbol="SubTitle"/>
+<entry field="true" id="53" symbol="&lt;globals/HelpEvent/&lt;&gt;_player&gt;"/>
+<entry id="38" object="true" symbol="StopEvent"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry field="true" id="49" symbol="&lt;globals/GoalEvent/&lt;&gt;_player&gt;"/>
+<entry field="true" id="52" symbol="&lt;globals/DefenceEvent/&lt;&gt;_action&gt;"/>
+<entry id="32" object="true" symbol="OutMenuDelegate"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="27" object="true" symbol="LeagueView"/>
+<entry field="true" id="94" symbol="RedCard"/>
+<entry id="67" object="true" symbol="Keeper"/>
+<entry field="true" id="91" symbol="PlayersPrompt"/>
+<entry id="24" object="true" symbol="KeeperMenuDelegate"/>
+<entry id="5" module="true" symbol="globals/Rez/JsonData"/>
+<entry id="8388899" method="true" symbol="log"/>
+<entry field="true" id="57" symbol="&lt;globals/Event/&lt;&gt;_kind&gt;"/>
+<entry id="25" object="true" symbol="LeagueApp"/>
+<entry field="true" id="79" symbol="DefenceTitle"/>
+<entry id="41" method="true" symbol="YYYYMMDD"/>
+<entry field="true" id="83" symbol="KeeperTitle"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry field="true" id="101" symbol="Yes"/>
+<entry id="14" object="true" symbol="DefenceMenuDelegate"/>
+<entry field="true" id="80" symbol="Foul"/>
+<entry field="true" id="85" symbol="Miss"/>
+<entry id="102" symbol="Players"/>
+<entry id="40" object="true" symbol="TimeEvent"/>
+<entry field="true" id="87" symbol="No"/>
+<entry field="true" id="82" symbol="In"/>
+<entry id="18" object="true" symbol="GoalMenuDelegate"/>
+<entry field="true" id="15" symbol="EVENTS"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="43" method="true" symbol="split"/>
+<entry id="8389619" method="true" symbol="onSelect"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="103" symbol="Red"/>
+<entry field="true" id="70" symbol="ActivityTitle"/>
+<entry field="true" id="36" symbol="SCORE_B"/>
+<entry field="true" id="35" symbol="SCORE_A"/>
+<entry field="true" id="92" symbol="PlayersTitle"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry field="true" id="72" symbol="AttackTitle"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry id="68" object="true" symbol="Mode"/>
+<entry field="true" id="95" symbol="Save"/>
+<entry id="44" method="true" symbol="timerTimeToString"/>
+<entry field="true" id="60" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="90" symbol="Pause"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="39" object="true" symbol="SubMenuDelegate"/>
+<entry id="9" object="true" symbol="AssistMenuDelegate"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry field="true" id="100" symbol="YellowCard"/>
+<entry field="true" id="96" symbol="Stop"/>
+<entry field="true" id="99" symbol="Title"/>
+<entry id="58" method="true" symbol="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;"/>
+<entry field="true" id="84" symbol="League"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="8388891" symbol="subSport"/>
+<entry id="11" object="true" symbol="AttackMenuDelegate"/>
+<entry field="true" id="8388892" symbol="name"/>
+<entry id="104" symbol="Yellow"/>
+<entry field="true" id="81" symbol="Goal"/>
+<entry id="31" object="true" symbol="OutEvent"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389347" symbol="color"/>
+<entry id="34" object="true" symbol="QuitConfirmationDelegate"/>
+<entry id="30" object="true" symbol="MatchMenuDelegate"/>
+<entry id="8389097" method="true" symbol="onKey"/>
+<entry field="true" id="56" symbol="&lt;globals/KeeperEvent/&lt;&gt;_action&gt;"/>
+<entry id="21" object="true" symbol="InEvent"/>
+<entry id="13" object="true" symbol="DefenceEvent"/>
+<entry id="23" object="true" symbol="KeeperEvent"/>
+<entry id="46" module="true" symbol="Layouts"/>
+<entry id="20" object="true" symbol="HelpEvent"/>
+<entry field="true" id="51" symbol="&lt;globals/AttackEvent/&lt;&gt;_action&gt;"/>
+<entry field="true" id="86" symbol="ModeTitle"/>
+<entry id="12" object="true" symbol="BeginEvent"/>
+<entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+<entry id="42" method="true" symbol="jsonLog"/>
+<entry field="true" id="77" symbol="ConfigTitle"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="29" object="true" symbol="MatchEvent"/>
+<entry field="true" id="75" symbol="CardTitle"/>
+<entry id="33" object="true" symbol="PauseEvent"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry field="true" id="8389642" symbol="title"/>
+<entry id="65" object="true" symbol="Confirm"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435836" name="item" stackId="1" startPc="268435515"/>
+<entry endPc="268435835" name="menu" stackId="2" startPc="268435519"/>
+<entry endPc="268435835" name="players" stackId="3" startPc="268435519"/>
+<entry arg="true" endPc="268436003" name="player" stackId="1" startPc="268435956"/>
+<entry arg="true" endPc="268436146" name="player" stackId="1" startPc="268436099"/>
+<entry arg="true" endPc="268436274" name="item" stackId="1" startPc="268436187"/>
+<entry arg="true" endPc="268436417" name="str" stackId="1" startPc="268436275"/>
+<entry arg="true" endPc="268436417" name="sep" stackId="2" startPc="268436275"/>
+<entry endPc="268436417" name="parts" stackId="3" startPc="268436287"/>
+<entry endPc="268436417" name="index" stackId="4" startPc="268436287"/>
+<entry arg="true" endPc="268436813" name="item" stackId="1" startPc="268436458"/>
+<entry endPc="268436812" name="pre_0" stackId="2" startPc="268436462"/>
+<entry endPc="268436812" name="id" stackId="3" startPc="268436462"/>
+<entry endPc="268436812" name="menu" stackId="4" startPc="268436462"/>
+<entry endPc="268436812" name="players" stackId="5" startPc="268436462"/>
+<entry arg="true" endPc="268437254" name="moment" stackId="1" startPc="268437104"/>
+<entry arg="true" endPc="268437397" name="action" stackId="1" startPc="268437350"/>
+<entry arg="true" endPc="268437613" name="pairs" stackId="1" startPc="268437398"/>
+<entry endPc="268437612" name="line" stackId="2" startPc="268437410"/>
+<entry endPc="268437588" name="i" stackId="3" startPc="268437474"/>
+<entry arg="true" endPc="268437756" name="action" stackId="1" startPc="268437709"/>
+<entry endPc="268437828" name="pre_0" stackId="1" startPc="268437780"/>
+<entry arg="true" endPc="268437972" name="item" stackId="1" startPc="268437851"/>
+<entry endPc="268437971" name="pre_0" stackId="2" startPc="268437855"/>
+<entry arg="true" endPc="268438115" name="player" stackId="1" startPc="268438068"/>
+<entry arg="true" endPc="268438234" name="timerTime" stackId="1" startPc="268438116"/>
+<entry arg="true" endPc="268438587" name="item" stackId="1" startPc="268438275"/>
+<entry endPc="268438586" name="pre_0" stackId="2" startPc="268438279"/>
+<entry arg="true" endPc="268438756" name="action" stackId="1" startPc="268438709"/>
+<entry arg="true" endPc="268438899" name="player" stackId="1" startPc="268438852"/>
+<entry arg="true" endPc="268439521" name="evt" stackId="1" startPc="268439238"/>
+<entry arg="true" endPc="268439855" name="item" stackId="1" startPc="268439562"/>
+<entry endPc="268439854" name="pre_0" stackId="2" startPc="268439566"/>
+<entry arg="true" endPc="268439964" name="response" stackId="1" startPc="268439875"/>
+<entry arg="true" endPc="268440339" name="anything" stackId="1" startPc="268440031"/>
+<entry endPc="268440338" name="pre_____" stackId="2" startPc="268440043"/>
+<entry endPc="268440255" name="j" stackId="3" startPc="268440198"/>
+<entry arg="true" endPc="268440467" name="item" stackId="1" startPc="268440380"/>
+<entry arg="true" endPc="268440530" name="dc" stackId="1" startPc="268440487"/>
+<entry arg="true" endPc="268440969" name="dc" stackId="1" startPc="268440552"/>
+<entry endPc="268440968" name="pre___02d_" stackId="2" startPc="268440556"/>
+<entry endPc="268440968" name="pre_2" stackId="3" startPc="268440556"/>
+<entry endPc="268440968" name="now" stackId="4" startPc="268440556"/>
+<entry arg="true" endPc="268441157" name="action" stackId="1" startPc="268441110"/>
+<entry arg="true" endPc="268441308" name="moment" stackId="1" startPc="268441158"/>
+<entry endPc="268441308" name="pre___02d_" stackId="2" startPc="268441170"/>
+<entry arg="true" endPc="268441398" name="kind" stackId="1" startPc="268441386"/>
+<entry arg="true" endPc="268441893" name="item" stackId="1" startPc="268441439"/>
+<entry endPc="268441892" name="pre_0" stackId="2" startPc="268441443"/>
+<entry endPc="268441891" name="menu" stackId="3" startPc="268441470"/>
+<entry endPc="268441891" name="players" stackId="4" startPc="268441470"/>
+<entry endPc="268442016" name="pre_SESSION" stackId="1" startPc="268441917"/>
+<entry endPc="268442232" name="pre_0" stackId="1" startPc="268442022"/>
+<entry arg="true" endPc="268442902" name="item" stackId="1" startPc="268442255"/>
+<entry endPc="268442901" name="pre_0" stackId="2" startPc="268442259"/>
+<entry endPc="268442901" name="pre_1" stackId="3" startPc="268442259"/>
+<entry endPc="268442901" name="pre_2" stackId="4" startPc="268442259"/>
+<entry arg="true" endPc="268443107" name="dc" stackId="1" startPc="268442948"/>
+<entry endPc="268443107" name="rez_cmp_local_text_5130272771" stackId="2" startPc="268442960"/>
+</localVars>
+<annotations>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Title"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ActivityTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Foul"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Goal"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="CardTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="PlayersTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Block"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="YellowCard"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ConfirmTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Pass"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Yes"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="KeeperTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Quit"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Save"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="RedCard"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Stop"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Concede"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Miss"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="League"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Pause"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Out"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="In"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SubTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Tackle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Begin"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="No"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AttackTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="PlayersPrompt"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ModeTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ConfigTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DefenceTitle"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/GoalMenuDelegate" offset="2511" parentId="globals" symbolId="GoalMenuDelegate" type="class"/>
+<dataEntry label="globals/Rez" offset="2566" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/InEvent" offset="2645" parentId="globals" symbolId="InEvent" type="class"/>
+<dataEntry label="globals/GoalEvent" offset="2708" parentId="globals" symbolId="GoalEvent" type="class"/>
+<dataEntry label="globals/InMenuDelegate" offset="2771" parentId="globals" symbolId="InMenuDelegate" type="class"/>
+<dataEntry label="globals/SubMenuDelegate" offset="2826" parentId="globals" symbolId="SubMenuDelegate" type="class"/>
+<dataEntry label="globals/LeagueApp" offset="2881" parentId="globals" symbolId="LeagueApp" type="class"/>
+<dataEntry label="globals/TimeEvent" offset="2952" parentId="globals" symbolId="TimeEvent" type="class"/>
+<dataEntry label="globals/AttackEvent" offset="3015" parentId="globals" symbolId="AttackEvent" type="class"/>
+<dataEntry label="globals/DefenceEvent" offset="3078" parentId="globals" symbolId="DefenceEvent" type="class"/>
+<dataEntry label="globals/AssistMenuDelegate" offset="3141" parentId="globals" symbolId="AssistMenuDelegate" type="class"/>
+<dataEntry label="globals/HelpEvent" offset="3204" parentId="globals" symbolId="HelpEvent" type="class"/>
+<dataEntry label="globals/KeeperMenuDelegate" offset="3267" parentId="globals" symbolId="KeeperMenuDelegate" type="class"/>
+<dataEntry label="globals/MatchEvent" offset="3322" parentId="globals" symbolId="MatchEvent" type="class"/>
+<dataEntry label="globals/OutEvent" offset="3385" parentId="globals" symbolId="OutEvent" type="class"/>
+<dataEntry label="globals/LeagueDelegate" offset="3448" parentId="globals" symbolId="LeagueDelegate" type="class"/>
+<dataEntry label="globals/DefenceMenuDelegate" offset="3527" parentId="globals" symbolId="DefenceMenuDelegate" type="class"/>
+<dataEntry label="globals/QuitConfirmationDelegate" offset="3582" parentId="globals" symbolId="QuitConfirmationDelegate" type="class"/>
+<dataEntry label="globals/PauseEvent" offset="3637" parentId="globals" symbolId="PauseEvent" type="class"/>
+<dataEntry label="globals/OutMenuDelegate" offset="3684" parentId="globals" symbolId="OutMenuDelegate" type="class"/>
+<dataEntry label="globals/LeagueView" offset="3739" parentId="globals" symbolId="LeagueView" type="class"/>
+<dataEntry label="globals/StopEvent" offset="3818" parentId="globals" symbolId="StopEvent" type="class"/>
+<dataEntry label="globals/KeeperEvent" offset="3865" parentId="globals" symbolId="KeeperEvent" type="class"/>
+<dataEntry label="globals/Event" offset="3928" parentId="globals" symbolId="Event" type="class"/>
+<dataEntry label="globals/AttackMenuDelegate" offset="3991" parentId="globals" symbolId="AttackMenuDelegate" type="class"/>
+<dataEntry label="globals/MatchMenuDelegate" offset="4046" parentId="globals" symbolId="MatchMenuDelegate" type="class"/>
+<dataEntry label="globals/BeginEvent" offset="4117" parentId="globals" symbolId="BeginEvent" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="4164" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="4203" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="4242" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="4345" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="4376" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="4663" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Menus/Sub" offset="4694" parentId="Menus" symbolId="Sub" type="class"/>
+<dataEntry label="globals/Rez/Menus/Config" offset="4741" parentId="Menus" symbolId="Config" type="class"/>
+<dataEntry label="globals/Rez/Menus/Mode" offset="4788" parentId="Menus" symbolId="Mode" type="class"/>
+<dataEntry label="globals/Rez/Menus/Keeper" offset="4835" parentId="Menus" symbolId="Keeper" type="class"/>
+<dataEntry label="globals/Rez/Menus/Confirm" offset="4882" parentId="Menus" symbolId="Confirm" type="class"/>
+<dataEntry label="globals/Rez/Menus/Activity" offset="4929" parentId="Menus" symbolId="Activity" type="class"/>
+<dataEntry label="globals/Rez/Menus/Attack" offset="4976" parentId="Menus" symbolId="Attack" type="class"/>
+<dataEntry label="globals/Rez/Menus/Defence" offset="5023" parentId="Menus" symbolId="Defence" type="class"/>
+<dataEntry label="globals/Rez/Menus/Card" offset="5070" parentId="Menus" symbolId="Card" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435493" name="&lt;init&gt;" parent="GoalMenuDelegate" startPc="268435475">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435514" name="initialize" parent="GoalMenuDelegate" startPc="268435494">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435836" name="onSelect" parent="GoalMenuDelegate" startPc="268435515">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435860" name="&lt;init&gt;" parent="Rez" startPc="268435837">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435879" name="&lt;init&gt;" parent="InEvent" startPc="268435861">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435955" name="log" parent="InEvent" startPc="268435880">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436003" name="initialize" parent="InEvent" startPc="268435956">
+<param id="player"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436022" name="&lt;init&gt;" parent="GoalEvent" startPc="268436004">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436098" name="log" parent="GoalEvent" startPc="268436023">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436146" name="initialize" parent="GoalEvent" startPc="268436099">
+<param id="player"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436165" name="&lt;init&gt;" parent="InMenuDelegate" startPc="268436147">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436186" name="initialize" parent="InMenuDelegate" startPc="268436166">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436274" name="onSelect" parent="InMenuDelegate" startPc="268436187">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436417" name="split" startPc="268436275">
+<param id="str"/>
+<param id="sep"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436436" name="&lt;init&gt;" parent="SubMenuDelegate" startPc="268436418">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436457" name="initialize" parent="SubMenuDelegate" startPc="268436437">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436813" name="onSelect" parent="SubMenuDelegate" startPc="268436458">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436832" name="&lt;init&gt;" parent="LeagueApp" startPc="268436814">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436835" name="onStart" parent="LeagueApp" startPc="268436833">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436912" name="getInitialView" parent="LeagueApp" startPc="268436836">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436933" name="initialize" parent="LeagueApp" startPc="268436913">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436936" name="onStop" parent="LeagueApp" startPc="268436934">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436955" name="&lt;init&gt;" parent="TimeEvent" startPc="268436937">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437031" name="log" parent="TimeEvent" startPc="268436956">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437103" name="initialize" parent="TimeEvent" startPc="268437032">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437254" name="YYYYMMDD" startPc="268437104">
+<param id="moment"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437273" name="&lt;init&gt;" parent="AttackEvent" startPc="268437255">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437349" name="log" parent="AttackEvent" startPc="268437274">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437397" name="initialize" parent="AttackEvent" startPc="268437350">
+<param id="action"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437613" name="jsonLog" startPc="268437398">
+<param id="pairs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437632" name="&lt;init&gt;" parent="DefenceEvent" startPc="268437614">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437708" name="log" parent="DefenceEvent" startPc="268437633">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437756" name="initialize" parent="DefenceEvent" startPc="268437709">
+<param id="action"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437775" name="&lt;init&gt;" parent="AssistMenuDelegate" startPc="268437757">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437829" name="onBack" parent="AssistMenuDelegate" startPc="268437776">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437850" name="initialize" parent="AssistMenuDelegate" startPc="268437830">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437972" name="onSelect" parent="AssistMenuDelegate" startPc="268437851">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437991" name="&lt;init&gt;" parent="HelpEvent" startPc="268437973">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438067" name="log" parent="HelpEvent" startPc="268437992">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438115" name="initialize" parent="HelpEvent" startPc="268438068">
+<param id="player"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438234" name="timerTimeToString" startPc="268438116">
+<param id="timerTime"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438253" name="&lt;init&gt;" parent="KeeperMenuDelegate" startPc="268438235">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438274" name="initialize" parent="KeeperMenuDelegate" startPc="268438254">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438587" name="onSelect" parent="KeeperMenuDelegate" startPc="268438275">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438613" name="getApp" startPc="268438588">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438632" name="&lt;init&gt;" parent="MatchEvent" startPc="268438614">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438708" name="log" parent="MatchEvent" startPc="268438633">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438756" name="initialize" parent="MatchEvent" startPc="268438709">
+<param id="action"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438775" name="&lt;init&gt;" parent="OutEvent" startPc="268438757">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438851" name="log" parent="OutEvent" startPc="268438776">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438899" name="initialize" parent="OutEvent" startPc="268438852">
+<param id="player"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438918" name="&lt;init&gt;" parent="LeagueDelegate" startPc="268438900">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439024" name="onBack" parent="LeagueDelegate" startPc="268438919">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439130" name="onMenu" parent="LeagueDelegate" startPc="268439025">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439151" name="initialize" parent="LeagueDelegate" startPc="268439131">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439237" name="onSelect" parent="LeagueDelegate" startPc="268439152">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439521" name="onKey" parent="LeagueDelegate" startPc="268439238">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439540" name="&lt;init&gt;" parent="DefenceMenuDelegate" startPc="268439522">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439561" name="initialize" parent="DefenceMenuDelegate" startPc="268439541">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439855" name="onSelect" parent="DefenceMenuDelegate" startPc="268439562">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439874" name="&lt;init&gt;" parent="QuitConfirmationDelegate" startPc="268439856">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439964" name="onResponse" parent="QuitConfirmationDelegate" startPc="268439875">
+<param id="response"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439985" name="initialize" parent="QuitConfirmationDelegate" startPc="268439965">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440004" name="&lt;init&gt;" parent="PauseEvent" startPc="268439986">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440030" name="initialize" parent="PauseEvent" startPc="268440005">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440339" name="toJson" startPc="268440031">
+<param id="anything"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440358" name="&lt;init&gt;" parent="OutMenuDelegate" startPc="268440340">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440379" name="initialize" parent="OutMenuDelegate" startPc="268440359">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440467" name="onSelect" parent="OutMenuDelegate" startPc="268440380">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440486" name="&lt;init&gt;" parent="LeagueView" startPc="268440468">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="LeagueView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440530" name="onLayout" parent="LeagueView" startPc="268440487">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440551" name="initialize" parent="LeagueView" startPc="268440531">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="LeagueView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440969" name="onUpdate" parent="LeagueView" startPc="268440552">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440988" name="&lt;init&gt;" parent="StopEvent" startPc="268440970">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441014" name="initialize" parent="StopEvent" startPc="268440989">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441033" name="&lt;init&gt;" parent="KeeperEvent" startPc="268441015">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441109" name="log" parent="KeeperEvent" startPc="268441034">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441157" name="initialize" parent="KeeperEvent" startPc="268441110">
+<param id="action"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441308" name="HHMMSS" startPc="268441158">
+<param id="moment"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Event">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441385" name="log" parent="Event" startPc="268441309">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441398" name="initialize" parent="Event" startPc="268441386">
+<param id="kind"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441417" name="&lt;init&gt;" parent="AttackMenuDelegate" startPc="268441399">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441438" name="initialize" parent="AttackMenuDelegate" startPc="268441418">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441893" name="onSelect" parent="AttackMenuDelegate" startPc="268441439">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441912" name="&lt;init&gt;" parent="MatchMenuDelegate" startPc="268441894">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268442017" name="&lt;globals/MatchMenuDelegate/&lt;&gt;stopMatch&gt;" parent="MatchMenuDelegate" startPc="268441913">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268442233" name="&lt;globals/MatchMenuDelegate/&lt;&gt;beginMatch&gt;" parent="MatchMenuDelegate" startPc="268442018">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442254" name="initialize" parent="MatchMenuDelegate" startPc="268442234">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442902" name="onSelect" parent="MatchMenuDelegate" startPc="268442255">
+<param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442921" name="&lt;init&gt;" parent="BeginEvent" startPc="268442903">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442947" name="initialize" parent="BeginEvent" startPc="268442922">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443107" name="MainLayout" parent="Layouts" startPc="268442948">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443126" name="&lt;init&gt;" parent="Sub" startPc="268443108">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443323" name="initialize" parent="Sub" startPc="268443127">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443342" name="&lt;init&gt;" parent="Config" startPc="268443324">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443539" name="initialize" parent="Config" startPc="268443343">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443558" name="&lt;init&gt;" parent="Mode" startPc="268443540">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443686" name="initialize" parent="Mode" startPc="268443559">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443705" name="&lt;init&gt;" parent="Keeper" startPc="268443687">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443971" name="initialize" parent="Keeper" startPc="268443706">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443990" name="&lt;init&gt;" parent="Confirm" startPc="268443972">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444187" name="initialize" parent="Confirm" startPc="268443991">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444206" name="&lt;init&gt;" parent="Activity" startPc="268444188">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444541" name="initialize" parent="Activity" startPc="268444207">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444560" name="&lt;init&gt;" parent="Attack" startPc="268444542">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444826" name="initialize" parent="Attack" startPc="268444561">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268444845" name="&lt;init&gt;" parent="Defence" startPc="268444827">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268445042" name="initialize" parent="Defence" startPc="268444846">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268445061" name="&lt;init&gt;" parent="Card" startPc="268445043">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268445258" name="initialize" parent="Card" startPc="268445062">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

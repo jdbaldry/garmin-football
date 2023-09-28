@@ -1,0 +1,73 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 1; ]
+import Toybox.System;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 4; ]
+class QuitConfirmationDelegate extends WatchUi.ConfirmationDelegate{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 5; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_5_24_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 6 4 ]
+        %tmp.2 = getv ? :ConfirmationDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_5_24_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 9; ]
+    function onResponse(response as Confirm) {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_9_43_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 10 4 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_10_4_if_stmt:
+        %tmp.2 = lgetv %response;
+        %tmp.3 = 1;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_10_4_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_10_4_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_10_23_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 11 6 ]
+        %tmp.6 = getv ? :SESSION;
+        lputv %response %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 12 6 ]
+        %tmp.7 = 3;
+        putv self :MATCH_STATE %tmp.7;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 13 6 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_13_6_if_stmt:
+        %tmp.9 = lgetv %response;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        bf %tmp.11 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_13_6_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_13_6_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_13_46_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 14 8 ]
+        %tmp.12 = lgetv %response;
+        %tmp.13 = as %tmp.12 { (!Null) };
+        %tmp.14 = getv function %tmp.13 :stop;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 15 8 ]
+        %tmp.15 = lgetv %response;
+        %tmp.16 = as %tmp.15 { (!Null) };
+        %tmp.17 = getv function %tmp.16 :save;
+        invoke %tmp.16 %tmp.17();
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_13_46_stop:
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_13_6_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_13_6_if_end:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc" 18 6 ]
+        %tmp.18 = getm $.Toybox.System;
+        %tmp.19 = getv function %tmp.18 :exit;
+        invoke %tmp.18 %tmp.19();
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_10_23_stop:
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_10_4_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_10_4_if_end:
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_QuitConfirmationDelegate_mc_9_43_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/QuitConfirmationDelegate.mc"; @line = 1; ]
+<init> {
+}

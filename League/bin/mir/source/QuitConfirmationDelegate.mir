@@ -1,0 +1,69 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 1; ]
+import Toybox.System;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 4; ]
+class QuitConfirmationDelegate extends WatchUi.ConfirmationDelegate{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 5; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_5_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc" 6 8 ]
+        %tmp.2 = getv ? :ConfirmationDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_5_26_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 9; ]
+    function onResponse(response as Confirm) {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_9_45_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc" 10 8 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_10_8_if_stmt:
+        %tmp.2 = lgetv %response;
+        %tmp.4 = getv ? :CONFIRM_YES;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_10_8_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_10_8_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_10_37_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc" 11 12 ]
+        %tmp.7 = getv ? :MATCH_STOPPED;
+        putv self :MATCH_STATE %tmp.7;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc" 12 12 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_12_12_if_stmt:
+        %tmp.9 = getv ? :SESSION;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        bf %tmp.11 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_12_12_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_12_12_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_12_33_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc" 13 16 ]
+        %tmp.13 = getv ? :SESSION;
+        %tmp.14 = as %tmp.13 { (!Null) };
+        %tmp.15 = getv function %tmp.14 :stop;
+        invoke %tmp.14 %tmp.15();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc" 14 16 ]
+        %tmp.17 = getv ? :SESSION;
+        %tmp.18 = getv function %tmp.17 :save;
+        invoke %tmp.17 %tmp.18();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_12_33_stop:
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_12_12_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_12_12_if_end:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc" 17 12 ]
+        %tmp.19 = getm $.Toybox.System;
+        %tmp.20 = getv function %tmp.19 :exit;
+        invoke %tmp.19 %tmp.20();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_10_37_stop:
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_10_8_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_10_8_if_end:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_QuitConfirmationDelegate_mc_9_45_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/QuitConfirmationDelegate.mc"; @line = 1; ]
+<init> {
+}

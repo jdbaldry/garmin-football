@@ -1,0 +1,8 @@
+<settings>
+    <group id="Players" title="@Strings.PlayersTitle">
+        <setting propertyKey="@Properties.Players" title="@Strings.PlayersTitle"
+            prompt="@Strings.PlayersPrompt">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+    </group>
+</settings>

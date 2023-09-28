@@ -1,0 +1,4 @@
+<properties>
+    <property id="AppVersion" type="string">1.0.0</property>
+    <property id="Players" type="string">Baldry,Joel,TomC,Sam,JackP,LouisH</property>
+</properties>

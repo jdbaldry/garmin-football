@@ -1,0 +1,216 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 4; ]
+import Toybox.System;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 6; ]
+class LeagueView extends WatchUi.View{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 7; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_7_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 8 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_7_26_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 12; ]
+    function onLayout(dc as Dc) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_12_40_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 13 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :MainLayout;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_12_40_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 19; ]
+    function onShow() as Void {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 22; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_22_40_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 24 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.5 = lgetv %dc;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 26 8 ]
+        %tmp.6 = lgetv %dc;
+        %tmp.7 = getv function %tmp.6 :setColor;
+        %tmp.8 = getm $.Toybox.Graphics;
+        %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+        %tmp.10 = getm $.Toybox.Graphics;
+        %tmp.11 = getv %tmp.10 :COLOR_BLACK;
+        invoke %tmp.6 %tmp.7(%tmp.9, %tmp.11);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 28 8 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_22_40_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_22_40_stop" ]
+        %now.1 = local;
+        %tmp.12 = getm $.Toybox.System;
+        %tmp.13 = getv function %tmp.12 :getClockTime;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %now.1 %tmp.14;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 29 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :drawText;
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :getWidth;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = 2;
+        %tmp.21 = div %tmp.19 %tmp.20;
+        %tmp.22 = lgetv %dc;
+        %tmp.23 = getv function %tmp.22 :getFontHeight;
+        %tmp.24 = getm $.Toybox.Graphics;
+        %tmp.25 = getv %tmp.24 :FONT_LARGE;
+        %tmp.26 = invoke %tmp.22 %tmp.23(%tmp.25);
+        %tmp.27 = getm $.Toybox.Graphics;
+        %tmp.28 = getv %tmp.27 :FONT_SMALL;
+        %tmp.29 = lgetv %now.1;
+        %tmp.30 = getv %tmp.29 :hour;
+        %tmp.31 = getv function %tmp.30 :format;
+        %tmp.32 = "%02d";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        %tmp.34 = ":";
+        %tmp.35 = add %tmp.33 %tmp.34;
+        %tmp.36 = lgetv %now.1;
+        %tmp.37 = getv %tmp.36 :min;
+        %tmp.38 = getv function %tmp.37 :format;
+        %tmp.39 = "%02d";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = add %tmp.35 %tmp.40;
+        %tmp.42 = ":";
+        %tmp.43 = add %tmp.41 %tmp.42;
+        %tmp.44 = lgetv %now.1;
+        %tmp.45 = getv %tmp.44 :sec;
+        %tmp.46 = getv function %tmp.45 :format;
+        %tmp.47 = "%02d";
+        %tmp.48 = invoke %tmp.45 %tmp.46(%tmp.47);
+        %tmp.49 = add %tmp.43 %tmp.48;
+        %tmp.50 = getm $.Toybox.Graphics;
+        %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.15 %tmp.16(%tmp.21, %tmp.26, %tmp.28, %tmp.49, %tmp.51);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 41 8 ]
+        %tmp.52 = lgetv %dc;
+        %tmp.53 = getv function %tmp.52 :drawText;
+        %tmp.54 = lgetv %dc;
+        %tmp.55 = getv function %tmp.54 :getWidth;
+        %tmp.56 = invoke %tmp.54 %tmp.55();
+        %tmp.57 = 2;
+        %tmp.58 = div %tmp.56 %tmp.57;
+        %tmp.59 = lgetv %dc;
+        %tmp.60 = getv function %tmp.59 :getHeight;
+        %tmp.61 = invoke %tmp.59 %tmp.60();
+        %tmp.62 = 2;
+        %tmp.63 = div %tmp.61 %tmp.62;
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :FONT_LARGE;
+        %tmp.67 = getv ? :SCORE_A;
+        %tmp.68 = " : ";
+        %tmp.69 = add %tmp.67 %tmp.68;
+        %tmp.71 = getv ? :SCORE_B;
+        %tmp.72 = add %tmp.69 %tmp.71;
+        %tmp.73 = getm $.Toybox.Graphics;
+        %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.52 %tmp.53(%tmp.58, %tmp.63, %tmp.65, %tmp.72, %tmp.74);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 49 8 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_8_if_stmt:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_12_begin:
+        %tmp.76 = getv ? :MATCH_STATE;
+        %tmp.78 = getv ? :MATCH_NONE;
+        %tmp.79 = ne %tmp.76 %tmp.78;
+        %tmp.80 = dup %tmp.79;
+        bf %tmp.80 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_41_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_41_true:
+        %tmp.82 = getv ? :MATCH_STATE;
+        %tmp.84 = getv ? :MATCH_STOPPED;
+        %tmp.85 = ne %tmp.82 %tmp.84;
+        %tmp.86 = and %tmp.79 %tmp.85;
+        push %tmp.86;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_41_end:
+        %tmp.87 = phi [%tmp.80 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_12_begin] [%tmp.86 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_41_true] [%tmp.87 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_41_end];
+        bf %tmp.87 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_8_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_8_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_71_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 50 12 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_71_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_71_stop" ]
+        %info.2 = local;
+        %tmp.89 = getv ? :Activity;
+        %tmp.90 = getv function %tmp.89 :getActivityInfo;
+        %tmp.91 = invoke %tmp.89 %tmp.90();
+        lputv %info.2 %tmp.91;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 51 12 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_71_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_71_stop" ]
+        %timerTime.3 = local;
+        %tmp.92 = lgetv %info.2;
+        %tmp.93 = getv %tmp.92 :timerTime;
+        lputv %timerTime.3 %tmp.93;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 52 12 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_52_12_if_stmt:
+        %tmp.95 = lgetv %timerTime.3;
+        %tmp.96 = null;
+        %tmp.97 = ne %tmp.95 %tmp.96;
+        bf %tmp.97 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_52_12_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_52_12_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_52_35_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc" 53 16 ]
+        %tmp.98 = lgetv %dc;
+        %tmp.99 = getv function %tmp.98 :drawText;
+        %tmp.100 = lgetv %dc;
+        %tmp.101 = getv function %tmp.100 :getWidth;
+        %tmp.102 = invoke %tmp.100 %tmp.101();
+        %tmp.103 = 2;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        %tmp.105 = lgetv %dc;
+        %tmp.106 = getv function %tmp.105 :getHeight;
+        %tmp.107 = invoke %tmp.105 %tmp.106();
+        %tmp.108 = lgetv %dc;
+        %tmp.109 = getv function %tmp.108 :getFontHeight;
+        %tmp.110 = getm $.Toybox.Graphics;
+        %tmp.111 = getv %tmp.110 :FONT_SMALL;
+        %tmp.112 = invoke %tmp.108 %tmp.109(%tmp.111);
+        %tmp.113 = sub %tmp.107 %tmp.112;
+        %tmp.114 = getm $.Toybox.Graphics;
+        %tmp.115 = getv %tmp.114 :FONT_NUMBER_THAI_HOT;
+        %tmp.116 = getm $.Toybox.Graphics;
+        %tmp.117 = getv %tmp.116 :FONT_SMALL;
+        %tmp.118 = bitor %tmp.115 %tmp.117;
+        %tmp.119 = self;
+        %tmp.120 = getv function %tmp.119 :timerTimeToString;
+        %tmp.122 = lgetv %timerTime.3;
+        %tmp.123 = as %tmp.122 { (!Null) };
+        %tmp.124 = invoke %tmp.119 %tmp.120(%tmp.123);
+        %tmp.125 = getm $.Toybox.Graphics;
+        %tmp.126 = getv %tmp.125 :TEXT_JUSTIFY_CENTER;
+        %tmp.127 = getm $.Toybox.Graphics;
+        %tmp.128 = getv %tmp.127 :TEXT_JUSTIFY_VCENTER;
+        %tmp.129 = bitor %tmp.126 %tmp.128;
+        invoke %tmp.98 %tmp.99(%tmp.104, %tmp.113, %tmp.118, %tmp.124, %tmp.129);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_52_35_stop:
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_52_12_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_52_12_if_end:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_71_stop:
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_8_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_49_8_if_end:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_LeagueView_mc_22_40_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 67; ]
+    function onHide() as Void {
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/LeagueView.mc"; @line = 1; ]
+<init> {
+}

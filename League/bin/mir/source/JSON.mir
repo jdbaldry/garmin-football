@@ -1,0 +1,297 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc"; @line = 2; ]
+import Toybox.System;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc"; @line = 3; ]
+import Toybox.Time;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc"; @line = 5; ]
+function toJson(anything) as String {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_5_36_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 6 4 ]
+    %tmp.2 = lgetv %anything;
+    push %tmp.2;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_6_4_switchStmtBegin:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 7 8 ]
+    %tmp.3 = dup %tmp.2;
+    %tmp.5 = getm $.Toybox.Lang;
+    %tmp.6 = getv %tmp.5 :Boolean;
+    %tmp.7 = isa %tmp.3 %tmp.6;
+    bt %tmp.7 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_7_8_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 10 8 ]
+    %tmp.8 = dup %tmp.2;
+    %tmp.10 = getm $.Toybox.Lang;
+    %tmp.11 = getv %tmp.10 :String;
+    %tmp.12 = isa %tmp.8 %tmp.11;
+    bt %tmp.12 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_10_8_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 13 8 ]
+    %tmp.13 = dup %tmp.2;
+    %tmp.15 = getm $.Toybox.Lang;
+    %tmp.16 = getv %tmp.15 :Number;
+    %tmp.17 = isa %tmp.13 %tmp.16;
+    bt %tmp.17 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_13_8_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 16 8 ]
+    %tmp.18 = dup %tmp.2;
+    %tmp.20 = getm $.Toybox.Lang;
+    %tmp.21 = getv %tmp.20 :Array;
+    %tmp.22 = isa %tmp.18 %tmp.21;
+    bt %tmp.22 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_16_8_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 29 8 ]
+    goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_6_4_defaultCodeBegin;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_7_8_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 8 12 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_begin:
+    %tmp.24 = lgetv %anything;
+    bf %tmp.24 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_false;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_true:
+    %tmp.25 = "true";
+    push %tmp.25;
+    goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_false:
+    %tmp.26 = "false";
+    push %tmp.26;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_end:
+    %tmp.27 = phi [%tmp.24 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_begin] [%tmp.25 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_true] [%tmp.26 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_false] [%tmp.27 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_8_19_end];
+    ret %tmp.27;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_10_8_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 11 12 ]
+    %tmp.28 = "\"";
+    %tmp.30 = lgetv %anything;
+    %tmp.31 = add %tmp.28 %tmp.30;
+    %tmp.32 = "\"";
+    %tmp.33 = add %tmp.31 %tmp.32;
+    ret %tmp.33;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_13_8_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 14 12 ]
+    %tmp.34 = lgetv %anything;
+    %tmp.35 = getv function %tmp.34 :toString;
+    %tmp.36 = invoke %tmp.34 %tmp.35();
+    ret %tmp.36;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_16_8_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 17 12 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_6_4_switchStmtBegin" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_6_4_switchStmtEnd" ]
+    %str.1 = local;
+    %tmp.37 = "[";
+    lputv %str.1 %tmp.37;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 19 12 ]
+    for @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_test @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_incr @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_init:
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_begin" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_end" ]
+    %j.2 = local;
+    %tmp.38 = 0;
+    lputv %j.2 %tmp.38;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_test:
+    %tmp.40 = lgetv %j.2;
+    %tmp.41 = lgetv %anything;
+    %tmp.42 = getv function %tmp.41 :size;
+    %tmp.43 = invoke %tmp.41 %tmp.42();
+    %tmp.44 = lt %tmp.40 %tmp.43;
+    bf %tmp.44 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_begin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_54_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 20 16 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_20_16_if_stmt:
+    %tmp.46 = lgetv %j.2;
+    %tmp.47 = 0;
+    %tmp.48 = ne %tmp.46 %tmp.47;
+    bf %tmp.48 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_20_16_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_20_16_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_20_28_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 21 20 ]
+    %tmp.49 = lgetv %str.1;
+    %tmp.50 = ", ";
+    %tmp.51 = add %tmp.49 %tmp.50;
+    lputv %str.1 %tmp.51;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_20_28_stop:
+    goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_20_16_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_20_16_if_end:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 23 16 ]
+    %tmp.52 = lgetv %str.1;
+    %tmp.53 = self;
+    %tmp.54 = getv function %tmp.53 :toJson;
+    %tmp.56 = lgetv %anything;
+    %tmp.58 = lgetv %j.2;
+    %tmp.59 = agetv %tmp.56 %tmp.58;
+    %tmp.60 = invoke %tmp.53 %tmp.54(%tmp.59);
+    %tmp.61 = add %tmp.52 %tmp.60;
+    lputv %str.1 %tmp.61;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_54_stop:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_incr:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 19 ]
+    %tmp.64 = lgetv %j.2;
+    %tmp.65 = add %tmp.64 1;
+    lputv %j.2 %tmp.65;
+    goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_test;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_19_12_for_end:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 25 12 ]
+    %tmp.66 = lgetv %str.1;
+    %tmp.67 = "]";
+    %tmp.68 = add %tmp.66 %tmp.67;
+    lputv %str.1 %tmp.68;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 27 12 ]
+    %tmp.70 = lgetv %str.1;
+    ret %tmp.70;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_29_8_switchCase:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_6_4_defaultCodeBegin:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 30 12 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_12_if_stmt:
+    %tmp.72 = lgetv %anything;
+    %tmp.74 = const :toString;
+    %tmp.75 = canhazplz %tmp.72 %tmp.74;
+    bf %tmp.75 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_12_if_false;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_12_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_40_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 31 16 ]
+    %tmp.76 = "\"";
+    %tmp.77 = lgetv %anything;
+    %tmp.78 = as %tmp.77 { (interface { var toString; }) };
+    %tmp.79 = getv function %tmp.78 :toString;
+    %tmp.80 = invoke %tmp.78 %tmp.79();
+    %tmp.81 = add %tmp.76 %tmp.80;
+    %tmp.82 = "\"";
+    %tmp.83 = add %tmp.81 %tmp.82;
+    ret %tmp.83;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_40_stop:
+    goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_12_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_12_if_false:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_32_19_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 33 16 ]
+    %tmp.86 = getm $.Toybox.Lang;
+    %tmp.87 = getv function ? %tmp.86 :InvalidValueException;
+    %tmp.88 = "Cannot convert ";
+    %tmp.90 = lgetv %anything;
+    %tmp.91 = as %tmp.90 { (!interface { var toString; }) };
+    %tmp.92 = add %tmp.88 %tmp.91;
+    %tmp.93 = " to JSON";
+    %tmp.94 = add %tmp.92 %tmp.93;
+    %tmp.84 = newc %tmp.87 (%tmp.94);
+    throw %tmp.84;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_32_19_stop:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_30_12_if_end:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_6_4_switchStmtEnd:
+    pop;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_5_36_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc"; @line = 40; ]
+function jsonLog(pairs as Array<String>) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_40_49_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 42 4 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_40_49_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_40_49_stop" ]
+    %line.1 = local;
+    %tmp.1 = "{\"T\":\"";
+        %tmp.2 = self;
+        %tmp.3 = getv function %tmp.2 :HHMMSS;
+        %tmp.4 = getm $.Toybox.Time;
+        %tmp.5 = getv function %tmp.4 :now;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = invoke %tmp.2 %tmp.3(%tmp.6);
+        %tmp.8 = add %tmp.1 %tmp.7;
+        %tmp.9 = "\"";
+        %tmp.10 = add %tmp.8 %tmp.9;
+        lputv %line.1 %tmp.10;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 44 4 ]
+        for @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_test @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_incr @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_init:
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_begin" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_end" ]
+        %i.2 = local;
+        %tmp.11 = 0;
+        lputv %i.2 %tmp.11;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_test:
+        %tmp.13 = lgetv %i.2;
+        %tmp.14 = lgetv %pairs;
+        %tmp.15 = getv function %tmp.14 :size;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = lt %tmp.13 %tmp.16;
+        bf %tmp.17 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_begin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_46_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 46 8 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_46_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_46_stop" ]
+        %key.3 = local;
+        %tmp.19 = lgetv %pairs;
+        %tmp.21 = lgetv %i.2;
+        %tmp.22 = agetv %tmp.19 %tmp.21;
+        lputv %key.3 %tmp.22;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 47 8 ]
+        %tmp.23 = lgetv %line.1;
+        %tmp.24 = ",";
+        %tmp.25 = add %tmp.23 %tmp.24;
+        lputv %line.1 %tmp.25;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 48 8 ]
+        %tmp.26 = lgetv %line.1;
+        %tmp.27 = self;
+        %tmp.28 = getv function %tmp.27 :toJson;
+        %tmp.30 = lgetv %key.3;
+        %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.30);
+        %tmp.32 = add %tmp.26 %tmp.31;
+        lputv %line.1 %tmp.32;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 49 8 ]
+        %tmp.33 = lgetv %line.1;
+        %tmp.34 = ":";
+        %tmp.35 = add %tmp.33 %tmp.34;
+        lputv %line.1 %tmp.35;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 51 8 ]
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_8_if_stmt:
+        %tmp.37 = lgetv %i.2;
+        %tmp.38 = 1;
+        %tmp.39 = add %tmp.37 %tmp.38;
+        %tmp.40 = lgetv %pairs;
+        %tmp.41 = getv function %tmp.40 :size;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        %tmp.43 = lt %tmp.39 %tmp.42;
+        bf %tmp.43 @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_8_if_false;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_8_if_true:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_34_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 53 12 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_34_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_34_stop" ]
+        %value.4 = local;
+        %tmp.45 = lgetv %pairs;
+        %tmp.47 = lgetv %i.2;
+        %tmp.48 = 1;
+        %tmp.49 = add %tmp.47 %tmp.48;
+        %tmp.50 = agetv %tmp.45 %tmp.49;
+        lputv %value.4 %tmp.50;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 54 12 ]
+        %tmp.51 = lgetv %line.1;
+        %tmp.52 = "";
+        %tmp.53 = self;
+        %tmp.54 = getv function %tmp.53 :toJson;
+        %tmp.56 = lgetv %value.4;
+        %tmp.57 = invoke %tmp.53 %tmp.54(%tmp.56);
+        %tmp.58 = add %tmp.52 %tmp.57;
+        %tmp.59 = add %tmp.51 %tmp.58;
+        lputv %line.1 %tmp.59;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_34_stop:
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_8_if_end;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_8_if_false:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_55_15_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 56 12 ]
+        %tmp.60 = lgetv %line.1;
+        %tmp.61 = " \"MISSING\"";
+        %tmp.62 = add %tmp.60 %tmp.61;
+        lputv %line.1 %tmp.62;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_55_15_stop:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_51_8_if_end:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_46_stop:
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_incr:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 44 ]
+        %tmp.63 = lgetv %i.2;
+        %tmp.64 = 2;
+        %tmp.65 = add %tmp.63 %tmp.64;
+        lputv %i.2 %tmp.65;
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_test;
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_44_4_for_end:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 59 4 ]
+        %tmp.66 = lgetv %line.1;
+    %tmp.67 = "}";
+    %tmp.68 = add %tmp.66 %tmp.67;
+    lputv %line.1 %tmp.68;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc" 61 4 ]
+    %tmp.69 = getm $.Toybox.System;
+    %tmp.70 = getv function %tmp.69 :println;
+    %tmp.72 = lgetv %line.1;
+    invoke %tmp.69 %tmp.70(%tmp.72);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_JSON_mc_40_49_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/JSON.mc"; @line = 1; ]
+<init> {
+}

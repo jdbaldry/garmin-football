@@ -1,0 +1,3 @@
+<menu2 id="Mode" title="@Strings.ModeTitle">
+    <menu-item id="League" label="@Strings.League" />
+</menu2>

@@ -1,0 +1,4 @@
+<menu2 id="Sub" title="@Strings.SubTitle">
+    <menu-item id="In" label="@Strings.In" />
+    <menu-item id="Out" label="@Strings.Out" />
+</menu2>

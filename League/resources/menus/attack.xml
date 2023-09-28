@@ -1,0 +1,5 @@
+<menu2 id="Attack" title="@Strings.AttackTitle">
+    <menu-item id="Goal" label="@Strings.Goal" />
+    <menu-item id="Save" label="@Strings.Save" />
+    <menu-item id="Miss" label="@Strings.Miss" />
+</menu2>

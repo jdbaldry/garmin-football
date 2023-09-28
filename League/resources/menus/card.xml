@@ -1,0 +1,4 @@
+<menu2 id="Card" title="@Strings.CardTitle">
+    <menu-item id="Red" label="@Strings.RedCard" />
+    <menu-item id="Yellow" label="@Strings.YellowCard" />
+</menu2>

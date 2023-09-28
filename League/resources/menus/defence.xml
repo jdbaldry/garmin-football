@@ -1,0 +1,4 @@
+<menu2 id="Defence" title="@Strings.DefenceTitle">
+    <menu-item id="Tackle" label="@Strings.Tackle" />
+    <menu-item id="Foul" label="@Strings.Foul" />
+</menu2>

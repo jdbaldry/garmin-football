@@ -1,0 +1,83 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 4; ]
+class AssistMenuDelegate extends WatchUi.Menu2InputDelegate{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 5; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_5_26_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 6 8 ]
+        %tmp.2 = getv ? :Menu2InputDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_5_26_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 9; ]
+    function onSelect(item as MenuItem) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_9_48_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 10 8 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_9_48_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_9_48_stop" ]
+        %id.1 = local;
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getId;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :toString;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = as %tmp.5 String;
+        lputv %id.1 %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 12 8 ]
+        %tmp.8 = getv ? :EVENTS;
+        %tmp.9 = getv function %tmp.8 :add;
+        %tmp.13 = getv ? :HelpEvent;
+        %tmp.15 = lgetv %id.1;
+        %tmp.10 = newc %tmp.13 (%tmp.15);
+        invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 14 8 ]
+        %tmp.16 = self;
+        %tmp.17 = getv function %tmp.16 :popView;
+        %tmp.19 = getv ? :SLIDE_IMMEDIATE;
+        invoke %tmp.16 %tmp.17(%tmp.19);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 15 8 ]
+        %tmp.20 = self;
+        %tmp.21 = getv function %tmp.20 :popView;
+        %tmp.23 = getv ? :SLIDE_IMMEDIATE;
+        invoke %tmp.20 %tmp.21(%tmp.23);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 16 8 ]
+        %tmp.24 = self;
+        %tmp.25 = getv function %tmp.24 :popView;
+        %tmp.27 = getv ? :SLIDE_IMMEDIATE;
+        invoke %tmp.24 %tmp.25(%tmp.27);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_9_48_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 19; ]
+    function onBack() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_19_30_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 20 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :popView;
+        %tmp.4 = getv ? :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 21 8 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :popView;
+        %tmp.8 = getv ? :SLIDE_IMMEDIATE;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc" 22 8 ]
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :popView;
+        %tmp.12 = getv ? :SLIDE_IMMEDIATE;
+        invoke %tmp.9 %tmp.10(%tmp.12);
+_Users_jdb_ext_jdbaldry_garmin_football_League_source_AssistMenuDelegate_mc_19_30_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/source/AssistMenuDelegate.mc"; @line = 1; ]
+<init> {
+}

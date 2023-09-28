@@ -1,0 +1,135 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc"; @line = 1; ]
+using Toybox.Time.Gregorian;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc"; @line = 3; ]
+import Toybox.Time;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc"; @line = 6; ]
+function timerTimeToString(timerTime as Number) as String {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_6_58_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 7 2 ]
+    %tmp.1 = getm $.Toybox.Time.Gregorian;
+    %tmp.2 = getv function %tmp.1 :duration;
+    %tmp.3 = newd 1;
+    %tmp.5 = const :seconds;
+    %tmp.7 = lgetv %timerTime;
+    %tmp.8 = 0.001;
+    %tmp.9 = mul %tmp.7 %tmp.8;
+    %tmp.10 = getv function %tmp.9 :toNumber;
+    %tmp.11 = invoke %tmp.9 %tmp.10();
+    %tmp.12 = dup %tmp.3;
+    %tmp.13 = aputv %tmp.12 %tmp.5 %tmp.11;
+    %tmp.14 = invoke %tmp.1 %tmp.2(%tmp.13);
+    %tmp.15 = getv function %tmp.14 :value;
+    %tmp.16 = invoke %tmp.14 %tmp.15();
+    lputv %timerTime %tmp.16;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 10 2 ]
+    %tmp.18 = lgetv %timerTime;
+    %tmp.19 = 60;
+    %tmp.20 = div %tmp.18 %tmp.19;
+    %tmp.21 = getv function %tmp.20 :format;
+    %tmp.22 = "%02d";
+    %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
+    %tmp.24 = ":";
+    %tmp.25 = add %tmp.23 %tmp.24;
+    %tmp.27 = lgetv %timerTime;
+    %tmp.28 = 60;
+    %tmp.29 = mod %tmp.27 %tmp.28;
+    %tmp.30 = getv function %tmp.29 :format;
+    %tmp.31 = "%02d";
+    %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+    %tmp.33 = add %tmp.25 %tmp.32;
+    ret %tmp.33;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_6_58_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc"; @line = 20; ]
+function YYYYMMDD(moment as Moment) as String {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_20_53_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 21 2 ]
+    %tmp.1 = getm $.Toybox.Time.Gregorian;
+    %tmp.2 = getv function %tmp.1 :info;
+    %tmp.4 = lgetv %moment;
+    %tmp.5 = 0;
+    %tmp.6 = as %tmp.5 Toybox.Time.DateFormat;
+    %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+    lputv %moment %tmp.7;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 26 2 ]
+    %tmp.8 = getm $.Toybox.Lang;
+    %tmp.9 = getv function %tmp.8 :format;
+    %tmp.10 = "$1$$2$$3$";
+    %tmp.11 = newa 3;
+    %tmp.12 = lgetv %moment;
+    %tmp.13 = getv %tmp.12 :year;
+    %tmp.14 = getv function %tmp.13 :format;
+    %tmp.15 = "%04d";
+    %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+    %tmp.17 = dup %tmp.11;
+    %tmp.18 = aputv %tmp.17 0 %tmp.16;
+    %tmp.19 = lgetv %moment;
+    %tmp.20 = getv %tmp.19 :month;
+    %tmp.21 = getv function %tmp.20 :format;
+    %tmp.22 = "%02d";
+    %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
+    %tmp.24 = dup %tmp.18;
+    %tmp.25 = aputv %tmp.24 1 %tmp.23;
+    %tmp.26 = lgetv %moment;
+    %tmp.27 = getv %tmp.26 :day;
+    %tmp.28 = getv function %tmp.27 :format;
+    %tmp.29 = "%02d";
+    %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+    %tmp.31 = dup %tmp.25;
+    %tmp.32 = aputv %tmp.31 2 %tmp.30;
+    %tmp.33 = invoke %tmp.8 %tmp.9(%tmp.10, %tmp.32);
+    ret %tmp.33;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_20_53_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc"; @line = 34; ]
+function HHMMSS(moment as Moment) as String {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_34_51_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 35 2 ]
+    [ "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_34_51_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_34_51_stop" ]
+    %pre___02d_.1 = local;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 36 2 ]
+    %tmp.1 = "%02d";
+    lputv %pre___02d_.1 %tmp.1;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 37 2 ]
+    %tmp.2 = getm $.Toybox.Time.Gregorian;
+    %tmp.3 = getv function %tmp.2 :info;
+    %tmp.5 = lgetv %moment;
+    %tmp.6 = 0;
+    %tmp.7 = as %tmp.6 Toybox.Time.DateFormat;
+    %tmp.8 = invoke %tmp.2 %tmp.3(%tmp.5, %tmp.7);
+    lputv %moment %tmp.8;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc" 42 2 ]
+    %tmp.9 = getm $.Toybox.Lang;
+    %tmp.10 = getv function %tmp.9 :format;
+    %tmp.11 = "$1$$2$$3$";
+    %tmp.12 = newa 3;
+    %tmp.13 = lgetv %moment;
+    %tmp.14 = getv %tmp.13 :hour;
+    %tmp.15 = getv function %tmp.14 :format;
+    %tmp.17 = lgetv %pre___02d_.1;
+    %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
+    %tmp.19 = dup %tmp.12;
+    %tmp.20 = aputv %tmp.19 0 %tmp.18;
+    %tmp.21 = lgetv %moment;
+    %tmp.22 = getv %tmp.21 :min;
+    %tmp.23 = getv function %tmp.22 :format;
+    %tmp.25 = lgetv %pre___02d_.1;
+    %tmp.26 = invoke %tmp.22 %tmp.23(%tmp.25);
+    %tmp.27 = dup %tmp.20;
+    %tmp.28 = aputv %tmp.27 1 %tmp.26;
+    %tmp.29 = lgetv %moment;
+    %tmp.30 = getv %tmp.29 :sec;
+    %tmp.31 = getv function %tmp.30 :format;
+    %tmp.33 = lgetv %pre___02d_.1;
+    %tmp.34 = invoke %tmp.30 %tmp.31(%tmp.33);
+    %tmp.35 = dup %tmp.28;
+    %tmp.36 = aputv %tmp.35 2 %tmp.34;
+    %tmp.37 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.36);
+    ret %tmp.37;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_Time_mc_34_51_stop:
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/Time.mc"; @line = 1; ]
+<init> {
+}

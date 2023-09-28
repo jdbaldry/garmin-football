@@ -1,0 +1,354 @@
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 1; ]
+import Toybox.ActivityRecording;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 5; ]
+class MatchMenuDelegate extends WatchUi.Menu2InputDelegate{
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 6; ]
+    function initialize() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_6_24_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 7 4 ]
+        %tmp.2 = getv ? :Menu2InputDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_6_24_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 10; ]
+    private
+    function beginMatch() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_10_39_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 11 4 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_10_39_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_10_39_stop" ]
+        %pre_0.1 = local;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 12 4 ]
+        %tmp.1 = 0;
+        lputv %pre_0.1 %tmp.1;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 13 4 ]
+        %tmp.3 = lgetv %pre_0.1;
+        putv self :SCORE_A %tmp.3;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 14 4 ]
+        %tmp.5 = lgetv %pre_0.1;
+        putv self :SCORE_B %tmp.5;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 16 4 ]
+        %tmp.6 = 1;
+        putv self :MATCH_STATE %tmp.6;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 17 4 ]
+        %tmp.7 = getm $.Toybox.ActivityRecording;
+        %tmp.8 = getv function %tmp.7 :createSession;
+        %tmp.9 = newd 3;
+        %tmp.11 = const :name;
+        %tmp.12 = "Football";
+        %tmp.13 = dup %tmp.9;
+        %tmp.14 = aputv %tmp.13 %tmp.11 %tmp.12;
+        %tmp.16 = const :sport;
+        %tmp.17 = 7;
+        %tmp.18 = as %tmp.17 Toybox.ActivityRecording.Sport1;
+        %tmp.19 = dup %tmp.14;
+        %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+        %tmp.22 = const :subSport;
+        %tmp.24 = lgetv %pre_0.1;
+        %tmp.25 = as %tmp.24 Toybox.ActivityRecording.SubSport;
+        %tmp.26 = dup %tmp.20;
+        %tmp.27 = aputv %tmp.26 %tmp.22 %tmp.25;
+        %tmp.28 = invoke %tmp.7 %tmp.8(%tmp.27);
+        putv self :SESSION %tmp.28;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 22 4 ]
+        %tmp.30 = getv ? :SESSION;
+        %tmp.31 = getv function %tmp.30 :start;
+        invoke %tmp.30 %tmp.31();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 24 4 ]
+        %tmp.33 = getv ? :EVENTS;
+        %tmp.34 = getv function %tmp.33 :add;
+        %tmp.38 = getv ? :TimeEvent;
+        %tmp.35 = newc %tmp.38 ();
+        invoke %tmp.33 %tmp.34(%tmp.35);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 25 4 ]
+        %tmp.40 = getv ? :EVENTS;
+        %tmp.41 = getv function %tmp.40 :add;
+        %tmp.45 = getv ? :BeginEvent;
+        %tmp.42 = newc %tmp.45 ();
+        invoke %tmp.40 %tmp.41(%tmp.42);
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_10_39_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 28; ]
+    private
+    function stopMatch() as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_28_38_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 29 4 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_28_38_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_28_38_stop" ]
+        %pre_SESSION.1 = local;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 30 4 ]
+        %tmp.2 = getv ? :SESSION;
+        lputv %pre_SESSION.1 %tmp.2;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 31 4 ]
+        %tmp.3 = 3;
+        putv self :MATCH_STATE %tmp.3;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 32 4 ]
+        %tmp.4 = lgetv %pre_SESSION.1;
+        %tmp.5 = getv function %tmp.4 :stop;
+        invoke %tmp.4 %tmp.5();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 33 4 ]
+        %tmp.6 = lgetv %pre_SESSION.1;
+        %tmp.7 = getv function %tmp.6 :save;
+        invoke %tmp.6 %tmp.7();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 34 4 ]
+        %tmp.8 = null;
+        putv self :SESSION %tmp.8;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 36 4 ]
+        %tmp.10 = getv ? :EVENTS;
+        %tmp.11 = getv function %tmp.10 :add;
+        %tmp.15 = getv ? :StopEvent;
+        %tmp.12 = newc %tmp.15 ();
+        invoke %tmp.10 %tmp.11(%tmp.12);
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_28_38_stop:
+    }
+    [ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 39; ]
+    function onSelect(item as MenuItem) as Void {
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_start:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 40 4 ]
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_stop" ]
+        %pre_0.1 = local;
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_stop" ]
+        %pre_1.2 = local;
+        [ "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_start" "_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_stop" ]
+        %pre_2.3 = local;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 41 4 ]
+        %tmp.1 = 2;
+        lputv %pre_2.3 %tmp.1;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 42 4 ]
+        %tmp.2 = 1;
+        lputv %pre_1.2 %tmp.2;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 43 4 ]
+        %tmp.3 = 0;
+        lputv %pre_0.1 %tmp.3;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 44 4 ]
+        %tmp.4 = lgetv %item;
+        %tmp.5 = getv function %tmp.4 :getId;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = getv function %tmp.6 :toString;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = as %tmp.8 String;
+        push %tmp.9;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_switchStmtBegin:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 45 6 ]
+        %tmp.10 = dup %tmp.9;
+        %tmp.11 = "Begin";
+        %tmp.12 = getv function %tmp.10 :equals;
+        %tmp.13 = invoke %tmp.10 %tmp.12 (%tmp.11);
+        bt %tmp.13 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_45_6_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 73 6 ]
+        %tmp.14 = dup %tmp.9;
+        %tmp.15 = "Pause";
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_73_6_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 87 6 ]
+        %tmp.18 = dup %tmp.9;
+        %tmp.19 = "Stop";
+        %tmp.20 = getv function %tmp.18 :equals;
+        %tmp.21 = invoke %tmp.18 %tmp.20 (%tmp.19);
+        bt %tmp.21 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_87_6_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 106 6 ]
+        %tmp.22 = dup %tmp.9;
+        %tmp.23 = "Quit";
+        %tmp.24 = getv function %tmp.22 :equals;
+        %tmp.25 = invoke %tmp.22 %tmp.24 (%tmp.23);
+        bt %tmp.25 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_106_6_switchCase;
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_defaultCodeBegin;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_45_6_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 46 8 ]
+        %tmp.27 = getv ? :MATCH_STATE;
+        push %tmp.27;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_46_8_switchStmtBegin:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 47 10 ]
+        %tmp.28 = dup %tmp.27;
+        %tmp.30 = lgetv %pre_0.1;
+        %tmp.31 = getv function %tmp.28 :equals;
+        %tmp.32 = invoke %tmp.28 %tmp.31 (%tmp.30);
+        bt %tmp.32 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_47_10_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 54 10 ]
+        %tmp.33 = dup %tmp.27;
+        %tmp.34 = 3;
+        %tmp.35 = getv function %tmp.33 :equals;
+        %tmp.36 = invoke %tmp.33 %tmp.35 (%tmp.34);
+        bt %tmp.36 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_54_10_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 61 10 ]
+        %tmp.37 = dup %tmp.27;
+        %tmp.39 = lgetv %pre_2.3;
+        %tmp.40 = getv function %tmp.37 :equals;
+        %tmp.41 = invoke %tmp.37 %tmp.40 (%tmp.39);
+        bt %tmp.41 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_61_10_switchCase;
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_46_8_defaultCodeBegin;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_47_10_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 48 12 ]
+        %tmp.42 = self;
+        %tmp.43 = getv function %tmp.42 :beginMatch;
+        invoke %tmp.42 %tmp.43();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 50 12 ]
+        %tmp.44 = self;
+        %tmp.45 = getv function %tmp.44 :popView;
+        %tmp.47 = lgetv %pre_0.1;
+        %tmp.48 = as %tmp.47 Toybox.WatchUi.SlideType;
+        invoke %tmp.44 %tmp.45(%tmp.48);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 52 12 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_46_8_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_54_10_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 55 12 ]
+        %tmp.49 = self;
+        %tmp.50 = getv function %tmp.49 :beginMatch;
+        invoke %tmp.49 %tmp.50();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 57 12 ]
+        %tmp.51 = self;
+        %tmp.52 = getv function %tmp.51 :popView;
+        %tmp.54 = lgetv %pre_0.1;
+        %tmp.55 = as %tmp.54 Toybox.WatchUi.SlideType;
+        invoke %tmp.51 %tmp.52(%tmp.55);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 59 12 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_46_8_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_61_10_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 62 12 ]
+        %tmp.57 = lgetv %pre_1.2;
+        putv self :MATCH_STATE %tmp.57;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 63 12 ]
+        %tmp.59 = getv ? :SESSION;
+        %tmp.60 = getv function %tmp.59 :start;
+        invoke %tmp.59 %tmp.60();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 64 12 ]
+        %tmp.62 = getv ? :EVENTS;
+        %tmp.63 = getv function %tmp.62 :add;
+        %tmp.67 = getv ? :BeginEvent;
+        %tmp.64 = newc %tmp.67 ();
+        invoke %tmp.62 %tmp.63(%tmp.64);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 66 12 ]
+        %tmp.68 = self;
+        %tmp.69 = getv function %tmp.68 :popView;
+        %tmp.71 = lgetv %pre_0.1;
+        %tmp.72 = as %tmp.71 Toybox.WatchUi.SlideType;
+        invoke %tmp.68 %tmp.69(%tmp.72);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 68 12 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_46_8_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_46_8_defaultCodeBegin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_46_8_switchStmtEnd:
+        pop;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 71 8 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_73_6_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 74 8 ]
+        %tmp.74 = getv ? :MATCH_STATE;
+        push %tmp.74;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_74_8_switchStmtBegin:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 75 10 ]
+        %tmp.75 = dup %tmp.74;
+        %tmp.77 = lgetv %pre_1.2;
+        %tmp.78 = getv function %tmp.75 :equals;
+        %tmp.79 = invoke %tmp.75 %tmp.78 (%tmp.77);
+        bt %tmp.79 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_75_10_switchCase;
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_74_8_defaultCodeBegin;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_75_10_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 76 12 ]
+        %tmp.81 = lgetv %pre_2.3;
+        putv self :MATCH_STATE %tmp.81;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 77 12 ]
+        %tmp.83 = getv ? :SESSION;
+        %tmp.84 = getv function %tmp.83 :stop;
+        invoke %tmp.83 %tmp.84();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 78 12 ]
+        %tmp.86 = getv ? :EVENTS;
+        %tmp.87 = getv function %tmp.86 :add;
+        %tmp.91 = getv ? :PauseEvent;
+        %tmp.88 = newc %tmp.91 ();
+        invoke %tmp.86 %tmp.87(%tmp.88);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 80 12 ]
+        %tmp.92 = self;
+        %tmp.93 = getv function %tmp.92 :popView;
+        %tmp.95 = lgetv %pre_0.1;
+        %tmp.96 = as %tmp.95 Toybox.WatchUi.SlideType;
+        invoke %tmp.92 %tmp.93(%tmp.96);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 82 12 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_74_8_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_74_8_defaultCodeBegin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_74_8_switchStmtEnd:
+        pop;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 85 8 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_87_6_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 88 8 ]
+        %tmp.98 = getv ? :MATCH_STATE;
+        push %tmp.98;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_88_8_switchStmtBegin:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 89 10 ]
+        %tmp.99 = dup %tmp.98;
+        %tmp.101 = lgetv %pre_1.2;
+        %tmp.102 = getv function %tmp.99 :equals;
+        %tmp.103 = invoke %tmp.99 %tmp.102 (%tmp.101);
+        bt %tmp.103 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_89_10_switchCase;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 96 10 ]
+        %tmp.104 = dup %tmp.98;
+        %tmp.106 = lgetv %pre_2.3;
+        %tmp.107 = getv function %tmp.104 :equals;
+        %tmp.108 = invoke %tmp.104 %tmp.107 (%tmp.106);
+        bt %tmp.108 @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_96_10_switchCase;
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_88_8_defaultCodeBegin;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_89_10_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 90 12 ]
+        %tmp.109 = self;
+        %tmp.110 = getv function %tmp.109 :stopMatch;
+        invoke %tmp.109 %tmp.110();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 92 12 ]
+        %tmp.111 = self;
+        %tmp.112 = getv function %tmp.111 :popView;
+        %tmp.114 = lgetv %pre_0.1;
+        %tmp.115 = as %tmp.114 Toybox.WatchUi.SlideType;
+        invoke %tmp.111 %tmp.112(%tmp.115);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 94 12 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_88_8_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_96_10_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 97 12 ]
+        %tmp.116 = self;
+        %tmp.117 = getv function %tmp.116 :stopMatch;
+        invoke %tmp.116 %tmp.117();
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 99 12 ]
+        %tmp.118 = self;
+        %tmp.119 = getv function %tmp.118 :popView;
+        %tmp.121 = lgetv %pre_0.1;
+        %tmp.122 = as %tmp.121 Toybox.WatchUi.SlideType;
+        invoke %tmp.118 %tmp.119(%tmp.122);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 101 12 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_88_8_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_88_8_defaultCodeBegin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_88_8_switchStmtEnd:
+        pop;
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 104 8 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_106_6_switchCase:
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 107 8 ]
+        %tmp.123 = self;
+        %tmp.124 = getv function %tmp.123 :pushView;
+        %tmp.128 = getv ? :Confirmation;
+        %tmp.129 = "Quit?";
+        %tmp.125 = newc %tmp.128 (%tmp.129);
+        %tmp.133 = getv ? :QuitConfirmationDelegate;
+        %tmp.130 = newc %tmp.133 ();
+        %tmp.135 = lgetv %pre_0.1;
+        %tmp.136 = as %tmp.135 Toybox.WatchUi.SlideType;
+        invoke %tmp.123 %tmp.124(%tmp.125, %tmp.130, %tmp.136);
+[ "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc" 113 8 ]
+        goto @_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_switchStmtEnd;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_defaultCodeBegin:
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_44_4_switchStmtEnd:
+        pop;
+_Users_jdb_ext_jdbaldry_garmin_football_League_bin_optimized_group000_debug_source_source_MatchMenuDelegate_mc_39_46_stop:
+    }
+}
+[ @file = "/Users/jdb/ext/jdbaldry/garmin-football/League/bin/optimized/group000-debug/source/source/MatchMenuDelegate.mc"; @line = 1; ]
+<init> {
+}
